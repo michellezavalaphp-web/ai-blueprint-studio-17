@@ -69,21 +69,40 @@ const Index = () => (
           title="The Time Reclaimed™ Framework"
           description="Seven stages from operational inefficiency to AI-powered transformation."
         />
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-3">
-          {frameworkStages.map((stage) => (
-            <div key={stage.name} className="glass-panel p-4 sm:p-5 text-center hover:glow-border transition-all duration-300">
-              <stage.icon className="h-5 w-5 text-primary mx-auto mb-2" />
-              <div className="text-[10px] text-primary/70 font-semibold mb-0.5">{stage.step}</div>
-              <div className="font-display text-xs sm:text-sm font-semibold">{stage.name}</div>
+        {/* Desktop: horizontal connected flow */}
+        <div className="hidden lg:flex items-center justify-center max-w-5xl mx-auto">
+          {frameworkStages.map((stage, i) => (
+            <div key={stage.name} className="flex items-center">
+              <div className="flex flex-col items-center text-center w-[100px] group">
+                <div className="text-xs font-bold text-primary tracking-wider mb-1.5">{stage.step}</div>
+                <div className="w-12 h-12 rounded-lg bg-card/60 border border-border/40 flex items-center justify-center group-hover:glow-border transition-all duration-300">
+                  <stage.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div className="font-display text-xs font-semibold mt-1.5">{stage.name}</div>
+              </div>
+              {i < frameworkStages.length - 1 && (
+                <div className="flex items-center mx-1">
+                  <div className="w-6 h-px bg-primary/30" />
+                  <ArrowRight className="h-3 w-3 text-primary/40 -ml-0.5" />
+                </div>
+              )}
             </div>
           ))}
         </div>
-        <div className="text-center mt-6 sm:mt-8">
-          <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-            <Link to="/framework">
-              Explore the Full Framework <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+        {/* Mobile/tablet: compact grid with flow indicators */}
+        <div className="lg:hidden grid grid-cols-4 sm:grid-cols-4 gap-x-1 gap-y-3 max-w-sm sm:max-w-md mx-auto">
+          {frameworkStages.map((stage, i) => (
+            <div key={stage.name} className="flex flex-col items-center text-center relative">
+              <div className="text-[10px] font-bold text-primary tracking-wider mb-1">{stage.step}</div>
+              <div className="w-11 h-11 rounded-lg bg-card/60 border border-border/40 flex items-center justify-center">
+                <stage.icon className="h-4 w-4 text-primary" />
+              </div>
+              <div className="font-display text-[11px] font-semibold mt-1">{stage.name}</div>
+              {i < frameworkStages.length - 1 && i !== 3 && (
+                <ArrowRight className="absolute right-[-8px] top-[28px] h-2.5 w-2.5 text-primary/30" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
