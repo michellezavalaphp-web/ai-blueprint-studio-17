@@ -171,7 +171,7 @@ const Index = () => (
           </div>
           <div className="dash-card text-center">
             <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
-              <Lock className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <LockKeyhole className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
             </div>
             <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Secure Implementation</h3>
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">AI integrations designed to operate safely within existing systems and workflows.</p>
