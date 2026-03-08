@@ -47,28 +47,28 @@ const Services = () => (
           </div>
           <span className="badge-tag">Strategy & Implementation</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">AI Strategy & Implementation</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">AI Strategy & Implementation</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           End-to-end AI solutions — from strategy to execution — so you can focus on what matters most: transforming your organization.
         </p>
       </div>
     </div>
 
-    <section className="section-padding !pt-10">
+    <section className="section-padding !pt-6 sm:!pt-10">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {services.map((s, i) => (
-            <div key={s.title} className="dash-card flex flex-col gap-4">
+            <div key={s.title} className="dash-card flex flex-col gap-3 sm:gap-4">
               <div className="flex items-start justify-between">
-                <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
-                  <s.icon className="h-5 w-5 text-primary" />
+                <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+                  <s.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
                 <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium bg-muted/60 rounded-full px-2.5 py-1">
                   0{i + 1}
                 </span>
               </div>
-              <h3 className="font-display text-base font-semibold">{s.title}</h3>
-              <p className="text-sm text-muted-foreground flex-1 leading-relaxed">{s.description}</p>
+              <h3 className="font-display text-sm sm:text-base font-semibold">{s.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground flex-1 leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>
@@ -77,20 +77,20 @@ const Services = () => (
 
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto max-w-xl">
-        <div className="glass-panel p-8 md:p-10 text-center glow-border">
-          <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+        <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
+          <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             Start Your AI Transformation
           </h2>
-          <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+          <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
             Every organization is unique. Let us build an AI strategy that fits your operations, goals, and team.
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
               <Link to="/book">
                 Book an AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+            <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
               <Link to="/tools">Explore AI Tools</Link>
             </Button>
           </div>

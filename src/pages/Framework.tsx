@@ -76,17 +76,17 @@ const Framework = () => (
           </div>
           <span className="badge-tag">Methodology</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Time Reclaimed™ Framework</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Time Reclaimed™ Framework</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           Our proprietary seven-stage methodology for transforming organizations from operational inefficiency to intelligent, AI-powered systems.
         </p>
       </div>
     </div>
 
     {/* Intro */}
-    <section className="section-padding !pt-10 !pb-12">
+    <section className="section-padding !pt-6 sm:!pt-10 !pb-8 sm:!pb-12">
       <div className="container mx-auto max-w-2xl text-center">
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
           The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine.
           Each stage builds on the last, moving your organization from manual, time-consuming operations
           to intelligent, automated systems that free your team to focus on what matters most.
@@ -101,26 +101,26 @@ const Framework = () => (
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-primary/5 hidden md:block" />
 
-          <div className="space-y-6">
-            {stages.map((stage, i) => (
-              <div key={stage.number} className="relative flex gap-5 md:gap-8">
+          <div className="space-y-4 sm:space-y-6">
+            {stages.map((stage) => (
+              <div key={stage.number} className="relative flex gap-3 sm:gap-5 md:gap-8">
                 {/* Stage number dot */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
-                    <stage.icon className="h-5 w-5 text-primary" />
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
+                    <stage.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="glass-panel p-6 flex-1 hover:glow-border transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[10px] uppercase tracking-widest text-primary font-semibold bg-primary/8 rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
+                <div className="glass-panel p-4 sm:p-6 flex-1 hover:glow-border transition-all duration-300">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                    <span className="text-[10px] uppercase tracking-widest text-primary font-semibold rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
                       Stage {stage.number}
                     </span>
-                    <h3 className="font-display text-lg font-bold">{stage.title}</h3>
+                    <h3 className="font-display text-base sm:text-lg font-bold">{stage.title}</h3>
                   </div>
-                  <p className="text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
+                  <p className="text-[11px] sm:text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
                 </div>
               </div>
             ))}
@@ -132,14 +132,14 @@ const Framework = () => (
     {/* CTA */}
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto max-w-xl">
-        <div className="glass-panel p-8 md:p-10 text-center glow-border">
-          <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+        <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
+          <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             Start Your Transformation
           </h2>
-          <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+          <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
             Begin with a free AI Strategy Session and see how the Time Reclaimed™ Framework can transform your organization.
           </p>
-          <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+          <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
             <Link to="/book">
               Schedule My AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
