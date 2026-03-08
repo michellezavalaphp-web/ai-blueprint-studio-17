@@ -100,7 +100,7 @@
   }
 
   .page-header {
-    @apply relative py-16 md:py-20 px-4 overflow-hidden;
+    @apply relative py-10 sm:py-16 md:py-20 px-4 overflow-hidden;
   }
 
   .badge-tag {
