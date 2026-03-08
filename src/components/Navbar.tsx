@@ -37,8 +37,8 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-2xl border-b border-border/40">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Go AI Innovation" className="h-7 w-auto" />
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src={logo} alt="Go AI Innovation" className="h-6 sm:h-7 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-0.5">
@@ -88,31 +88,33 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground p-2 -mr-2" onClick={() => setOpen(!open)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <nav className="lg:hidden bg-card/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 space-y-0.5">
+        <nav className="lg:hidden bg-card/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
           {allLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               onClick={() => setOpen(false)}
-              className={`block px-4 py-2.5 rounded-md text-sm font-medium ${
+              className={`block px-4 py-3 rounded-md text-sm font-medium ${
                 location.pathname === l.to ? "text-primary bg-primary/10" : "text-muted-foreground"
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <div className="px-4 py-2">
+          <div className="px-4 py-3">
             <SocialIcons size={16} />
           </div>
-          <Button variant="hero" size="sm" className="w-full mt-2" asChild>
-            <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
-          </Button>
+          <div className="px-4 pt-1">
+            <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
+              <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
+            </Button>
+          </div>
         </nav>
       )}
     </header>

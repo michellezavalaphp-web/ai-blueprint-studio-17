@@ -32,17 +32,17 @@ const Founder = () => (
           </div>
           <span className="badge-tag">Meet the Founder</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Mardel Michelle Zavala</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-lg leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Mardel Michelle Zavala</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-lg leading-relaxed">
           AI Implementation Strategist & Founder of Go AI Innovation
         </p>
       </div>
     </div>
 
-    <section className="section-padding !pt-10">
+    <section className="section-padding !pt-6 sm:!pt-10">
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto mb-16">
-          <div className="glass-panel p-8 space-y-4 text-muted-foreground text-sm leading-relaxed">
+        <div className="max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="glass-panel p-5 sm:p-8 space-y-3 sm:space-y-4 text-muted-foreground text-xs sm:text-sm leading-relaxed">
             <p>
               Mardel Michelle Zavala is the visionary behind Go AI Innovation — a platform dedicated to
               helping organizations reclaim time and operate more intelligently using AI systems and automation.
@@ -61,23 +61,23 @@ const Founder = () => (
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-16">
+        <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 mb-10 sm:mb-16">
           {values.map((v) => (
             <div key={v.title} className="dash-card text-center">
-              <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-4">
-                <v.icon className="h-5 w-5 text-primary" />
+              <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <v.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
               </div>
-              <h3 className="font-display text-base font-semibold mb-2">{v.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{v.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{v.description}</p>
             </div>
           ))}
         </div>
 
         <div className="max-w-lg mx-auto">
-          <div className="glass-panel p-8 text-center glow-border">
-            <h3 className="font-display text-lg font-semibold mb-2">Connect with Mardel</h3>
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">Book a strategy session and work directly with the founder.</p>
-            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+          <div className="glass-panel p-6 sm:p-8 text-center glow-border">
+            <h3 className="font-display text-base sm:text-lg font-semibold mb-2">Connect with Mardel</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">Book a strategy session and work directly with the founder.</p>
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/book">
                 Book a Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

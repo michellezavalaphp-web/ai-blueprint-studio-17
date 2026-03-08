@@ -68,6 +68,13 @@ const caseStudies = [
   },
 ];
 
+const metrics = [
+  { icon: BarChart3, stat: "500+", label: "Organizations assessed" },
+  { icon: TrendingUp, stat: "40%", label: "Average time savings" },
+  { icon: Users, stat: "10K+", label: "Hours reclaimed" },
+  { icon: Award, stat: "98%", label: "Client satisfaction" },
+];
+
 const Impact = () => (
   <>
     {/* Page Header */}
@@ -80,33 +87,28 @@ const Impact = () => (
           </div>
           <span className="badge-tag">Results</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Impact & Client Success</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Impact & Client Success</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           Real transformation stories from organizations using AI systems to improve operations, reclaim time, and scale intelligently.
         </p>
       </div>
     </div>
 
     {/* Metrics */}
-    <section className="section-padding !pt-10 !pb-12">
+    <section className="section-padding !pt-6 sm:!pt-10 !pb-8 sm:!pb-12">
       <div className="container mx-auto">
         <div className="glass-panel p-1 glow-border">
           <div className="grid grid-cols-2 md:grid-cols-4">
-            {[
-              { icon: BarChart3, stat: "500+", label: "Organizations assessed" },
-              { icon: TrendingUp, stat: "40%", label: "Average time savings" },
-              { icon: Users, stat: "10K+", label: "Hours reclaimed" },
-              { icon: Award, stat: "98%", label: "Client satisfaction" },
-            ].map((s, i) => (
+            {metrics.map((s, i) => (
               <div
                 key={s.label}
-                className={`flex flex-col items-center justify-center py-5 px-4 ${
-                  i < 3 ? "border-r border-border/30" : ""
-                }`}
+                className={`flex flex-col items-center justify-center py-4 sm:py-5 px-3 sm:px-4 ${
+                  i % 2 === 0 ? "border-r border-border/30" : i < 3 ? "md:border-r md:border-border/30" : ""
+                } ${i < 2 ? "border-b border-border/30 md:border-b-0" : ""}`}
               >
-                <s.icon className="h-4 w-4 text-primary/60 mb-2" />
-                <div className="stat-value text-2xl md:text-3xl">{s.stat}</div>
-                <div className="text-[11px] text-muted-foreground mt-0.5 tracking-wide">{s.label}</div>
+                <s.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary/60 mb-1.5 sm:mb-2" />
+                <div className="stat-value text-xl sm:text-2xl md:text-3xl">{s.stat}</div>
+                <div className="text-[10px] sm:text-[11px] text-muted-foreground mt-0.5 tracking-wide text-center">{s.label}</div>
               </div>
             ))}
           </div>
@@ -118,14 +120,14 @@ const Impact = () => (
     <section className="section-padding !pt-0">
       <div className="container mx-auto">
         <SectionHeading tag="Case Studies" title="Transformation Stories" />
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {caseStudies.map((cs) => (
-            <div key={cs.title} className="dash-card flex flex-col gap-4">
-              <h3 className="font-display text-base font-semibold">{cs.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{cs.description}</p>
+            <div key={cs.title} className="dash-card flex flex-col gap-3 sm:gap-4">
+              <h3 className="font-display text-sm sm:text-base font-semibold">{cs.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">{cs.description}</p>
               <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/30">
                 {cs.tags.map((tag) => (
-                  <span key={tag} className="text-[10px] uppercase tracking-wider text-primary font-medium rounded-full px-2 py-0.5" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
+                  <span key={tag} className="text-[9px] sm:text-[10px] uppercase tracking-wider text-primary font-medium rounded-full px-2 py-0.5" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
                     {tag}
                   </span>
                 ))}
@@ -140,20 +142,20 @@ const Impact = () => (
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto">
         <SectionHeading tag="Testimonials" title="What Organizations Say" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {testimonials.map((t) => (
-            <div key={t.name} className="dash-card flex flex-col gap-4">
-              <Quote className="h-5 w-5 text-primary/30" />
-              <p className="text-sm text-muted-foreground flex-1 italic leading-relaxed">"{t.quote}"</p>
-              <div className="text-xs text-primary font-semibold">{t.metric}</div>
+            <div key={t.name} className="dash-card flex flex-col gap-3 sm:gap-4">
+              <Quote className="h-4 w-4 sm:h-5 sm:w-5 text-primary/30" />
+              <p className="text-xs sm:text-sm text-muted-foreground flex-1 italic leading-relaxed">"{t.quote}"</p>
+              <div className="text-[11px] sm:text-xs text-primary font-semibold">{t.metric}</div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-3 w-3 text-primary fill-primary" />
                 ))}
               </div>
               <div className="border-t border-border/30 pt-3">
-                <div className="font-display font-semibold text-[13px]">{t.name}</div>
-                <div className="text-[11px] text-muted-foreground">{t.role}</div>
+                <div className="font-display font-semibold text-xs sm:text-[13px]">{t.name}</div>
+                <div className="text-[10px] sm:text-[11px] text-muted-foreground">{t.role}</div>
               </div>
             </div>
           ))}
@@ -164,14 +166,14 @@ const Impact = () => (
     {/* CTA */}
     <section className="section-padding">
       <div className="container mx-auto max-w-xl">
-        <div className="glass-panel p-8 md:p-10 text-center glow-border">
-          <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+        <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
+          <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+          <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
             Book a free strategy session and see how the Time Reclaimed™ Framework can transform your organization.
           </p>
-          <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+          <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
             <Link to="/book">
               Schedule My AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

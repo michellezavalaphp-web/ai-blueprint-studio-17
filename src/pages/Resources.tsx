@@ -48,39 +48,39 @@ const Resources = () => (
           </div>
           <span className="badge-tag">Knowledge Hub</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Learning & Resources</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Learning & Resources</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           Explore books, training programs, guides, and workshops designed to help organizations adopt AI and transform operations.
         </p>
       </div>
     </div>
 
-    <section className="section-padding !pt-10">
+    <section className="section-padding !pt-6 sm:!pt-10">
       <div className="container mx-auto">
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
           {resources.map((r) => (
-            <div key={r.title} className="dash-card flex flex-col gap-4">
+            <div key={r.title} className="dash-card flex flex-col gap-3 sm:gap-4">
               <div className="flex items-start justify-between">
-                <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
-                  <r.icon className="h-5 w-5 text-primary" />
+                <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+                  <r.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold rounded-full px-2.5 py-1 bg-muted/60 text-muted-foreground">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold rounded-full px-2.5 py-1 bg-muted/60 text-muted-foreground">
                   {r.status}
                 </span>
               </div>
-              <h3 className="font-display text-base font-semibold">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{r.description}</p>
+              <h3 className="font-display text-sm sm:text-base font-semibold">{r.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">{r.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-14 max-w-lg mx-auto">
-          <div className="glass-panel p-8 text-center glow-border">
-            <h3 className="font-display text-lg font-semibold mb-2">Want Early Access?</h3>
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+        <div className="mt-10 sm:mt-14 max-w-lg mx-auto">
+          <div className="glass-panel p-6 sm:p-8 text-center glow-border">
+            <h3 className="font-display text-base sm:text-lg font-semibold mb-2">Want Early Access?</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">
               Book a strategy session to learn more about upcoming resources and get personalized AI guidance.
             </p>
-            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/book">
                 Book a Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import SectionHeading from "@/components/SectionHeading";
 import ToolCard from "@/components/ToolCard";
 import { Gauge, Clock, ScanSearch, FileText, PenTool, ArrowRight, LayoutDashboard } from "lucide-react";
 
@@ -49,27 +48,27 @@ const Tools = () => (
           </div>
           <span className="badge-tag">AI Tools Library</span>
         </div>
-        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Interactive AI Tools</h1>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Interactive AI Tools</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           Explore our suite of AI-powered tools designed to help you assess, plan, and implement AI systems for your organization.
         </p>
       </div>
     </div>
 
-    <section className="section-padding !pt-10">
+    <section className="section-padding !pt-6 sm:!pt-10">
       <div className="container mx-auto">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {allTools.map((t) => (
             <ToolCard key={t.title} {...t} />
           ))}
         </div>
-        <div className="mt-14">
-          <div className="glass-panel p-8 text-center glow-border max-w-lg mx-auto">
-            <h3 className="font-display text-lg font-semibold mb-2">Need a Custom Solution?</h3>
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+        <div className="mt-10 sm:mt-14">
+          <div className="glass-panel p-6 sm:p-8 text-center glow-border max-w-lg mx-auto">
+            <h3 className="font-display text-base sm:text-lg font-semibold mb-2">Need a Custom Solution?</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">
               Book a strategy session and we'll build a personalized AI roadmap for your organization.
             </p>
-            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/book">
                 Book an AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

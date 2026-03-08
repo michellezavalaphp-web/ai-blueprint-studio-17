@@ -39,42 +39,42 @@ const Contact = () => {
             </div>
             <span className="badge-tag">Get in Touch</span>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Contact Go AI Innovation</h1>
-          <p className="text-muted-foreground text-sm md:text-base max-w-lg leading-relaxed">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Contact Go AI Innovation</h1>
+          <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-lg leading-relaxed">
             Have a question, want to explore a partnership, or need more information? We'd love to hear from you.
           </p>
         </div>
       </div>
 
-      <section className="section-padding !pt-10">
+      <section className="section-padding !pt-6 sm:!pt-10">
         <div className="container mx-auto max-w-lg">
           {submitted ? (
-            <div className="glass-panel p-10 text-center glow-border">
-              <CheckCircle2 className="h-10 w-10 text-primary mx-auto mb-4" />
-              <h3 className="font-display text-xl font-bold mb-2">Thank You!</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+            <div className="glass-panel p-8 sm:p-10 text-center glow-border">
+              <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10 text-primary mx-auto mb-4" />
+              <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Thank You!</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                 Your message has been received. Our team will get back to you shortly.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="glass-panel p-8 space-y-5 glow-border">
+            <form onSubmit={handleSubmit} className="glass-panel p-5 sm:p-8 space-y-4 sm:space-y-5 glow-border">
               <div className="space-y-1.5">
-                <Label htmlFor="name" className="text-[13px]">Name</Label>
-                <Input id="name" name="name" placeholder="Your full name" maxLength={100} required className="h-10" />
+                <Label htmlFor="name" className="text-xs sm:text-[13px]">Name</Label>
+                <Input id="name" name="name" placeholder="Your full name" maxLength={100} required className="h-11 sm:h-10 text-sm" />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="org" className="text-[13px]">Organization <span className="text-muted-foreground">(optional)</span></Label>
-                <Input id="org" name="org" placeholder="Company or organization name" maxLength={100} className="h-10" />
+                <Label htmlFor="org" className="text-xs sm:text-[13px]">Organization <span className="text-muted-foreground">(optional)</span></Label>
+                <Input id="org" name="org" placeholder="Company or organization name" maxLength={100} className="h-11 sm:h-10 text-sm" />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="email" className="text-[13px]">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="you@example.com" maxLength={255} required className="h-10" />
+                <Label htmlFor="email" className="text-xs sm:text-[13px]">Email</Label>
+                <Input id="email" name="email" type="email" placeholder="you@example.com" maxLength={255} required className="h-11 sm:h-10 text-sm" />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="message" className="text-[13px]">Message</Label>
-                <Textarea id="message" name="message" placeholder="How can we help?" rows={4} maxLength={1000} required />
+                <Label htmlFor="message" className="text-xs sm:text-[13px]">Message</Label>
+                <Textarea id="message" name="message" placeholder="How can we help?" rows={4} maxLength={1000} required className="text-sm" />
               </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full h-11 text-sm">
+              <Button type="submit" variant="hero" size="lg" className="w-full h-12 sm:h-11 text-sm">
                 Send Message <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>
