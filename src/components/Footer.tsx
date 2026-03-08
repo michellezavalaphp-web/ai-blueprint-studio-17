@@ -57,8 +57,9 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <div className="container mx-auto mt-8 sm:mt-12 pt-6 border-t border-border/30 text-center text-[10px] sm:text-[11px] text-muted-foreground">
-      © {new Date().getFullYear()} Go AI Innovation. All rights reserved.
+    <div className="container mx-auto mt-8 sm:mt-12 pt-6 border-t border-border/30 text-center text-[10px] sm:text-[11px] text-muted-foreground space-y-1.5">
+      <div>© {new Date().getFullYear()} Go AI Innovation. All rights reserved.</div>
+      <div className="text-muted-foreground/50">Go AI Innovation is a brand of Agape Advisory Group LLC.</div>
     </div>
   </footer>
 );

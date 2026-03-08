@@ -131,6 +131,27 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mission Statement */}
+      <section className="section-padding">
+        <div className="container mx-auto max-w-2xl text-center">
+          <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
+            AI Is Transforming How Organizations Operate
+          </h2>
+          <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+            <p>AI is transforming how organizations operate.</p>
+            <p>Most organizations are still overwhelmed by manual work, disconnected systems, and inefficient processes.</p>
+            <p>Go AI Innovation helps organizations reclaim time and implement intelligent AI systems that drive real results.</p>
+          </div>
+          <div className="mt-6 sm:mt-8">
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
+              <Link to="/tools">
+                Explore AI Tools <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Dashboard Metrics Strip */}
       <section className="relative -mt-6 sm:-mt-8 z-20 container mx-auto px-4">
         <div className="glass-panel p-1 glow-border">
