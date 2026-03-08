@@ -104,7 +104,9 @@
   }
 
   .badge-tag {
-    @apply inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-primary/8 border border-primary/15 rounded-full px-3.5 py-1.5;
+    @apply inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary border rounded-full px-3.5 py-1.5;
+    background-color: hsl(207 90% 54% / 0.08);
+    border-color: hsl(207 90% 54% / 0.15);
   }
 
   .stat-value {
