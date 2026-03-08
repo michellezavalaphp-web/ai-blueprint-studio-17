@@ -38,7 +38,6 @@ const allTools = [
 
 const Tools = () => (
   <>
-    {/* Page Header */}
     <div className="page-header">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
       <div className="container mx-auto relative z-10">
@@ -70,7 +69,7 @@ const Tools = () => (
             </p>
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/book">
-                Book an AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+                Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

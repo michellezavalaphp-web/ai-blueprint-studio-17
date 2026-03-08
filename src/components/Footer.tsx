@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SocialIcons from "@/components/SocialIcons";
 import logo from "@/assets/logo.png";
+import { Phone, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border/40 bg-card/30 backdrop-blur-xl py-10 sm:py-14 px-4">
@@ -46,14 +47,24 @@ const Footer = () => (
       <div>
         <h4 className="font-display font-semibold mb-3 sm:mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Connect</h4>
         <ul className="space-y-2 sm:space-y-2.5">
-          {[
-            { to: "/book", label: "Strategy Session" },
-            { to: "/contact", label: "Contact Us" },
-          ].map((l) => (
-            <li key={l.to}>
-              <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">{l.label}</Link>
-            </li>
-          ))}
+          <li>
+            <Link to="/book" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">Strategy Session</Link>
+          </li>
+          <li>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">Contact Us</Link>
+          </li>
+          <li className="pt-2 border-t border-border/20 mt-2">
+            <div className="flex items-center gap-1.5 text-muted-foreground text-[11px] sm:text-xs">
+              <Phone className="h-3 w-3 shrink-0" />
+              <span>(XXX) XXX-XXXX</span>
+            </div>
+          </li>
+          <li>
+            <a href="mailto:info@goaiinnovation.com" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors text-[11px] sm:text-xs">
+              <Mail className="h-3 w-3 shrink-0" />
+              <span>info@goaiinnovation.com</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

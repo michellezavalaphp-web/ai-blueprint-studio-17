@@ -175,7 +175,7 @@ const Impact = () => (
           </p>
           <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
             <Link to="/book">
-              Schedule My AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
