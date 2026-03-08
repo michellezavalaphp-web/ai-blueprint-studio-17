@@ -1,22 +1,38 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import logo from "@/assets/logo.png";
 
-const navLinks = [
+const mainLinks = [
   { label: "Home", to: "/" },
   { label: "Solutions", to: "/solutions" },
   { label: "Services", to: "/services" },
   { label: "AI Tools", to: "/tools" },
+  { label: "Framework", to: "/framework" },
+];
+
+const moreLinks = [
+  { label: "Impact", to: "/impact" },
+  { label: "Resources", to: "/resources" },
   { label: "Founder", to: "/founder" },
   { label: "Contact", to: "/contact" },
 ];
 
+const allLinks = [...mainLinks, ...moreLinks];
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
+
+  const linkClass = (to: string) =>
+    `px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
+      location.pathname === to
+        ? "text-primary bg-primary/10"
+        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+    }`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-2xl border-b border-border/40">
@@ -26,19 +42,45 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-0.5">
-          {navLinks.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className={`px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
-                location.pathname === l.to
-                  ? "text-primary bg-primary/8"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-              }`}
-            >
+          {mainLinks.map((l) => (
+            <Link key={l.to} to={l.to} className={linkClass(l.to)}>
               {l.label}
             </Link>
           ))}
+
+          {/* More dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setMoreOpen(!moreOpen)}
+              onBlur={() => setTimeout(() => setMoreOpen(false), 150)}
+              className={`px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors flex items-center gap-1 ${
+                moreLinks.some((l) => l.to === location.pathname)
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+              }`}
+            >
+              More <ChevronDown className="h-3 w-3" />
+            </button>
+            {moreOpen && (
+              <div className="absolute top-full right-0 mt-1 w-44 glass-panel p-1.5 shadow-xl">
+                {moreLinks.map((l) => (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setMoreOpen(false)}
+                    className={`block px-3 py-2 rounded-md text-[13px] font-medium transition-colors ${
+                      location.pathname === l.to
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <div className="w-px h-5 bg-border mx-2" />
           <SocialIcons size={14} />
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
@@ -53,13 +95,13 @@ const Navbar = () => {
 
       {open && (
         <nav className="lg:hidden bg-card/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 space-y-0.5">
-          {navLinks.map((l) => (
+          {allLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               onClick={() => setOpen(false)}
               className={`block px-4 py-2.5 rounded-md text-sm font-medium ${
-                location.pathname === l.to ? "text-primary bg-primary/8" : "text-muted-foreground"
+                location.pathname === l.to ? "text-primary bg-primary/10" : "text-muted-foreground"
               }`}
             >
               {l.label}

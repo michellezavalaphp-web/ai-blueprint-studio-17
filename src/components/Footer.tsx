@@ -4,8 +4,8 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border/40 bg-card/30 backdrop-blur-xl py-14 px-4">
-    <div className="container mx-auto grid gap-10 md:grid-cols-4">
-      <div>
+    <div className="container mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="sm:col-span-2 lg:col-span-1">
         <Link to="/" className="flex items-center gap-2 mb-4">
           <img src={logo} alt="Go AI Innovation" className="h-6 w-auto" />
         </Link>
@@ -16,12 +16,12 @@ const Footer = () => (
       </div>
       <div>
         <h4 className="font-display font-semibold mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Platform</h4>
-        <ul className="space-y-2.5 text-sm">
+        <ul className="space-y-2.5">
           {[
-            { to: "/", label: "Home" },
+            { to: "/tools", label: "AI Tools" },
+            { to: "/framework", label: "Framework" },
             { to: "/solutions", label: "Solutions" },
             { to: "/services", label: "Services" },
-            { to: "/tools", label: "AI Tools" },
           ].map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-[13px]">{l.label}</Link>
@@ -30,12 +30,12 @@ const Footer = () => (
         </ul>
       </div>
       <div>
-        <h4 className="font-display font-semibold mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Company</h4>
-        <ul className="space-y-2.5 text-sm">
+        <h4 className="font-display font-semibold mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Learn</h4>
+        <ul className="space-y-2.5">
           {[
+            { to: "/impact", label: "Impact & Results" },
+            { to: "/resources", label: "Resources" },
             { to: "/founder", label: "Founder" },
-            { to: "/contact", label: "Contact" },
-            { to: "/book", label: "Strategy Session" },
           ].map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-[13px]">{l.label}</Link>
@@ -44,11 +44,17 @@ const Footer = () => (
         </ul>
       </div>
       <div>
-        <h4 className="font-display font-semibold mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Get Started</h4>
-        <p className="text-xs text-muted-foreground leading-relaxed mb-3">Ready to transform your organization with AI?</p>
-        <Link to="/book" className="inline-flex items-center gap-1.5 text-primary text-[13px] font-medium hover:underline">
-          Schedule a Strategy Session →
-        </Link>
+        <h4 className="font-display font-semibold mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Connect</h4>
+        <ul className="space-y-2.5">
+          {[
+            { to: "/book", label: "Strategy Session" },
+            { to: "/contact", label: "Contact Us" },
+          ].map((l) => (
+            <li key={l.to}>
+              <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-[13px]">{l.label}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
     <div className="container mx-auto mt-12 pt-6 border-t border-border/30 text-center text-[11px] text-muted-foreground">
