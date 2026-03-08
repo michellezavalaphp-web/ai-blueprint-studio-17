@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import SectionHeading from "@/components/SectionHeading";
-import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, ArrowRight } from "lucide-react";
+import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, ArrowRight, Settings } from "lucide-react";
 
 const services = [
   {
@@ -38,44 +37,63 @@ const services = [
 
 const Services = () => (
   <>
-    <section className="section-padding">
+    {/* Page Header */}
+    <div className="page-header">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
+      <div className="container mx-auto relative z-10">
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+            <Settings className="h-4 w-4 text-primary" />
+          </div>
+          <span className="badge-tag">Strategy & Implementation</span>
+        </div>
+        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">AI Strategy & Implementation</h1>
+        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+          End-to-end AI solutions — from strategy to execution — so you can focus on what matters most: transforming your organization.
+        </p>
+      </div>
+    </div>
+
+    <section className="section-padding !pt-10">
       <div className="container mx-auto">
-        <SectionHeading
-          tag="Strategy & Implementation"
-          title="AI Strategy & Implementation"
-          description="Go AI Innovation delivers end-to-end AI solutions — from strategy to execution — so you can focus on what matters most: transforming your organization."
-        />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <div key={s.title} className="glass rounded-lg p-6 flex flex-col gap-4 hover:glow-border transition-all duration-300">
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <s.icon className="h-6 w-6 text-primary" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((s, i) => (
+            <div key={s.title} className="dash-card flex flex-col gap-4">
+              <div className="flex items-start justify-between">
+                <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+                  <s.icon className="h-5 w-5 text-primary" />
+                </div>
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium bg-muted/60 rounded-full px-2.5 py-1">
+                  0{i + 1}
+                </span>
               </div>
-              <h3 className="font-display text-lg font-semibold">{s.title}</h3>
-              <p className="text-sm text-muted-foreground flex-1">{s.description}</p>
+              <h3 className="font-display text-base font-semibold">{s.title}</h3>
+              <p className="text-sm text-muted-foreground flex-1 leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <section className="section-padding bg-secondary/30">
-      <div className="container mx-auto text-center max-w-2xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-          Start Your AI Transformation
-        </h2>
-        <p className="text-muted-foreground mb-8">
-          Every organization is unique. Let us build an AI strategy that fits your operations, goals, and team.
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/book">
-              Book an AI Strategy Session <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-          <Button variant="hero-outline" size="lg" asChild>
-            <Link to="/tools">Explore AI Tools</Link>
-          </Button>
+    <section className="section-padding bg-secondary/20">
+      <div className="container mx-auto max-w-xl">
+        <div className="glass-panel p-8 md:p-10 text-center glow-border">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+            Start Your AI Transformation
+          </h2>
+          <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+            Every organization is unique. Let us build an AI strategy that fits your operations, goals, and team.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/book">
+                Book an AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/tools">Explore AI Tools</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
