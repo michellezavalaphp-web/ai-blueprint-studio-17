@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ToolCard from "@/components/ToolCard";
-import { Gauge, Clock, ScanSearch, FileText, PenTool, ArrowRight } from "lucide-react";
+import { Gauge, Clock, ScanSearch, FileText, PenTool, ArrowRight, LayoutDashboard } from "lucide-react";
 
 const allTools = [
   {
@@ -39,24 +39,42 @@ const allTools = [
 
 const Tools = () => (
   <>
-    <section className="section-padding">
+    {/* Page Header */}
+    <div className="page-header">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
+      <div className="container mx-auto relative z-10">
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+            <LayoutDashboard className="h-4 w-4 text-primary" />
+          </div>
+          <span className="badge-tag">AI Tools Library</span>
+        </div>
+        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Interactive AI Tools</h1>
+        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+          Explore our suite of AI-powered tools designed to help you assess, plan, and implement AI systems for your organization.
+        </p>
+      </div>
+    </div>
+
+    <section className="section-padding !pt-10">
       <div className="container mx-auto">
-        <SectionHeading
-          tag="AI Tools Library"
-          title="Interactive AI Tools for Your Organization"
-          description="Explore our suite of AI-powered tools designed to help you assess, plan, and implement AI systems."
-        />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {allTools.map((t) => (
             <ToolCard key={t.title} {...t} />
           ))}
         </div>
-        <div className="text-center mt-12">
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/book">
-              Book an AI Strategy Session <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+        <div className="mt-14">
+          <div className="glass-panel p-8 text-center glow-border max-w-lg mx-auto">
+            <h3 className="font-display text-lg font-semibold mb-2">Need a Custom Solution?</h3>
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+              Book a strategy session and we'll build a personalized AI roadmap for your organization.
+            </p>
+            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/book">
+                Book an AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

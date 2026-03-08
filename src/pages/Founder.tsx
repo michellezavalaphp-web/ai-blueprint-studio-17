@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Lightbulb, Target, Rocket } from "lucide-react";
+import { ArrowRight, Lightbulb, Target, Rocket, User } from "lucide-react";
 
 const values = [
   {
@@ -22,19 +22,27 @@ const values = [
 
 const Founder = () => (
   <>
-    <section className="section-padding">
+    {/* Page Header */}
+    <div className="page-header">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
+      <div className="container mx-auto relative z-10">
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+            <User className="h-4 w-4 text-primary" />
+          </div>
+          <span className="badge-tag">Meet the Founder</span>
+        </div>
+        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Mardel Michelle Zavala</h1>
+        <p className="text-muted-foreground text-sm md:text-base max-w-lg leading-relaxed">
+          AI Implementation Strategist & Founder of Go AI Innovation
+        </p>
+      </div>
+    </div>
+
+    <section className="section-padding !pt-10">
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            Meet the Founder
-          </span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            Mardel Michelle Zavala
-          </h1>
-          <p className="text-lg text-muted-foreground mb-4">
-            AI Implementation Strategist & Founder of Go AI Innovation
-          </p>
-          <div className="glass rounded-xl p-8 text-left space-y-4 text-muted-foreground text-sm leading-relaxed">
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="glass-panel p-8 space-y-4 text-muted-foreground text-sm leading-relaxed">
             <p>
               Mardel Michelle Zavala is the visionary behind Go AI Innovation — a platform dedicated to
               helping organizations reclaim time and operate more intelligently using AI systems and automation.
@@ -53,24 +61,28 @@ const Founder = () => (
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-5 mb-16">
           {values.map((v) => (
-            <div key={v.title} className="glass rounded-lg p-6 text-center">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <v.icon className="h-6 w-6 text-primary" />
+            <div key={v.title} className="dash-card text-center">
+              <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-4">
+                <v.icon className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="font-display text-lg font-semibold mb-2">{v.title}</h3>
-              <p className="text-sm text-muted-foreground">{v.description}</p>
+              <h3 className="font-display text-base font-semibold mb-2">{v.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/book">
-              Book a Strategy Session with Mardel <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+        <div className="max-w-lg mx-auto">
+          <div className="glass-panel p-8 text-center glow-border">
+            <h3 className="font-display text-lg font-semibold mb-2">Connect with Mardel</h3>
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">Book a strategy session and work directly with the founder.</p>
+            <Button variant="hero" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/book">
+                Book a Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

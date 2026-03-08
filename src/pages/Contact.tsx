@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import SectionHeading from "@/components/SectionHeading";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -24,53 +23,65 @@ const Contact = () => {
       return;
     }
 
-    // Placeholder — replace with real submission logic
     setSubmitted(true);
     toast({ title: "Message sent!", description: "We'll be in touch soon." });
   };
 
   return (
-    <section className="section-padding">
-      <div className="container mx-auto max-w-2xl">
-        <SectionHeading
-          tag="Get in Touch"
-          title="Contact Go AI Innovation"
-          description="Have a question, want to explore a partnership, or need more information? We'd love to hear from you."
-        />
-
-        {submitted ? (
-          <div className="glass rounded-xl p-10 text-center glow-border">
-            <CheckCircle2 className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="font-display text-2xl font-bold mb-2">Thank You!</h3>
-            <p className="text-muted-foreground text-sm">
-              Your message has been received. Our team will get back to you shortly.
-            </p>
+    <>
+      {/* Page Header */}
+      <div className="page-header">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
+        <div className="container mx-auto relative z-10">
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+              <Mail className="h-4 w-4 text-primary" />
+            </div>
+            <span className="badge-tag">Get in Touch</span>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="glass rounded-xl p-8 space-y-6 glow-border">
-            <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" name="name" placeholder="Your full name" maxLength={100} required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="org">Organization (optional)</Label>
-              <Input id="org" name="org" placeholder="Company or organization name" maxLength={100} />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" placeholder="you@example.com" maxLength={255} required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea id="message" name="message" placeholder="How can we help?" rows={5} maxLength={1000} required />
-            </div>
-            <Button type="submit" variant="hero" size="lg" className="w-full">
-              Send Message <Send className="ml-2 h-5 w-5" />
-            </Button>
-          </form>
-        )}
+          <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Contact Go AI Innovation</h1>
+          <p className="text-muted-foreground text-sm md:text-base max-w-lg leading-relaxed">
+            Have a question, want to explore a partnership, or need more information? We'd love to hear from you.
+          </p>
+        </div>
       </div>
-    </section>
+
+      <section className="section-padding !pt-10">
+        <div className="container mx-auto max-w-lg">
+          {submitted ? (
+            <div className="glass-panel p-10 text-center glow-border">
+              <CheckCircle2 className="h-10 w-10 text-primary mx-auto mb-4" />
+              <h3 className="font-display text-xl font-bold mb-2">Thank You!</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Your message has been received. Our team will get back to you shortly.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="glass-panel p-8 space-y-5 glow-border">
+              <div className="space-y-1.5">
+                <Label htmlFor="name" className="text-[13px]">Name</Label>
+                <Input id="name" name="name" placeholder="Your full name" maxLength={100} required className="h-10" />
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="org" className="text-[13px]">Organization <span className="text-muted-foreground">(optional)</span></Label>
+                <Input id="org" name="org" placeholder="Company or organization name" maxLength={100} className="h-10" />
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="email" className="text-[13px]">Email</Label>
+                <Input id="email" name="email" type="email" placeholder="you@example.com" maxLength={255} required className="h-10" />
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="message" className="text-[13px]">Message</Label>
+                <Textarea id="message" name="message" placeholder="How can we help?" rows={4} maxLength={1000} required />
+              </div>
+              <Button type="submit" variant="hero" size="lg" className="w-full h-11 text-sm">
+                Send Message <Send className="ml-2 h-4 w-4" />
+              </Button>
+            </form>
+          )}
+        </div>
+      </section>
+    </>
   );
 };
 

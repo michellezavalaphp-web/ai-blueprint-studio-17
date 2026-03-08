@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import SectionHeading from "@/components/SectionHeading";
-import { CalendarDays, Target, Map, ArrowRight, CheckCircle2 } from "lucide-react";
+import { CalendarDays, Target, Map, ArrowRight, CheckCircle2, Calendar } from "lucide-react";
 
 const steps = [
   {
@@ -11,7 +10,7 @@ const steps = [
   {
     icon: Map,
     title: "Build Your Roadmap",
-    description: "Walk away with a clear, actionable AI implementation plan tailored to your business.",
+    description: "Walk away with a clear, actionable AI implementation plan tailored to your organization.",
   },
   {
     icon: CalendarDays,
@@ -31,43 +30,62 @@ const includes = [
 
 const Book = () => (
   <>
-    <section className="section-padding">
-      <div className="container mx-auto">
-        <SectionHeading
-          tag="Free Consultation"
-          title="Book Your AI Strategy Session"
-          description="This session is designed to help your business identify automation opportunities and build a roadmap for AI implementation."
-        />
+    {/* Page Header */}
+    <div className="page-header">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
+      <div className="container mx-auto relative z-10">
+        <div className="flex items-center gap-2.5 mb-4">
+          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
+            <Calendar className="h-4 w-4 text-primary" />
+          </div>
+          <span className="badge-tag">Free Consultation</span>
+        </div>
+        <h1 className="font-display text-3xl md:text-4xl font-bold mb-3">Book Your AI Strategy Session</h1>
+        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+          Designed to help your organization identify automation opportunities and build a roadmap for AI implementation.
+        </p>
+      </div>
+    </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+    <section className="section-padding !pt-10">
+      <div className="container mx-auto">
+        {/* Steps */}
+        <div className="grid md:grid-cols-3 gap-5 mb-16">
           {steps.map((s, i) => (
-            <div key={s.title} className="glass rounded-lg p-6 text-center">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <s.icon className="h-6 w-6 text-primary" />
+            <div key={s.title} className="dash-card text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <span className="text-[10px] uppercase tracking-widest text-primary font-semibold bg-primary/8 rounded-full px-2.5 py-1">
+                  Step {i + 1}
+                </span>
               </div>
-              <div className="text-xs text-primary font-semibold mb-2">Step {i + 1}</div>
-              <h3 className="font-display text-lg font-semibold mb-2">{s.title}</h3>
-              <p className="text-sm text-muted-foreground">{s.description}</p>
+              <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-4">
+                <s.icon className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display text-base font-semibold mb-2">{s.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{s.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="max-w-2xl mx-auto glass rounded-xl p-8 text-center glow-border">
-          <h3 className="font-display text-2xl font-bold mb-6">What's Included</h3>
-          <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
-            {includes.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm">
-                <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-muted-foreground">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <Button variant="hero" size="lg" className="animate-pulse-glow">
-            Schedule My AI Strategy Session <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <p className="text-xs text-muted-foreground mt-4">
-            Free — no credit card required
-          </p>
+        {/* What's Included */}
+        <div className="max-w-xl mx-auto">
+          <div className="glass-panel p-8 md:p-10 text-center glow-border">
+            <h3 className="font-display text-xl font-bold mb-6">What's Included</h3>
+            <ul className="space-y-3 text-left max-w-sm mx-auto mb-8">
+              {includes.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm">
+                  <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-muted-foreground text-[13px] leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Button variant="hero" size="lg" className="h-11 text-sm animate-pulse-glow">
+              Schedule My AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <p className="text-[11px] text-muted-foreground mt-4 tracking-wide">
+              Free — no credit card required
+            </p>
+          </div>
         </div>
       </div>
     </section>
