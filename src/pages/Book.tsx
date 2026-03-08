@@ -40,7 +40,7 @@ const Book = () => (
           </div>
           <span className="badge-tag">Free Consultation</span>
         </div>
-        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Book Your AI Strategy Session</h1>
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Book Your Free AI Strategy Session</h1>
         <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
           Designed to help your organization identify automation opportunities and build a roadmap for AI implementation.
         </p>
@@ -80,7 +80,7 @@ const Book = () => (
               ))}
             </ul>
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto animate-pulse-glow">
-              Schedule My AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-4 tracking-wide">
               Free — no credit card required
