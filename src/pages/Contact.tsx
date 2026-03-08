@@ -48,6 +48,15 @@ const Contact = () => {
 
       <section className="section-padding !pt-6 sm:!pt-10">
         <div className="container mx-auto max-w-lg">
+          <div className="glass-panel p-4 sm:p-5 mb-5 sm:mb-6 flex items-center gap-3">
+            <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center shrink-0">
+              <Phone className="h-4 w-4 text-primary" />
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm font-medium">AI Strategy Line</p>
+              <p className="text-[11px] sm:text-xs text-muted-foreground">(XXX) XXX-XXXX — Coming Soon</p>
+            </div>
+          </div>
           {submitted ? (
             <div className="glass-panel p-8 sm:p-10 text-center glow-border">
               <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10 text-primary mx-auto mb-4" />
