@@ -13,6 +13,9 @@ import {
   ArrowRight,
   CheckCircle2,
   XCircle,
+  ShieldCheck,
+  LockKeyhole,
+  Building2,
 } from "lucide-react";
 
 const frameworkStages = [
@@ -150,7 +153,41 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 4 · Qualification */}
+    {/* 4 · Security, Compliance & Responsible AI */}
+    <section className="section-padding">
+      <div className="container mx-auto">
+        <SectionHeading
+          tag="Trust & Governance"
+          title="Security, Compliance & Responsible AI"
+          description="Go AI Innovation helps organizations implement AI responsibly, securely, and in alignment with operational standards."
+        />
+        <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Responsible AI Design</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">AI systems designed with transparency, accountability, and human oversight.</p>
+          </div>
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <LockKeyhole className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Secure Implementation</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">AI integrations designed to operate safely within existing systems and workflows.</p>
+          </div>
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Operational Alignment</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">AI solutions built to support organizational policies, governance structures, and operational environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* 5 · Qualification */}
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto">
         <SectionHeading
