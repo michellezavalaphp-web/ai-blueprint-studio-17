@@ -13,8 +13,6 @@ import {
   ArrowRight,
   CheckCircle2,
   XCircle,
-  User,
-  ImageIcon,
 } from "lucide-react";
 
 const frameworkStages = [
