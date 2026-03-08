@@ -97,7 +97,7 @@ const Index = () => {
                 <Link to="/tools">Discover Your AI Readiness</Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/tools">Calculate Time Reclaimed</Link>
+                <Link to="/tools">Calculate Time Reclaimed™</Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
                 <Link to="/tools">Generate Your AI Blueprint</Link>

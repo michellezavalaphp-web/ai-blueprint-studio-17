@@ -58,7 +58,7 @@ const Solutions = () => (
         <SectionHeading
           tag="Solutions"
           title="AI Solutions for Every Organization"
-          description="Go AI Innovation delivers intelligent systems tailored to your industry — improving efficiency, automation, and decision-making across your entire organization."
+          description="Go AI Innovation delivers intelligent systems powered by the Time Reclaimed™ Framework — improving efficiency, automation, and decision-making across your entire organization."
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((s) => (
