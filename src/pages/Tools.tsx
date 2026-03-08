@@ -46,11 +46,11 @@ const Tools = () => (
           <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
             <LayoutDashboard className="h-4 w-4 text-primary" />
           </div>
-          <span className="badge-tag">AI Tools Library</span>
+          <span className="badge-tag">AI Readiness & Assessment</span>
         </div>
-        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Interactive AI Tools</h1>
+        <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">AI Readiness & Assessment Tools</h1>
         <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
-          Explore our suite of AI-powered tools designed to help you assess, plan, and implement AI systems for your organization.
+          Evaluate your organization's AI readiness and uncover opportunities to prepare for successful AI implementation.
         </p>
       </div>
     </div>
