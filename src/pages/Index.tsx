@@ -13,8 +13,6 @@ import {
   ArrowRight,
   CheckCircle2,
   XCircle,
-  User,
-  ImageIcon,
 } from "lucide-react";
 
 const frameworkStages = [
@@ -152,44 +150,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 4 · Founder Spotlight */}
-    <section className="section-padding">
-      <div className="container mx-auto">
-        <SectionHeading tag="Leadership" title="Meet the Founder" />
-        <div className="max-w-3xl mx-auto">
-          <div className="glass-panel p-6 sm:p-8 md:p-10 glow-border">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-              {/* Headshot placeholder */}
-              <div className="shrink-0 flex flex-col items-center gap-2">
-                <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-xl bg-muted/40 border border-border/30 flex flex-col items-center justify-center">
-                  <User className="h-10 w-10 text-muted-foreground/40" />
-                  <ImageIcon className="h-4 w-4 text-muted-foreground/30 mt-1" />
-                </div>
-                <span className="text-[10px] text-muted-foreground/50 tracking-wide">Founder Photo Coming Soon</span>
-              </div>
-              {/* Bio */}
-              <div className="text-center md:text-left flex-1">
-                <h3 className="font-display text-lg sm:text-xl font-bold">Mardel Michelle Zavala</h3>
-                <p className="text-xs sm:text-sm text-primary font-medium mt-1 mb-4">Founder & AI Implementation Strategist</p>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3">
-                  Mardel founded Go AI Innovation to help organizations reclaim time and operate more intelligently through AI. With deep expertise in business process automation and intelligent systems, she created the Time Reclaimed™ Framework — a proven methodology for assessing, planning, and deploying AI systems that deliver measurable results.
-                </p>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5">
-                  Her mission is clear: make AI accessible, actionable, and impactful for every organization — from small businesses to government departments.
-                </p>
-                <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-                  <Link to="/book">
-                    Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* 5 · Qualification */}
+    {/* 4 · Qualification */}
     <section className="section-padding bg-secondary/20">
       <div className="container mx-auto">
         <SectionHeading
