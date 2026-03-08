@@ -16,6 +16,9 @@ import {
   Activity,
   Zap,
   BarChart3,
+  Users,
+  Bot,
+  Lightbulb,
 } from "lucide-react";
 
 const tools = [
@@ -67,6 +70,13 @@ const testimonials = [
     name: "Amara Okafor",
     role: "Executive Director, Community Forward",
   },
+];
+
+const teamPlaceholders = [
+  { icon: Users, name: "AI Strategy Lead", desc: "Driving organizational AI transformation" },
+  { icon: Bot, name: "Automation Architect", desc: "Designing intelligent workflow systems" },
+  { icon: Lightbulb, name: "AI Solutions Consultant", desc: "Tailoring AI to industry needs" },
+  { icon: Zap, name: "Innovation Analyst", desc: "Identifying high-impact AI opportunities" },
 ];
 
 const Index = () => {
@@ -139,8 +149,46 @@ const Index = () => {
         </div>
       </section>
 
+      {/* The Challenge */}
+      <section className="section-padding">
+        <div className="container mx-auto">
+          <SectionHeading
+            tag="The Challenge"
+            title="Why Organizations Lose Time"
+            description="Manual processes, disconnected systems, and outdated workflows cost organizations thousands of hours every year. AI changes that."
+          />
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              {
+                icon: Clock,
+                title: "Repetitive Manual Tasks",
+                desc: "Teams spend 40%+ of their time on tasks that AI can automate — data entry, scheduling, reporting, and follow-ups.",
+              },
+              {
+                icon: Activity,
+                title: "Disconnected Systems",
+                desc: "Information silos and fragmented tools slow decision-making and create bottlenecks across departments.",
+              },
+              {
+                icon: BarChart3,
+                title: "Missed Opportunities",
+                desc: "Without intelligent systems, organizations miss insights hiding in their data — opportunities that drive growth.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="dash-card">
+                <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mb-4">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-display text-base font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Tools — primary section */}
-      <section id="tools" className="section-padding">
+      <section id="tools" className="section-padding bg-secondary/20">
         <div className="container mx-auto">
           <SectionHeading
             tag="Platform Tools"
@@ -152,11 +200,71 @@ const Index = () => {
               <ToolCard key={t.title} {...t} />
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/tools">
+                View All Tools <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Framework Preview */}
+      <section className="section-padding">
+        <div className="container mx-auto">
+          <SectionHeading
+            tag="Our Methodology"
+            title="The Time Reclaimed™ Framework"
+            description="Seven stages that take your organization from operational inefficiency to AI-powered transformation."
+          />
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+            {["Discover", "Diagnose", "Design", "Develop", "Deploy", "Drive", "Dominate"].map((stage, i) => (
+              <div key={stage} className="glass-panel p-4 text-center hover:glow-border transition-all duration-300">
+                <div className="text-[10px] text-primary font-semibold mb-1">0{i + 1}</div>
+                <div className="font-display text-sm font-semibold">{stage}</div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/framework">
+                Explore the Full Framework <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation Team */}
+      <section className="section-padding bg-secondary/20">
+        <div className="container mx-auto">
+          <SectionHeading
+            tag="Our People"
+            title="Our Innovation Team"
+            description="Go AI Innovation is building a team of AI strategists, consultants, and intelligent systems designed to help organizations transform operations."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {teamPlaceholders.map((m) => (
+              <div key={m.name} className="dash-card text-center">
+                <div className="h-14 w-14 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-4">
+                  <m.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-[13px] mb-1">{m.name}</h3>
+                <p className="text-[11px] text-muted-foreground">{m.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/founder">Meet Our Founder</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-secondary/20">
+      <section className="section-padding">
         <div className="container mx-auto">
           <SectionHeading tag="Impact & Results" title="What Our Clients Say" />
           <div className="grid md:grid-cols-3 gap-5">
@@ -176,11 +284,18 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+              <Link to="/impact">
+                View All Results <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-secondary/20">
         <div className="container mx-auto max-w-xl">
           <div className="glass-panel p-8 md:p-10 text-center glow-border">
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">

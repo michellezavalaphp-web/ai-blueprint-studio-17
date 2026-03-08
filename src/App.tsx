@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Services from "./pages/Services";
 import Tools from "./pages/Tools";
+import Framework from "./pages/Framework";
+import Resources from "./pages/Resources";
+import Impact from "./pages/Impact";
 import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
@@ -27,6 +30,9 @@ const App = () => (
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/services" element={<Services />} />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/framework" element={<Framework />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/impact" element={<Impact />} />
             <Route path="/founder" element={<Founder />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<Book />} />
