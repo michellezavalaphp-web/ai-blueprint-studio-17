@@ -87,6 +87,8 @@ const Index = () => {
               <span className="text-gradient">Lead the AI Era.</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
+              Powered by the <span className="text-primary font-semibold">Time Reclaimed™ Framework</span> — our proven methodology for helping organizations reclaim time and efficiency through AI systems and automation.
+            </p>
               Not sure where to start with AI? Try one of our free tools below —
               no sign-up needed, no tech experience required.
             </p>
