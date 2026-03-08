@@ -24,8 +24,8 @@ const tools = [
   },
   {
     icon: Clock,
-    title: "Time Reclaimed Calculator",
-    description: "Find out how many hours per week AI could save you and your team.",
+    title: "Time Reclaimed™ Calculator",
+    description: "Use our proprietary Time Reclaimed™ Framework to see how many hours AI could save your team each week.",
     benefit: "See your potential savings instantly",
   },
   {
@@ -87,15 +87,14 @@ const Index = () => {
               <span className="text-gradient">Lead the AI Era.</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-              Not sure where to start with AI? Try one of our free tools below —
-              no sign-up needed, no tech experience required.
+              Powered by the <span className="text-primary font-semibold">Time Reclaimed™ Framework</span> — our proven methodology for helping organizations reclaim time through AI. No tech experience required.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/tools">Discover Your AI Readiness</Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/tools">Calculate Time Reclaimed</Link>
+                <Link to="/tools">Calculate Time Reclaimed™</Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
                 <Link to="/tools">Generate Your AI Blueprint</Link>

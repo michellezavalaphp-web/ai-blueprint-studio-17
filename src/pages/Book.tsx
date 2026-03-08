@@ -22,9 +22,10 @@ const steps = [
 
 const includes = [
   "One-on-one consultation with an AI strategist",
-  "Assessment of your current workflows",
+  "Assessment using the Time Reclaimed™ Framework",
   "Identification of top AI automation opportunities",
   "Custom AI implementation roadmap",
+  "Time Reclaimed™ score for your organization",
   "No obligation — just actionable insights",
 ];
 

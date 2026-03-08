@@ -7,7 +7,7 @@ const services = [
   {
     icon: Brain,
     title: "AI Transformation Strategy",
-    description: "We assess your operations, identify AI opportunities, and create a strategic roadmap tailored to your organization's goals.",
+    description: "Using our Time Reclaimed™ Framework, we assess your operations, identify AI opportunities, and create a strategic roadmap tailored to your organization's goals.",
   },
   {
     icon: Cog,

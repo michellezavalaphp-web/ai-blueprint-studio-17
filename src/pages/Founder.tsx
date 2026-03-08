@@ -16,7 +16,7 @@ const values = [
   {
     icon: Rocket,
     title: "Approach",
-    description: "Strategy-first implementation. We assess, plan, and deploy AI systems that deliver measurable results from day one.",
+    description: "The Time Reclaimed™ Framework — our proprietary methodology for assessing, planning, and deploying AI systems that deliver measurable results from day one.",
   },
 ];
 
