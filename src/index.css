@@ -85,7 +85,7 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 px-4;
+    @apply py-12 sm:py-16 md:py-28 px-4;
   }
 
   .platform-grid {
