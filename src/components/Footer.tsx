@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import logo from "@/assets/logo.png";
 
