@@ -13,6 +13,9 @@ import {
   ArrowRight,
   CheckCircle2,
   XCircle,
+  ShieldCheck,
+  LockKeyhole,
+  Building2,
 } from "lucide-react";
 
 const frameworkStages = [
