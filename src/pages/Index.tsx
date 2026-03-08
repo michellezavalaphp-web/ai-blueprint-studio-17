@@ -24,8 +24,8 @@ const tools = [
   },
   {
     icon: Clock,
-    title: "Time Reclaimed Calculator",
-    description: "Find out how many hours per week AI could save you and your team.",
+    title: "Time Reclaimed™ Calculator",
+    description: "Use our proprietary Time Reclaimed™ Framework to see how many hours AI could save your team each week.",
     benefit: "See your potential savings instantly",
   },
   {
