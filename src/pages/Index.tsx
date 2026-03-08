@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ToolCard from "@/components/ToolCard";
+import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import {
   Gauge,
@@ -68,33 +69,49 @@ const testimonials = [
 const Index = () => {
   return (
     <>
-      {/* Hero — short, warm, one clear CTA */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+      {/* Hero */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
         <div className="container mx-auto px-4 relative z-10 py-16">
-          <div className="max-w-2xl mx-auto text-center animate-fade-up">
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
-              See How AI Can Help{" "}
-              <span className="text-gradient">Your Organization</span>
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-8">
-              Not sure where to start? Try one of our free tools below — no
-              sign-up needed, no tech experience required.
+          <div className="max-w-3xl mx-auto text-center animate-fade-up">
+            <img src={logo} alt="Go AI Innovation" className="h-14 md:h-16 w-auto mx-auto mb-5" />
+            <p className="text-sm uppercase tracking-[0.25em] text-primary font-medium mb-6">
+              Intelligent Systems for Modern Organizations
             </p>
-            <Button variant="hero" size="lg" asChild>
-              <a href="#tools">
-                Explore the Tools <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+              Reclaim Time. Transform Operations.{" "}
+              <span className="text-gradient">Lead the AI Era.</span>
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
+              Not sure where to start with AI? Try one of our free tools below —
+              no sign-up needed, no tech experience required.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/tools">Discover Your AI Readiness</Link>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild>
+                <Link to="/tools">Calculate Time Reclaimed</Link>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild>
+                <Link to="/tools">Generate Your AI Blueprint</Link>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild>
+                <Link to="/tools">Explore AI Tools</Link>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild>
+                <Link to="/book">Book an AI Strategy Session</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Tools — the primary section */}
+      {/* Tools — primary section */}
       <section id="tools" className="section-padding">
         <div className="container mx-auto">
           <SectionHeading
@@ -110,7 +127,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Simple value props */}
+      {/* Stats */}
       <section className="section-padding bg-secondary/30">
         <div className="container mx-auto max-w-3xl text-center">
           <SectionHeading
@@ -136,10 +153,7 @@ const Index = () => {
       {/* Testimonials */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <SectionHeading
-            tag="Real Results"
-            title="What Our Clients Say"
-          />
+          <SectionHeading tag="Real Results" title="What Our Clients Say" />
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div key={t.name} className="glass rounded-lg p-6 flex flex-col gap-4">

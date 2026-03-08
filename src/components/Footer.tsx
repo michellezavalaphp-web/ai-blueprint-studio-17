@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import { Zap } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border bg-card/40 section-padding !py-12">
     <div className="container mx-auto grid gap-8 md:grid-cols-4">
       <div>
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold mb-3">
-          <Zap className="h-5 w-5 text-primary" />
-          Go AI Innovation
+        <Link to="/" className="flex items-center gap-2 mb-3">
+          <img src={logo} alt="Go AI Innovation" className="h-7 w-auto" />
         </Link>
         <p className="text-sm text-muted-foreground max-w-xs mb-4">
           Intelligent Systems for Modern Organizations. Led by Mardel Michelle Zavala.
