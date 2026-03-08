@@ -153,7 +153,41 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 4 · Security, Compliance & Responsible AI */}
+    {/* 4 · Our Mission & Public Impact */}
+    <section className="section-padding">
+      <div className="container mx-auto">
+        <SectionHeading
+          tag="Mission"
+          title="Our Mission & Public Impact"
+          description="Go AI Innovation helps organizations reclaim time, improve operational efficiency, and responsibly implement AI systems that drive measurable results."
+        />
+        <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Gauge className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Operational Efficiency</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Helping organizations reduce manual work and improve productivity through intelligent automation.</p>
+          </div>
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <BrainCircuit className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Workforce Empowerment</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Supporting teams with AI-assisted systems that improve decision-making and operational capacity.</p>
+          </div>
+          <div className="dash-card text-center">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+            </div>
+            <h3 className="font-display text-sm sm:text-base font-semibold mb-2">Responsible AI Adoption</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Guiding organizations in implementing AI systems with transparency, accountability, and long-term sustainability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* 5 · Security, Compliance & Responsible AI */}
     <section className="section-padding">
       <div className="container mx-auto">
         <SectionHeading
