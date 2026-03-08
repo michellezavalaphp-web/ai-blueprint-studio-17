@@ -2,13 +2,15 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap } from "lucide-react";
+import SocialIcons from "@/components/SocialIcons";
 
 const navLinks = [
   { label: "Home", to: "/" },
+  { label: "Solutions", to: "/solutions" },
   { label: "Services", to: "/services" },
-  { label: "Insurance", to: "/insurance" },
   { label: "AI Tools", to: "/tools" },
-  { label: "Book a Session", to: "/book" },
+  { label: "Founder", to: "/founder" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -23,12 +25,12 @@ const Navbar = () => {
           <span>Go AI Innovation</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 location.pathname === l.to
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -37,18 +39,19 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <Button variant="hero" size="sm" className="ml-2" asChild>
+          <SocialIcons className="ml-2" size={16} />
+          <Button variant="hero" size="sm" className="ml-3" asChild>
             <Link to="/book">Get Started</Link>
           </Button>
         </nav>
 
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
-        <nav className="md:hidden glass border-t border-border px-4 pb-4 space-y-1">
+        <nav className="lg:hidden glass border-t border-border px-4 pb-4 space-y-1">
           {navLinks.map((l) => (
             <Link
               key={l.to}
@@ -61,6 +64,9 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <div className="px-4 py-2">
+            <SocialIcons size={18} />
+          </div>
           <Button variant="hero" size="sm" className="w-full mt-2" asChild>
             <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
           </Button>
