@@ -96,7 +96,7 @@
   }
 
   .dash-card {
-    @apply glass-panel p-6 hover:glow-border transition-all duration-300;
+    @apply glass-panel p-4 sm:p-6 hover:glow-border transition-all duration-300;
   }
 
   .page-header {
