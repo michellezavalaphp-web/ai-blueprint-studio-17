@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 import SocialIcons from "@/components/SocialIcons";
 import logo from "@/assets/logo.png";
 
@@ -13,6 +14,10 @@ const Footer = () => (
           Intelligent Systems for Modern Organizations. Powered by the Time Reclaimed™ Framework.
         </p>
         <SocialIcons size={15} />
+        <div className="flex items-center gap-2 mt-4 text-muted-foreground">
+          <Phone className="h-3.5 w-3.5 text-primary/70" />
+          <span className="text-[11px] leading-tight">(XXX) XXX-XXXX<br /><span className="text-muted-foreground/60">AI Strategy Line – Coming Soon</span></span>
+        </div>
       </div>
       <div>
         <h4 className="font-display font-semibold mb-3 sm:mb-4 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">Platform</h4>
