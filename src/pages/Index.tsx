@@ -146,6 +146,10 @@ const Index = () => (
             </div>
           ))}
         </div>
+        {/* Visual accent */}
+        <div className="mt-10 sm:mt-14 max-w-3xl mx-auto overflow-hidden rounded-xl border border-border/20">
+          <img src={frameworkVisual} alt="Digital network visualization representing AI-powered data transformation" className="w-full h-32 sm:h-44 object-cover opacity-60" />
+        </div>
       </div>
     </section>
 
