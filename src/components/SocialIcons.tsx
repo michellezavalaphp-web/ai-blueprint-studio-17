@@ -1,4 +1,4 @@
-import { Youtube, Instagram } from "lucide-react";
+import { Youtube, Instagram, Facebook } from "lucide-react";
 
 /* Custom X (formerly Twitter) icon */
 const XIcon = ({ size = 18 }: { size?: number }) => (
