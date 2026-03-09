@@ -62,6 +62,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    letter-spacing: -0.025em;
   }
 }
 
@@ -72,8 +77,8 @@
   }
 
   .glow-border {
-    box-shadow: 0 0 24px -6px hsl(207 90% 54% / 0.25),
-                0 0 0 1px hsl(207 90% 54% / 0.08);
+    box-shadow: 0 0 24px -6px hsl(207 90% 54% / 0.2),
+                0 0 0 1px hsl(207 90% 54% / 0.06);
   }
 
   .glass {
@@ -85,31 +90,35 @@
   }
 
   .section-padding {
-    @apply py-12 sm:py-16 md:py-28 px-4;
+    @apply py-14 sm:py-20 md:py-28 px-4;
   }
 
   .platform-grid {
     background-image:
-      linear-gradient(hsl(222 15% 14% / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(222 15% 14% / 0.4) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(hsl(222 15% 14% / 0.25) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(222 15% 14% / 0.25) 1px, transparent 1px);
+    background-size: 72px 72px;
   }
 
   .dash-card {
-    @apply glass-panel p-4 sm:p-6 hover:glow-border transition-all duration-300;
+    @apply glass-panel p-5 sm:p-7 hover:glow-border transition-all duration-300;
   }
 
   .page-header {
-    @apply relative py-10 sm:py-16 md:py-20 px-4 overflow-hidden;
+    @apply relative py-12 sm:py-16 md:py-24 px-4 overflow-hidden;
   }
 
   .badge-tag {
-    @apply inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary border rounded-full px-3.5 py-1.5;
-    background-color: hsl(207 90% 54% / 0.08);
-    border-color: hsl(207 90% 54% / 0.15);
+    @apply inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary border rounded-full px-3.5 py-1.5;
+    background-color: hsl(207 90% 54% / 0.06);
+    border-color: hsl(207 90% 54% / 0.12);
   }
 
   .stat-value {
     @apply font-display text-3xl md:text-4xl font-bold text-primary;
+  }
+
+  .section-divider {
+    @apply w-12 h-px bg-primary/20 mx-auto;
   }
 }
