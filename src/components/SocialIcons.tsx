@@ -18,7 +18,7 @@ const socials = [
   { icon: Youtube, href: "https://youtube.com/@goaiinnovation", label: "YouTube" },
   { icon: Instagram, href: "https://www.instagram.com/goaiinnovation", label: "Instagram" },
   { icon: XIcon, href: "https://x.com/goaiinnovation", label: "X" },
-  { icon: TikTokIcon, href: "https://tiktok.com/@goaiinnovation", label: "TikTok" },
+  { icon: TikTokIcon, href: "https://www.tiktok.com/@goaiinnovation", label: "TikTok" },
 ];
 
 interface SocialIconsProps {
