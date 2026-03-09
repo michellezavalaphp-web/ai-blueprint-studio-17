@@ -16,7 +16,7 @@ const TikTokIcon = ({ size = 18 }: { size?: number }) => (
 
 const socials = [
   { icon: Youtube, href: "https://youtube.com/@goaiinnovation", label: "YouTube" },
-  { icon: Instagram, href: "https://instagram.com/goaiinnovation", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/goaiinnovation", label: "Instagram" },
   { icon: XIcon, href: "https://x.com/goaiinnovation", label: "X" },
   { icon: TikTokIcon, href: "https://tiktok.com/@goaiinnovation", label: "TikTok" },
 ];
