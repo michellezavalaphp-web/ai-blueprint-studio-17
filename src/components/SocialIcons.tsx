@@ -1,4 +1,4 @@
-import { Youtube, Instagram } from "lucide-react";
+import { Youtube, Instagram, Facebook } from "lucide-react";
 
 /* Custom X (formerly Twitter) icon */
 const XIcon = ({ size = 18 }: { size?: number }) => (
@@ -17,6 +17,7 @@ const TikTokIcon = ({ size = 18 }: { size?: number }) => (
 const socials = [
   { icon: Youtube, href: "https://youtube.com/@goaiinnovation", label: "YouTube" },
   { icon: Instagram, href: "https://www.instagram.com/goaiinnovation", label: "Instagram" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1Ef4pqPgNg/", label: "Facebook" },
   { icon: XIcon, href: "https://x.com/goaiinnovation", label: "X" },
   { icon: TikTokIcon, href: "https://www.tiktok.com/@goaiinnovation", label: "TikTok" },
 ];
