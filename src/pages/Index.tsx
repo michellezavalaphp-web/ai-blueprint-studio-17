@@ -161,13 +161,18 @@ const Index = () => (
           title="AI Strategy & Implementation"
           description="End-to-end support to bring intelligent systems into your organization."
         />
-        <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
-          {services.map((s) => (
-            <div key={s.title} className="dash-card text-center">
-              <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{s.title}</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-            </div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto items-center">
+          <div className="grid sm:grid-cols-1 gap-4 sm:gap-5">
+            {services.map((s) => (
+              <div key={s.title} className="dash-card text-center sm:text-left">
+                <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{s.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="hidden lg:block overflow-hidden rounded-xl border border-border/20">
+            <img src={servicesVisual} alt="Business team collaborating with digital analytics and AI dashboards" className="w-full h-full object-cover opacity-70" />
+          </div>
         </div>
         <div className="text-center mt-8 sm:mt-10">
           <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
