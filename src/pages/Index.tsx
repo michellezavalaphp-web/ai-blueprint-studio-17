@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import frameworkVisual from "@/assets/framework-visual.jpg";
+import servicesVisual from "@/assets/services-visual.jpg";
+import strategyVisual from "@/assets/strategy-visual.jpg";
 import {
   Gauge,
   ScanSearch,
