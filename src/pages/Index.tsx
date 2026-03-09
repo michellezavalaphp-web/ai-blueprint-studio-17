@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import frameworkVisual from "@/assets/framework-visual.jpg";
+import servicesVisual from "@/assets/services-visual.jpg";
+import strategyVisual from "@/assets/strategy-visual.jpg";
 import {
   Gauge,
   ScanSearch,
@@ -143,6 +146,10 @@ const Index = () => (
             </div>
           ))}
         </div>
+        {/* Visual accent */}
+        <div className="mt-10 sm:mt-14 max-w-3xl mx-auto overflow-hidden rounded-xl border border-border/20">
+          <img src={frameworkVisual} alt="Digital network visualization representing AI-powered data transformation" className="w-full h-32 sm:h-44 object-cover opacity-60" />
+        </div>
       </div>
     </section>
 
@@ -154,13 +161,18 @@ const Index = () => (
           title="AI Strategy & Implementation"
           description="End-to-end support to bring intelligent systems into your organization."
         />
-        <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
-          {services.map((s) => (
-            <div key={s.title} className="dash-card text-center">
-              <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{s.title}</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-            </div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto items-center">
+          <div className="grid sm:grid-cols-1 gap-4 sm:gap-5">
+            {services.map((s) => (
+              <div key={s.title} className="dash-card text-center sm:text-left">
+                <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{s.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="hidden lg:block overflow-hidden rounded-xl border border-border/20">
+            <img src={servicesVisual} alt="Business team collaborating with digital analytics and AI dashboards" className="w-full h-full object-cover opacity-70" />
+          </div>
         </div>
         <div className="text-center mt-8 sm:mt-10">
           <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
@@ -263,8 +275,12 @@ const Index = () => (
     </section>
 
     {/* ── 7 · Final CTA ── */}
-    <section className="section-padding bg-secondary/15">
-      <div className="container mx-auto max-w-xl">
+    <section className="section-padding bg-secondary/15 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={strategyVisual} alt="Executive strategy consulting session" className="w-full h-full object-cover opacity-[0.06]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+      </div>
+      <div className="container mx-auto max-w-xl relative z-10">
         <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
           <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             Ready to Implement AI in Your Organization?
