@@ -275,8 +275,12 @@ const Index = () => (
     </section>
 
     {/* ── 7 · Final CTA ── */}
-    <section className="section-padding bg-secondary/15">
-      <div className="container mx-auto max-w-xl">
+    <section className="section-padding bg-secondary/15 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <img src={strategyVisual} alt="Executive strategy consulting session" className="w-full h-full object-cover opacity-[0.06]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+      </div>
+      <div className="container mx-auto max-w-xl relative z-10">
         <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
           <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             Ready to Implement AI in Your Organization?
