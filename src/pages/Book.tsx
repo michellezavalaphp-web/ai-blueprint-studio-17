@@ -28,7 +28,16 @@ const includes = [
   "No obligation — just actionable insights",
 ];
 
-const Book = () => (
+const Book = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://api.growthhub365.com/js/form_embed.js";
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
+  return (
   <>
     {/* Page Header */}
     <div className="page-header">
