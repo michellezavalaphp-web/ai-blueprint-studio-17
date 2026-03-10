@@ -105,6 +105,7 @@ const Book = () => {
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default Book;
