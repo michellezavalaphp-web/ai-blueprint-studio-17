@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { CalendarDays, Target, Map, ArrowRight, CheckCircle2, Calendar } from "lucide-react";
+import { useEffect } from "react";
+import { CalendarDays, Target, Map, CheckCircle2, Calendar } from "lucide-react";
 
 const steps = [
   {
@@ -28,7 +28,16 @@ const includes = [
   "No obligation — just actionable insights",
 ];
 
-const Book = () => (
+const Book = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://api.growthhub365.com/js/form_embed.js";
+    script.type = "text/javascript";
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
+  return (
   <>
     {/* Page Header */}
     <div className="page-header">
@@ -79,9 +88,15 @@ const Book = () => (
                 </li>
               ))}
             </ul>
-            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto animate-pulse-glow">
-              Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <div className="w-full mt-2">
+              <iframe
+                src="https://api.growthhub365.com/widget/booking/2t9zp9Jcf8KpPG8MBvDG"
+                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
+                scrolling="no"
+                id="2t9zp9Jcf8KpPG8MBvDG_1773113973549"
+                title="Book Your Free AI Strategy Session"
+              />
+            </div>
             <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-4 tracking-wide">
               Free — no credit card required
             </p>
@@ -90,6 +105,7 @@ const Book = () => (
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default Book;
