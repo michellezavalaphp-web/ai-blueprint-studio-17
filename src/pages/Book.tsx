@@ -80,15 +80,6 @@ const Book = () => {
                 </li>
               ))}
             </ul>
-            <div className="w-full mt-2">
-              <iframe
-                src="https://api.growthhub365.com/widget/booking/2t9zp9Jcf8KpPG8MBvDG"
-                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                scrolling="no"
-                id="2t9zp9Jcf8KpPG8MBvDG_1773113973549"
-                title="Book Your Free AI Strategy Session"
-              />
-            </div>
             <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-4 tracking-wide">
               Free — no credit card required
             </p>
