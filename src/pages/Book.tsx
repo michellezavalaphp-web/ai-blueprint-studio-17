@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { CalendarDays, Target, Map, CheckCircle2, Calendar } from "lucide-react";
 
 const steps = [
