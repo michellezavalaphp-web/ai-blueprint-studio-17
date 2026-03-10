@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { CalendarDays, Target, Map, ArrowRight, CheckCircle2, Calendar } from "lucide-react";
+import { useEffect } from "react";
+import { CalendarDays, Target, Map, CheckCircle2, Calendar } from "lucide-react";
 
 const steps = [
   {
