@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Send, CheckCircle2, Mail, Phone } from "lucide-react";
+import { Send, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -50,15 +50,14 @@ const Contact = () => {
         <div className="container mx-auto max-w-lg">
           {/* Contact details */}
           <div className="glass-panel p-4 sm:p-5 mb-5 sm:mb-6">
-            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
               <div className="flex items-start gap-3">
                 <div className="h-8 w-8 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center shrink-0">
                   <Phone className="h-3.5 w-3.5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold mb-0.5">AI Strategy Line</div>
-                  <div className="text-[11px] sm:text-xs text-muted-foreground">(XXX) XXX-XXXX</div>
-                  <div className="text-[10px] text-muted-foreground/50 mt-0.5">Coming Soon</div>
+                  <div className="text-xs font-semibold mb-0.5">Phone</div>
+                  <a href="tel:3053606170" className="text-[11px] sm:text-xs text-primary hover:underline">(305) 360-6170</a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -67,7 +66,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-xs font-semibold mb-0.5">Email</div>
-                  <a href="mailto:info@goaiinnovation.com" className="text-[11px] sm:text-xs text-primary hover:underline">info@goaiinnovation.com</a>
+                  <a href="mailto:mzavala@goaiinnovation.com" className="text-[11px] sm:text-xs text-primary hover:underline">mzavala@goaiinnovation.com</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-8 w-8 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center shrink-0">
+                  <MapPin className="h-3.5 w-3.5 text-primary" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold mb-0.5">Address</div>
+                  <div className="text-[11px] sm:text-xs text-muted-foreground">8958 West State Road 84, 233<br />Davie, FL 33324</div>
                 </div>
               </div>
             </div>
