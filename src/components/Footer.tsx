@@ -60,9 +60,9 @@ const Footer = () => (
             </div>
           </li>
           <li>
-            <a href="mailto:info@goaiinnovation.com" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors text-[11px] sm:text-xs">
+            <a href="mailto:mzavala@goaiinnovation.com" className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors text-[11px] sm:text-xs">
               <Mail className="h-3 w-3 shrink-0" />
-              <span>info@goaiinnovation.com</span>
+              <span>mzavala@goaiinnovation.com</span>
             </a>
           </li>
         </ul>
