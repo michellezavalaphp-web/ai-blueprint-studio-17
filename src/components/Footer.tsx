@@ -56,7 +56,7 @@ const Footer = () => (
           <li className="pt-2 border-t border-border/20 mt-2">
             <div className="flex items-center gap-1.5 text-muted-foreground text-[11px] sm:text-xs">
               <Phone className="h-3 w-3 shrink-0" />
-              <span>(XXX) XXX-XXXX</span>
+              <span>(305) 360-6170</span>
             </div>
           </li>
           <li>
@@ -70,7 +70,12 @@ const Footer = () => (
     </div>
     <div className="container mx-auto mt-8 sm:mt-12 pt-6 border-t border-border/30 text-center text-[10px] sm:text-[11px] text-muted-foreground space-y-1.5">
       <div>© {new Date().getFullYear()} Go AI Innovation. All rights reserved.</div>
-      <div className="text-muted-foreground/50">Go AI Innovation is a brand of Agape Advisory Group LLC.</div>
+      <div className="text-muted-foreground/50">Go AI Innovation DBA Agape Advisory Group LLC · 8958 West State Road 84, 233, Davie, FL 33324</div>
+      <div className="flex items-center justify-center gap-3">
+        <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+        <span className="text-muted-foreground/30">|</span>
+        <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+      </div>
     </div>
   </footer>
 );

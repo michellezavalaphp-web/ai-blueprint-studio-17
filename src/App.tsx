@@ -14,6 +14,8 @@ import Impact from "./pages/Impact";
 import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +38,8 @@ const App = () => (
             <Route path="/founder" element={<Founder />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
