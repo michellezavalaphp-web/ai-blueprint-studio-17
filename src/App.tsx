@@ -14,6 +14,8 @@ import Impact from "./pages/Impact";
 import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
