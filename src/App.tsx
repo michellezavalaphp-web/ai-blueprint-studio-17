@@ -38,6 +38,8 @@ const App = () => (
             <Route path="/founder" element={<Founder />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
