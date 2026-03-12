@@ -42,12 +42,14 @@ const Footer = () => (
             { to: "/impact", label: "Impact & Results" },
             { to: "/resources", label: "Resources" },
             { to: "/contact", label: "Contact" },
-            { to: "/book", label: "Strategy Session" },
           ].map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">{l.label}</Link>
             </li>
           ))}
+          <li>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">Strategy Session</a>
+          </li>
         </ul>
       </div>
       <div>

@@ -87,9 +87,9 @@ const Services = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
-            <Link to="/book">
-              Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
               <Link to="/tools">Explore AI Tools</Link>

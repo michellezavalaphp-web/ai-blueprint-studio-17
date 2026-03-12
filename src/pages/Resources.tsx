@@ -82,9 +82,9 @@ const Resources = () => (
               Book a strategy session to learn more about upcoming resources and get personalized AI guidance.
             </p>
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to="/book">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

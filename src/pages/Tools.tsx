@@ -57,9 +57,9 @@ const Tools = () => (
               Book a strategy session and we'll build a personalized AI roadmap for your organization.
             </p>
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to="/book">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Request AI Strategy Consultation <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

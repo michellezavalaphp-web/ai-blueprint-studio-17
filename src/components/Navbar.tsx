@@ -64,7 +64,7 @@ const Navbar = () => {
           ))}
           <div className="px-4 pt-1">
             <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
-              <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Get Started</a>
             </Button>
           </div>
         </nav>
