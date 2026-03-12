@@ -43,7 +43,7 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        <button className="lg:hidden text-foreground p-2 -mr-2" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-white p-2 -mr-2" onClick={() => setOpen(!open)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
