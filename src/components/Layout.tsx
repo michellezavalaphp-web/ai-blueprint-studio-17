@@ -4,7 +4,7 @@ import Footer from "./Footer";
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen flex flex-col">
     <Navbar />
-    <main className="flex-1 pt-16 platform-grid">{children}</main>
+    <main className="flex-1 pt-14">{children}</main>
     <Footer />
   </div>
 );

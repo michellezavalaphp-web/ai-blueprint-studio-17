@@ -1,30 +1,20 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
-import SocialIcons from "@/components/SocialIcons";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const mainLinks = [
+const navLinks = [
   { label: "Home", to: "/" },
-  { label: "Solutions", to: "/solutions" },
   { label: "Services", to: "/services" },
   { label: "AI Tools", to: "/tools" },
   { label: "Framework", to: "/framework" },
-];
-
-const moreLinks = [
-  { label: "Impact", to: "/impact" },
-  { label: "Resources", to: "/resources" },
-  { label: "Founder", to: "/founder" },
+  { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
-const allLinks = [...mainLinks, ...moreLinks];
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
 
   const linkClass = (to: string) =>
@@ -42,47 +32,11 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-0.5">
-          {mainLinks.map((l) => (
+          {navLinks.map((l) => (
             <Link key={l.to} to={l.to} className={linkClass(l.to)}>
               {l.label}
             </Link>
           ))}
-
-          {/* More dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setMoreOpen(!moreOpen)}
-              onBlur={() => setTimeout(() => setMoreOpen(false), 150)}
-              className={`px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors flex items-center gap-1 ${
-                moreLinks.some((l) => l.to === location.pathname)
-                  ? "text-primary bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-              }`}
-            >
-              More <ChevronDown className="h-3 w-3" />
-            </button>
-            {moreOpen && (
-              <div className="absolute top-full right-0 mt-1 w-44 glass-panel p-1.5 shadow-xl">
-                {moreLinks.map((l) => (
-                  <Link
-                    key={l.to}
-                    to={l.to}
-                    onClick={() => setMoreOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-[13px] font-medium transition-colors ${
-                      location.pathname === l.to
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
-                    }`}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="w-px h-5 bg-border mx-2" />
-          <SocialIcons size={14} />
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
             <Link to="/book">Get Started</Link>
           </Button>
@@ -95,7 +49,7 @@ const Navbar = () => {
 
       {open && (
         <nav className="lg:hidden bg-card/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
-          {allLinks.map((l) => (
+          {navLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
@@ -107,9 +61,6 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <div className="px-4 py-3">
-            <SocialIcons size={16} />
-          </div>
           <div className="px-4 pt-1">
             <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
               <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
