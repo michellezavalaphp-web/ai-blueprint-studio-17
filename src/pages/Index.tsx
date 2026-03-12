@@ -228,10 +228,10 @@ const Index = () => (
     </section>
 
     {/* ── 6 · Primary CTA (Dark) ── */}
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-dark section-padding relative overflow-hidden">
       <div className="absolute inset-0">
         <img src={aiAbstract} alt="AI systems visualization" className="w-full h-full object-cover opacity-[0.08]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
       </div>
       <div className="container mx-auto max-w-xl relative z-10">
         <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
