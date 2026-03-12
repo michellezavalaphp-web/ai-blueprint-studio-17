@@ -8,7 +8,7 @@ const Footer = () => (
     <div className="container mx-auto grid gap-8 sm:gap-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
       <div className="col-span-2 lg:col-span-1">
         <Link to="/" className="flex items-center gap-2 mb-3">
-          <img src={logo} alt="Go AI Innovation" className="h-6 w-auto" />
+          <img src={logoIcon} alt="Go AI Innovation" className="h-8 w-auto" />
         </Link>
         <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-2">
           Go AI Innovation
