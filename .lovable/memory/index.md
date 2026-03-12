@@ -11,8 +11,8 @@ Go AI Innovation design system, brand rules, and architecture decisions
 ## Visual Tone
 - Enterprise consulting firm — NOT tech startup
 - Default theme is LIGHT (white bg, dark text)
+- Header & footer: dark navy backgrounds
 - Hero section: light (white) so logo displays cleanly
-- Header & footer: white backgrounds
 - Dark sections (`.section-dark`): used for framework, CTA — deep navy HSL 222 30% 5%
 - Light sections: `.section-light` (white), `.section-light-alt` (light gray)
 - Logo (src/assets/logo.png) only on light backgrounds
