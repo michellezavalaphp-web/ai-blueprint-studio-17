@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BOOKING_URL } from "@/lib/constants";
 import ToolCard from "@/components/ToolCard";
 import { Gauge, Clock, ScanSearch, ArrowRight, LayoutDashboard } from "lucide-react";
 
