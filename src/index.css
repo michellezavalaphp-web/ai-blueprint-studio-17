@@ -156,8 +156,8 @@
 
   .platform-grid {
     background-image:
-      linear-gradient(hsl(222 15% 14% / 0.25) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(222 15% 14% / 0.25) 1px, transparent 1px);
+      linear-gradient(hsl(220 13% 91% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 13% 91% / 0.5) 1px, transparent 1px);
     background-size: 72px 72px;
   }
 
