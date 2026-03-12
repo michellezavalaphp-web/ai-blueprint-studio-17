@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 
 const Footer = () => (
-  <footer className="border-t border-border/40 bg-white py-10 sm:py-14 px-4">
+  <footer className="section-dark border-t border-[hsl(222,15%,14%)]/40 py-10 sm:py-14 px-4">
     <div className="container mx-auto grid gap-8 sm:gap-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
       <div className="col-span-2 lg:col-span-1">
         <Link to="/" className="flex items-center gap-2 mb-3">

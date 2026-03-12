@@ -22,11 +22,11 @@ const Navbar = () => {
     `px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
       location.pathname === to
         ? "text-primary bg-primary/10"
-        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+        : "text-[hsl(215,15%,65%)] hover:text-white hover:bg-white/5"
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl border-b border-border/40">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(222,30%,5%)]/95 backdrop-blur-2xl border-b border-[hsl(222,15%,14%)]/40">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={logoIcon} alt="Go AI Innovation" className="h-8 sm:h-9 w-auto" />
@@ -43,20 +43,20 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        <button className="lg:hidden text-foreground p-2 -mr-2" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-white p-2 -mr-2" onClick={() => setOpen(!open)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <nav className="lg:hidden bg-white/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
+        <nav className="lg:hidden bg-[hsl(222,30%,5%)]/95 backdrop-blur-2xl border-t border-[hsl(222,15%,14%)]/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
           {navLinks.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               onClick={() => setOpen(false)}
               className={`block px-4 py-3 rounded-md text-sm font-medium ${
-                location.pathname === l.to ? "text-primary bg-primary/10" : "text-muted-foreground"
+                location.pathname === l.to ? "text-primary bg-primary/10" : "text-[hsl(215,15%,65%)]"
               }`}
             >
               {l.label}
