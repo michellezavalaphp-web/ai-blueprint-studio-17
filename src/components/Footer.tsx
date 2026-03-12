@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SocialIcons from "@/components/SocialIcons";
 import logoIcon from "@/assets/logo-icon.png";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { BOOKING_URL } from "@/lib/constants";
 
 const Footer = () => (
   <footer className="border-t border-border/40 bg-card/30 backdrop-blur-xl py-10 sm:py-14 px-4">
