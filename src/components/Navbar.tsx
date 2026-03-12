@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
-            <Link to="/book">Get Started</Link>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Get Started</a>
           </Button>
         </nav>
 
