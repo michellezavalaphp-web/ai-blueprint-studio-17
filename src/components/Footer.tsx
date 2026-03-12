@@ -11,11 +11,8 @@ const Footer = () => (
         <Link to="/" className="flex items-center gap-2 mb-3">
           <img src={logoIcon} alt="Go AI Innovation" className="h-10 w-10" />
         </Link>
-        <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-2">
+        <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-5">
           Go AI Innovation
-        </p>
-        <p className="text-[10px] sm:text-[11px] text-muted-foreground/70 leading-relaxed mb-5">
-          DBA Agape Advisory Group LLC
         </p>
         <SocialIcons size={15} />
       </div>
@@ -78,7 +75,7 @@ const Footer = () => (
     </div>
     <div className="container mx-auto mt-8 sm:mt-12 pt-6 border-t border-border/30 text-center text-[10px] sm:text-[11px] text-muted-foreground space-y-1.5">
       <div>© {new Date().getFullYear()} Go AI Innovation. All rights reserved.</div>
-      <div className="text-muted-foreground/50">Go AI Innovation DBA Agape Advisory Group LLC · 8958 West State Road 84 #233, Davie, FL 33324</div>
+      <div className="text-muted-foreground/50">Agape Advisory Group LLC DBA Go AI Innovation · 8958 West State Road 84 #233, Davie, FL 33324</div>
       <div className="flex items-center justify-center gap-3">
         <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
         <span className="text-muted-foreground/30">|</span>

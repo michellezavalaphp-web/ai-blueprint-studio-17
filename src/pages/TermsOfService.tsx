@@ -25,14 +25,14 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>1. Agreement to Terms</h2>
           <p>
-            By accessing or using the website and services provided by <strong>Go AI Innovation DBA Agape Advisory Group LLC</strong> ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services.
+            By accessing or using the website and services provided by <strong>Agape Advisory Group LLC DBA Go AI Innovation</strong> ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services.
           </p>
         </div>
 
         <div className="prose-section">
           <h2>2. Company Information</h2>
           <p>
-            Go AI Innovation DBA Agape Advisory Group LLC<br />
+            Agape Advisory Group LLC DBA Go AI Innovation<br />
             8958 West State Road 84, 233<br />
             Davie, FL 33324<br />
             Email: <a href="mailto:mzavala@goaiinnovation.com" className="text-primary hover:underline">mzavala@goaiinnovation.com</a><br />
@@ -61,7 +61,7 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>5. Intellectual Property</h2>
           <p>
-            All content, features, and functionality on our website — including but not limited to the Time Reclaimed™ Framework, text, graphics, logos, and software — are the exclusive property of Go AI Innovation DBA Agape Advisory Group LLC and are protected by copyright, trademark, and other intellectual property laws.
+            All content, features, and functionality on our website — including but not limited to the Time Reclaimed™ Framework, text, graphics, logos, and software — are the exclusive property of Agape Advisory Group LLC DBA Go AI Innovation and are protected by copyright, trademark, and other intellectual property laws.
           </p>
         </div>
 
@@ -82,14 +82,14 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>8. Limitation of Liability</h2>
           <p>
-            To the fullest extent permitted by law, Go AI Innovation DBA Agape Advisory Group LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities arising from your use of our services.
+            To the fullest extent permitted by law, Agape Advisory Group LLC DBA Go AI Innovation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities arising from your use of our services.
           </p>
         </div>
 
         <div className="prose-section">
           <h2>9. Indemnification</h2>
           <p>
-            You agree to indemnify and hold harmless Go AI Innovation DBA Agape Advisory Group LLC, its officers, directors, employees, and agents from any claims, liabilities, damages, or expenses arising from your use of our services or violation of these Terms.
+            You agree to indemnify and hold harmless Agape Advisory Group LLC DBA Go AI Innovation, its officers, directors, employees, and agents from any claims, liabilities, damages, or expenses arising from your use of our services or violation of these Terms.
           </p>
         </div>
 

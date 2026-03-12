@@ -25,14 +25,14 @@ const PrivacyPolicy = () => (
         <div className="prose-section">
           <h2>1. Introduction</h2>
           <p>
-            <strong>Go AI Innovation DBA Agape Advisory Group LLC</strong> ("Company," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            <strong>Agape Advisory Group LLC DBA Go AI Innovation</strong> ("Company," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
         </div>
 
         <div className="prose-section">
           <h2>2. Company Information</h2>
           <p>
-            Go AI Innovation DBA Agape Advisory Group LLC<br />
+            Agape Advisory Group LLC DBA Go AI Innovation<br />
             8958 West State Road 84, 233<br />
             Davie, FL 33324<br />
             Email: <a href="mailto:mzavala@goaiinnovation.com" className="text-primary hover:underline">mzavala@goaiinnovation.com</a><br />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoIcon from "@/assets/logo-icon.png";
 import { BOOKING_URL } from "@/lib/constants";
 
 const navLinks = [
@@ -29,7 +29,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-2xl border-b border-border/40">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="Go AI Innovation" className="h-8 sm:h-9 w-auto" />
+          <img src={logoIcon} alt="Go AI Innovation" className="h-8 sm:h-9 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-0.5">
