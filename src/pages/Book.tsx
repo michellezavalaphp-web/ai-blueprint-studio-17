@@ -82,6 +82,11 @@ const Book = () => {
                 </li>
               ))}
             </ul>
+            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Your Free Session Now <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
             <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-4 tracking-wide">
               Free — no credit card required
             </p>
