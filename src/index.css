@@ -138,8 +138,8 @@
   }
 
   .glow-border {
-    box-shadow: 0 0 24px -6px hsl(207 90% 54% / 0.2),
-                0 0 0 1px hsl(207 90% 54% / 0.06);
+    box-shadow: 0 4px 24px -6px hsl(207 90% 54% / 0.1),
+                0 0 0 1px hsl(220 13% 91%);
   }
 
   .glass {
