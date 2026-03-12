@@ -122,7 +122,7 @@ const Index = () => (
     </section>
 
     {/* ── 3 · Time Reclaimed™ Framework (Light Alt) ── */}
-    <section className="section-light-alt section-padding">
+    <section className="section-dark section-padding">
       <div className="container mx-auto">
         <SectionHeading
           tag="Our Methodology"
