@@ -26,7 +26,7 @@ const Navbar = () => {
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl border-b border-border/40">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(222,30%,5%)]/95 backdrop-blur-2xl border-b border-[hsl(222,15%,14%)]/40">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={logoIcon} alt="Go AI Innovation" className="h-8 sm:h-9 w-auto" />
