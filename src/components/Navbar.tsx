@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <nav className="lg:hidden bg-white/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
+        <nav className="lg:hidden bg-[hsl(222,30%,5%)]/95 backdrop-blur-2xl border-t border-[hsl(222,15%,14%)]/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
           {navLinks.map((l) => (
             <Link
               key={l.to}
