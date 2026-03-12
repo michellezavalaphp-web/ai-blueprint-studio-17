@@ -57,8 +57,8 @@ const methodology = [
 const Index = () => (
   <>
     {/* ── 1 · Hero (Dark) ── */}
-    <section className="relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center opacity-[0.07]" style={{ backgroundImage: `url(${heroBg})` }} />
+    <section className="relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-cover bg-center opacity-[0.04]" style={{ backgroundImage: `url(${heroBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/70 to-background" />
       <div className="container mx-auto px-4 relative z-10 py-8 sm:py-14 md:py-16">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
