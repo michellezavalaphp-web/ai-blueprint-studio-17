@@ -49,51 +49,18 @@ const Contact = () => {
         </div>
       </div>
 
-      <section className="section-light section-padding !pt-6 sm:!pt-10">
-        <div className="container mx-auto max-w-lg">
-          {/* Contact details */}
-          <div className="dash-card p-4 sm:p-5 mb-5 sm:mb-6">
-            <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
-              <div className="flex items-start gap-3">
-                <div className="h-8 w-8 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
-                  <Phone className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold mb-0.5">Phone</div>
-                  <a href="tel:3053606170" className="text-[11px] sm:text-xs text-primary hover:underline font-medium">305-360-6170</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-8 w-8 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
-                  <Mail className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold mb-0.5">Email</div>
-                  <a href="mailto:MZavala@GoAIInnovation.com" className="text-[11px] sm:text-xs text-primary hover:underline">MZavala@GoAIInnovation.com</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="h-8 w-8 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
-                  <MapPin className="h-3.5 w-3.5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold mb-0.5">Address</div>
-                  <div className="text-[11px] sm:text-xs text-muted-foreground">8958 West State Road 84 #233<br />Davie, FL 33324</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      <section className="section-light section-padding">
+        <div className="container mx-auto max-w-xl">
           {submitted ? (
-            <div className="dash-card p-8 sm:p-10 text-center glow-border">
-              <CheckCircle2 className="h-8 w-8 sm:h-10 sm:w-10 text-primary mx-auto mb-4" />
-              <h3 className="font-display text-lg sm:text-xl font-bold mb-2">Thank You!</h3>
-              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+            <div className="dash-card p-10 sm:p-14 text-center glow-border">
+              <CheckCircle2 className="h-10 w-10 sm:h-12 sm:w-12 text-primary mx-auto mb-5" />
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-3">Thank You!</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">
                 Your message has been received. Our team will get back to you shortly.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="dash-card p-5 sm:p-8 space-y-4 sm:space-y-5 glow-border">
+            <form onSubmit={handleSubmit} className="dash-card p-6 sm:p-10 space-y-5 sm:space-y-6 glow-border">
               <div className="space-y-1.5">
                 <Label htmlFor="name" className="text-xs sm:text-[13px]">Full Name <span className="text-destructive">*</span></Label>
                 <Input id="name" name="name" placeholder="Your full name" maxLength={100} required className="h-11 sm:h-10 text-sm" />
@@ -112,7 +79,7 @@ const Contact = () => {
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="message" className="text-xs sm:text-[13px]">Message <span className="text-destructive">*</span></Label>
-                <Textarea id="message" name="message" placeholder="How can we help?" rows={4} maxLength={1000} required className="text-sm" />
+                <Textarea id="message" name="message" placeholder="How can we help?" rows={5} maxLength={1000} required className="text-sm" />
               </div>
               <Button type="submit" variant="hero" size="lg" className="w-full h-12 sm:h-11 text-sm">
                 Request AI Strategy Consultation <Send className="ml-2 h-4 w-4" />
