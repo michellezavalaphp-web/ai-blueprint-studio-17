@@ -11,7 +11,7 @@ const Footer = () => (
         <Link to="/" className="flex items-center gap-2 mb-3">
           <img src={logoIcon} alt="Go AI Innovation" className="h-10 w-10" />
         </Link>
-        <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-2">
+        <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-5">
           Go AI Innovation
         </p>
         <SocialIcons size={15} />
