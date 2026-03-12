@@ -61,7 +61,7 @@ const Index = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/70 to-background" />
       <div className="container mx-auto px-4 relative z-10 py-14 sm:py-20 md:py-24">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
-          <img src={logo} alt="Go AI Innovation" className="h-9 sm:h-11 md:h-13 w-auto mx-auto mb-5 sm:mb-7" />
+          <img src={logo} alt="Go AI Innovation" className="h-12 sm:h-14 md:h-16 w-auto mx-auto mb-5 sm:mb-7" />
           <span className="badge-tag mb-5 sm:mb-6">
             <Activity className="h-3 w-3" />
             AI Implementation Consulting
