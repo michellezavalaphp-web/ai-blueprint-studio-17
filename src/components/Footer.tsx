@@ -14,9 +14,6 @@ const Footer = () => (
         <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed mb-2">
           Go AI Innovation
         </p>
-        <p className="text-[10px] sm:text-[11px] text-muted-foreground/70 leading-relaxed mb-5">
-          DBA Agape Advisory Group LLC
-        </p>
         <SocialIcons size={15} />
       </div>
       <div>
