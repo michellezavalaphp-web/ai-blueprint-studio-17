@@ -26,7 +26,7 @@ const Navbar = () => {
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-2xl border-b border-border/40">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-2xl border-b border-border/40">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={logoIcon} alt="Go AI Innovation" className="h-8 sm:h-9 w-auto" />
@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <nav className="lg:hidden bg-card/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
+        <nav className="lg:hidden bg-white/95 backdrop-blur-2xl border-t border-border/40 px-4 pb-4 pt-2 space-y-0.5 max-h-[80vh] overflow-y-auto">
           {navLinks.map((l) => (
             <Link
               key={l.to}

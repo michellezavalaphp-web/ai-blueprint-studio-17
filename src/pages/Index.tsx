@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
-import logo from "@/assets/logo-white.png";
-import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
+// hero bg removed — light hero now
 import consultingHero from "@/assets/consulting-hero.jpg";
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import {
@@ -57,12 +57,11 @@ const methodology = [
 const Index = () => (
   <>
     {/* ── 1 · Hero (Dark) ── */}
-    <section className="relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center opacity-[0.07]" style={{ backgroundImage: `url(${heroBg})` }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/70 to-background" />
+    <section className="section-light relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/40 via-background to-background" />
       <div className="container mx-auto px-4 relative z-10 py-8 sm:py-14 md:py-16">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
-          <img src={logo} alt="Go AI Innovation" className="h-28 sm:h-40 md:h-48 w-auto mx-auto mb-5 sm:mb-7 drop-shadow-[0_4px_24px_rgba(59,130,246,0.18)]" />
+          <img src={logo} alt="Go AI Innovation" className="h-28 sm:h-40 md:h-48 w-auto mx-auto mb-5 sm:mb-7" />
           <span className="badge-tag mb-5 sm:mb-6">
             <Activity className="h-3 w-3" />
             AI Implementation Strategist
@@ -123,7 +122,7 @@ const Index = () => (
     </section>
 
     {/* ── 3 · Time Reclaimed™ Framework (Light Alt) ── */}
-    <section className="section-light-alt section-padding">
+    <section className="section-dark section-padding">
       <div className="container mx-auto">
         <SectionHeading
           tag="Our Methodology"
@@ -229,10 +228,10 @@ const Index = () => (
     </section>
 
     {/* ── 6 · Primary CTA (Dark) ── */}
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-dark section-padding relative overflow-hidden">
       <div className="absolute inset-0">
         <img src={aiAbstract} alt="AI systems visualization" className="w-full h-full object-cover opacity-[0.08]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
       </div>
       <div className="container mx-auto max-w-xl relative z-10">
         <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">

@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 222 30% 5%;
-    --foreground: 210 40% 96%;
+    --background: 0 0% 100%;
+    --foreground: 222 30% 12%;
 
-    --card: 222 25% 8%;
-    --card-foreground: 210 40% 96%;
+    --card: 220 20% 97%;
+    --card-foreground: 222 30% 12%;
 
-    --popover: 222 25% 8%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 12%;
 
     --primary: 207 90% 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 22% 12%;
-    --secondary-foreground: 210 40% 90%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 30% 12%;
 
-    --muted: 222 18% 11%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
 
     --accent: 199 100% 50%;
-    --accent-foreground: 222 30% 5%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 15% 14%;
-    --input: 222 15% 14%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 207 90% 54%;
 
     --radius: 0.625rem;
 
-    --sidebar-background: 222 25% 7%;
-    --sidebar-foreground: 210 40% 90%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 30% 12%;
     --sidebar-primary: 207 90% 54%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 18% 11%;
-    --sidebar-accent-foreground: 210 40% 90%;
-    --sidebar-border: 222 15% 14%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 30% 12%;
+    --sidebar-border: 220 13% 91%;
     --sidebar-ring: 207 90% 54%;
 
     --glow: 207 90% 54%;
@@ -101,6 +101,47 @@
   color: hsl(222 30% 12%);
 }
 
+/* ── Dark section overrides ── */
+.section-dark {
+  --background: 222 30% 5%;
+  --foreground: 210 40% 96%;
+  --card: 222 25% 8%;
+  --card-foreground: 210 40% 96%;
+  --muted: 222 18% 11%;
+  --muted-foreground: 215 25% 60%;
+  --border: 222 15% 14%;
+  --secondary: 222 22% 12%;
+  --secondary-foreground: 210 40% 90%;
+  --input: 222 15% 14%;
+  background-color: hsl(222 30% 5%);
+  color: hsl(210 40% 96%);
+}
+
+.section-dark .glass-panel {
+  background-color: hsl(222 25% 8% / 0.7);
+  border-color: hsl(222 15% 14% / 0.4);
+}
+
+.section-dark .dash-card {
+  background-color: hsl(222 25% 8% / 0.7);
+  border-color: hsl(222 15% 14% / 0.4);
+}
+
+.section-dark .badge-tag {
+  background-color: hsl(207 90% 54% / 0.1);
+  border-color: hsl(207 90% 54% / 0.2);
+  color: hsl(207 90% 64%);
+}
+
+.section-dark .glow-border {
+  box-shadow: 0 0 24px -6px hsl(207 90% 54% / 0.2),
+              0 0 0 1px hsl(207 90% 54% / 0.06);
+}
+
+.section-dark .text-gradient {
+  background-image: linear-gradient(135deg, hsl(207 90% 54%), hsl(199 100% 65%));
+}
+
 .section-light .glass-panel,
 .section-light-alt .glass-panel {
   background-color: hsl(0 0% 100% / 0.8);
@@ -134,7 +175,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(207 90% 54%), hsl(199 100% 65%));
+    background-image: linear-gradient(135deg, hsl(207 90% 44%), hsl(199 100% 40%));
   }
 
   .glow-border {
@@ -156,8 +197,8 @@
 
   .platform-grid {
     background-image:
-      linear-gradient(hsl(222 15% 14% / 0.25) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(222 15% 14% / 0.25) 1px, transparent 1px);
+      linear-gradient(hsl(220 13% 91% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 13% 91% / 0.5) 1px, transparent 1px);
     background-size: 72px 72px;
   }
 
