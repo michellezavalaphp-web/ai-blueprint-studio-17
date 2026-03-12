@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BOOKING_URL } from "@/lib/constants";
 import {
   Search,
   Stethoscope,
@@ -140,9 +141,9 @@ const Framework = () => (
             Begin with a free AI Strategy Session and see how the Time Reclaimed™ Framework can transform your organization.
           </p>
           <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-            <Link to="/book">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book Your Free AI Strategy Session <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

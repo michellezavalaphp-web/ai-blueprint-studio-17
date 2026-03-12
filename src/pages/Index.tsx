@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -75,9 +76,9 @@ const Index = () => (
           </p>
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 justify-center max-w-2xl mx-auto">
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to="/book">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Request AI Strategy Consultation <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/tools">Start AI Readiness Assessment</Link>
@@ -244,9 +245,9 @@ const Index = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to="/book">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Request AI Strategy Consultation <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/tools">Start AI Readiness Assessment</Link>

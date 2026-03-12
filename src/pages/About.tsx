@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BOOKING_URL } from "@/lib/constants";
 import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon, Gauge, BrainCircuit, ShieldCheck, Building2 } from "lucide-react";
 
 const values = [
@@ -126,9 +127,9 @@ const About = () => (
           <h3 className="font-display text-base sm:text-lg font-semibold mb-2">Work With Us</h3>
           <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">Book a strategy session and discover how AI can transform your organization.</p>
           <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-            <Link to="/book">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Request AI Strategy Consultation <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

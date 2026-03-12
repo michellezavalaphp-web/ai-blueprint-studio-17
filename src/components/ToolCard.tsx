@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LucideIcon, ArrowRight } from "lucide-react";
 import LeadCaptureDialog, { hasLeadBeenCaptured } from "@/components/LeadCaptureDialog";
-import { useToast } from "@/hooks/use-toast";
+import { TOOL_URLS } from "@/lib/constants";
 
 interface ToolCardProps {
   icon: LucideIcon;
@@ -13,24 +13,22 @@ interface ToolCardProps {
 
 const ToolCard = ({ icon: Icon, title, description, benefit }: ToolCardProps) => {
   const [showCapture, setShowCapture] = useState(false);
-  const { toast } = useToast();
+  const toolUrl = TOOL_URLS[title];
 
   const handleLaunch = () => {
     if (hasLeadBeenCaptured()) {
-      toast({
-        title: "Tool Launching",
-        description: `Opening "${title}" — full interactive tools coming soon.`,
-      });
+      if (toolUrl) {
+        window.open(toolUrl, "_blank", "noopener,noreferrer");
+      }
     } else {
       setShowCapture(true);
     }
   };
 
   const handleCaptureSuccess = () => {
-    toast({
-      title: "Tool Launching",
-      description: `Opening "${title}" — full interactive tools coming soon.`,
-    });
+    if (toolUrl) {
+      window.open(toolUrl, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (

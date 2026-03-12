@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { BOOKING_URL } from "@/lib/constants";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -38,7 +39,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
-            <Link to="/book">Get Started</Link>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Get Started</a>
           </Button>
         </nav>
 
@@ -63,7 +64,7 @@ const Navbar = () => {
           ))}
           <div className="px-4 pt-1">
             <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
-              <Link to="/book" onClick={() => setOpen(false)}>Get Started</Link>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Get Started</a>
             </Button>
           </div>
         </nav>
