@@ -57,8 +57,8 @@ const methodology = [
 const Index = () => (
   <>
     {/* ── 1 · Hero (Dark) ── */}
-    <section className="section-light relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/40 via-background to-background" />
+    <section className="section-light relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden bg-white">
+      <div className="absolute inset-0 bg-white" />
       <div className="container mx-auto px-4 relative z-10 py-8 sm:py-14 md:py-16">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
           <img src={logo} alt="Go AI Innovation" className="h-28 sm:h-40 md:h-48 w-auto mx-auto mb-5 sm:mb-7" />
