@@ -91,9 +91,6 @@ const Contact = () => {
                   </Link>
                 </Button>
               </div>
-              <p className="text-center text-xs text-muted-foreground">
-                Or call us directly: <a href="tel:3053606170" className="text-primary hover:underline font-medium">305-360-6170</a>
-              </p>
             </form>
           )}
         </div>
