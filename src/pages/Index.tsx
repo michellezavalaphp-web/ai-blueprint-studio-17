@@ -65,7 +65,7 @@ const Index = () => (
           <img src={logo} alt="Go AI Innovation" className="h-12 sm:h-14 md:h-16 w-auto mx-auto mb-5 sm:mb-7" />
           <span className="badge-tag mb-5 sm:mb-6">
             <Activity className="h-3 w-3" />
-            AI Implementation Consulting
+            AI Implementation Strategist
           </span>
           <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.12] mb-4 sm:mb-5 mt-3 sm:mt-4">
             Reclaim Time. Transform Operations.{" "}
