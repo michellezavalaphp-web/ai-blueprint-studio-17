@@ -56,7 +56,7 @@ const Navbar = () => {
               to={l.to}
               onClick={() => setOpen(false)}
               className={`block px-4 py-3 rounded-md text-sm font-medium ${
-                location.pathname === l.to ? "text-primary bg-primary/10" : "text-muted-foreground"
+                location.pathname === l.to ? "text-primary bg-primary/10" : "text-[hsl(215,15%,65%)]"
               }`}
             >
               {l.label}
