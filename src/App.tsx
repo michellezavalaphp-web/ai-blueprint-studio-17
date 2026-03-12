@@ -11,6 +11,7 @@ import Tools from "./pages/Tools";
 import Framework from "./pages/Framework";
 import Resources from "./pages/Resources";
 import Impact from "./pages/Impact";
+import About from "./pages/About";
 import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/framework" element={<Framework />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/impact" element={<Impact />} />
+            <Route path="/about" element={<About />} />
             <Route path="/founder" element={<Founder />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<Book />} />

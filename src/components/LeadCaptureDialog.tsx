@@ -44,8 +44,7 @@ const LeadCaptureDialog = ({
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
     company: "",
@@ -56,10 +55,10 @@ const LeadCaptureDialog = ({
   };
 
   const isValid =
-    formData.firstName.trim() &&
-    formData.lastName.trim() &&
+    formData.name.trim() &&
     formData.email.trim() &&
-    formData.phone.trim();
+    formData.phone.trim() &&
+    formData.company.trim();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,7 +66,6 @@ const LeadCaptureDialog = ({
 
     setIsSubmitting(true);
 
-    // Simulate brief processing
     setTimeout(() => {
       markLeadCaptured();
       setIsSubmitting(false);
@@ -89,47 +87,30 @@ const LeadCaptureDialog = ({
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm leading-relaxed">
             Enter your details below to view your personalized results
-            instantly. We may also send a copy to your email for reference.
+            instantly.
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
-          <div className="grid grid-cols-2 gap-3">
-            <div className="space-y-1.5">
-              <Label htmlFor="firstName" className="text-xs">
-                First Name <span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="firstName"
-                name="firstName"
-                placeholder="Jane"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                maxLength={100}
-                className="h-9 text-sm"
-              />
-            </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="lastName" className="text-xs">
-                Last Name <span className="text-destructive">*</span>
-              </Label>
-              <Input
-                id="lastName"
-                name="lastName"
-                placeholder="Doe"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                maxLength={100}
-                className="h-9 text-sm"
-              />
-            </div>
+          <div className="space-y-1.5">
+            <Label htmlFor="name" className="text-xs">
+              Full Name <span className="text-destructive">*</span>
+            </Label>
+            <Input
+              id="name"
+              name="name"
+              placeholder="Jane Doe"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              maxLength={100}
+              className="h-9 text-sm"
+            />
           </div>
 
           <div className="space-y-1.5">
             <Label htmlFor="email" className="text-xs">
-              Email Address <span className="text-destructive">*</span>
+              Business Email <span className="text-destructive">*</span>
             </Label>
             <Input
               id="email"
@@ -146,7 +127,7 @@ const LeadCaptureDialog = ({
 
           <div className="space-y-1.5">
             <Label htmlFor="phone" className="text-xs">
-              Phone Number <span className="text-destructive">*</span>
+              Phone <span className="text-destructive">*</span>
             </Label>
             <Input
               id="phone"
@@ -162,9 +143,8 @@ const LeadCaptureDialog = ({
           </div>
 
           <div className="space-y-1.5">
-            <Label htmlFor="company" className="text-xs text-muted-foreground">
-              Company Name{" "}
-              <span className="text-muted-foreground/60">(optional)</span>
+            <Label htmlFor="company" className="text-xs">
+              Company <span className="text-destructive">*</span>
             </Label>
             <Input
               id="company"
@@ -172,6 +152,7 @@ const LeadCaptureDialog = ({
               placeholder="Acme Inc."
               value={formData.company}
               onChange={handleChange}
+              required
               maxLength={200}
               className="h-9 text-sm"
             />
