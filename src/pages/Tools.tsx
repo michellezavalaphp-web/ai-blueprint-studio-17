@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ToolCard from "@/components/ToolCard";
-import { Gauge, Clock, ScanSearch, FileText, PenTool, ArrowRight, LayoutDashboard } from "lucide-react";
+import { Gauge, Clock, ScanSearch, ArrowRight, LayoutDashboard } from "lucide-react";
 
 const allTools = [
   {
@@ -21,18 +21,6 @@ const allTools = [
     title: "AI Automation Opportunity Scanner",
     description: "Scan your organization's workflows to uncover processes ripe for automation and AI enhancement.",
     benefit: "Discover bottlenecks you didn't know existed",
-  },
-  {
-    icon: FileText,
-    title: "AI Implementation Blueprint Generator",
-    description: "Generate a step-by-step AI implementation plan customized to your organization's goals and industry.",
-    benefit: "A clear, actionable plan tailored to you",
-  },
-  {
-    icon: PenTool,
-    title: "AI Authority Content Engine",
-    description: "Create thought-leadership articles, social posts, and case studies powered by AI insights.",
-    benefit: "Position yourself as an AI-forward leader",
   },
 ];
 
