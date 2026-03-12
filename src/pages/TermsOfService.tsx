@@ -25,7 +25,7 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>1. Agreement to Terms</h2>
           <p>
-            By accessing or using the website and services provided by <strong>Go AI Innovation DBA Agape Advisory Group LLC</strong> ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services.
+            By accessing or using the website and services provided by <strong>Agape Advisory Group LLC DBA Go AI Innovation</strong> ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services.
           </p>
         </div>
 
