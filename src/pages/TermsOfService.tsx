@@ -61,7 +61,7 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>5. Intellectual Property</h2>
           <p>
-            All content, features, and functionality on our website — including but not limited to the Time Reclaimed™ Framework, text, graphics, logos, and software — are the exclusive property of Go AI Innovation DBA Agape Advisory Group LLC and are protected by copyright, trademark, and other intellectual property laws.
+            All content, features, and functionality on our website — including but not limited to the Time Reclaimed™ Framework, text, graphics, logos, and software — are the exclusive property of Agape Advisory Group LLC DBA Go AI Innovation and are protected by copyright, trademark, and other intellectual property laws.
           </p>
         </div>
 
