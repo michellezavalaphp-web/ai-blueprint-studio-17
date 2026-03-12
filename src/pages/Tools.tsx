@@ -19,7 +19,7 @@ const allTools = [
   },
   {
     icon: ScanSearch,
-    title: "AI Automation Opportunity Scanner",
+    title: "AI Opportunity Finder",
     description: "Scan your organization's workflows to uncover processes ripe for automation and AI enhancement.",
     benefit: "Discover bottlenecks you didn't know existed",
   },

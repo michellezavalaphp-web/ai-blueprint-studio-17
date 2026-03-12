@@ -89,7 +89,7 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>9. Indemnification</h2>
           <p>
-            You agree to indemnify and hold harmless Go AI Innovation DBA Agape Advisory Group LLC, its officers, directors, employees, and agents from any claims, liabilities, damages, or expenses arising from your use of our services or violation of these Terms.
+            You agree to indemnify and hold harmless Agape Advisory Group LLC DBA Go AI Innovation, its officers, directors, employees, and agents from any claims, liabilities, damages, or expenses arising from your use of our services or violation of these Terms.
           </p>
         </div>
 

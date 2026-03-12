@@ -32,7 +32,7 @@ const PrivacyPolicy = () => (
         <div className="prose-section">
           <h2>2. Company Information</h2>
           <p>
-            Go AI Innovation DBA Agape Advisory Group LLC<br />
+            Agape Advisory Group LLC DBA Go AI Innovation<br />
             8958 West State Road 84, 233<br />
             Davie, FL 33324<br />
             Email: <a href="mailto:mzavala@goaiinnovation.com" className="text-primary hover:underline">mzavala@goaiinnovation.com</a><br />
