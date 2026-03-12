@@ -82,7 +82,7 @@ const TermsOfService = () => (
         <div className="prose-section">
           <h2>8. Limitation of Liability</h2>
           <p>
-            To the fullest extent permitted by law, Go AI Innovation DBA Agape Advisory Group LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities arising from your use of our services.
+            To the fullest extent permitted by law, Agape Advisory Group LLC DBA Go AI Innovation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities arising from your use of our services.
           </p>
         </div>
 
