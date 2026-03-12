@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon } from "lucide-react";
+import { BOOKING_URL } from "@/lib/constants";
 
 const values = [
   {
