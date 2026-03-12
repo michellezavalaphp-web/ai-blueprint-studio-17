@@ -25,7 +25,7 @@ const PrivacyPolicy = () => (
         <div className="prose-section">
           <h2>1. Introduction</h2>
           <p>
-            <strong>Go AI Innovation DBA Agape Advisory Group LLC</strong> ("Company," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            <strong>Agape Advisory Group LLC DBA Go AI Innovation</strong> ("Company," "we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
         </div>
 
