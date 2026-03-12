@@ -1,4 +1,6 @@
-import { CalendarDays, Target, Map, CheckCircle2, Calendar } from "lucide-react";
+import { CalendarDays, Target, Map, CheckCircle2, Calendar, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BOOKING_URL } from "@/lib/constants";
 
 const steps = [
   {
