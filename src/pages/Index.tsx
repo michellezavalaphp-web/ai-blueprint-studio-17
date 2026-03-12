@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
-import logo from "@/assets/logo-white.png";
+import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import consultingHero from "@/assets/consulting-hero.jpg";
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
