@@ -22,7 +22,7 @@ const Navbar = () => {
     `px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
       location.pathname === to
         ? "text-primary bg-primary/10"
-        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+        : "text-[hsl(215,15%,65%)] hover:text-white hover:bg-white/5"
     }`;
 
   return (
