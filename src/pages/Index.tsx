@@ -42,7 +42,7 @@ const frameworkStages = [
 const diagnostics = [
   { icon: Gauge, title: "AI Readiness Assessment", desc: "Discover your AI Readiness Score and get tailored recommendations." },
   { icon: Clock, title: "Time Reclaimed™ Calculator", desc: "Quantify how many hours per week AI could save your team." },
-  { icon: ScanSearch, title: "AI Automation Opportunity Scanner", desc: "Uncover processes ripe for automation and AI enhancement." },
+  { icon: ScanSearch, title: "AI Opportunity Finder", desc: "Uncover processes ripe for automation and AI enhancement." },
 ];
 
 const methodology = [
