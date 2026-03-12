@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import consultingHero from "@/assets/consulting-hero.jpg";
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
@@ -60,9 +60,9 @@ const Index = () => (
     <section className="relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center opacity-[0.07]" style={{ backgroundImage: `url(${heroBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/70 to-background" />
-      <div className="container mx-auto px-4 relative z-10 py-14 sm:py-20 md:py-24">
+      <div className="container mx-auto px-4 relative z-10 py-8 sm:py-14 md:py-16">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
-          <img src={logo} alt="Go AI Innovation" className="h-16 sm:h-20 md:h-24 w-auto mx-auto mb-5 sm:mb-7" />
+          <img src={logo} alt="Go AI Innovation" className="h-20 sm:h-28 md:h-32 w-auto mx-auto mb-5 sm:mb-7 drop-shadow-[0_4px_24px_rgba(59,130,246,0.18)]" />
           <span className="badge-tag mb-5 sm:mb-6">
             <Activity className="h-3 w-3" />
             AI Implementation Strategist
