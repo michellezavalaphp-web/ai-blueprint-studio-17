@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.jpg";
+// hero bg removed — light hero now
 import consultingHero from "@/assets/consulting-hero.jpg";
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import {
