@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
@@ -24,28 +25,30 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/tools" element={<Tools />} />
-            <Route path="/framework" element={<Framework />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/impact" element={<Impact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/founder" element={<Founder />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/book" element={<Book />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+      <LanguageProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/framework" element={<Framework />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/impact" element={<Impact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/founder" element={<Founder />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/book" element={<Book />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
