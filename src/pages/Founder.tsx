@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon } from "lucide-react";
+import founderPhoto from "@/assets/founder-photo.png";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 
