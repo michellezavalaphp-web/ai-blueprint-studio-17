@@ -4,19 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import { BOOKING_URL } from "@/lib/constants";
-
-const navLinks = [
-  { label: "Home", to: "/" },
-  { label: "Services", to: "/services" },
-  { label: "AI Tools", to: "/tools" },
-  { label: "Framework", to: "/framework" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/contact" },
-];
+import LanguageToggle from "@/components/LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { label: t("Home", "Inicio"), to: "/" },
+    { label: t("Services", "Servicios"), to: "/services" },
+    { label: t("AI Tools", "Herramientas IA"), to: "/tools" },
+    { label: t("Framework", "Metodología"), to: "/framework" },
+    { label: t("About", "Nosotros"), to: "/about" },
+    { label: t("Contact", "Contacto"), to: "/contact" },
+  ];
 
   const linkClass = (to: string) =>
     `px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
@@ -38,14 +41,20 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <LanguageToggle />
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Get Started</a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              {t("Get Started", "Comenzar")}
+            </a>
           </Button>
         </nav>
 
-        <button className="lg:hidden text-white p-2 -mr-2" onClick={() => setOpen(!open)}>
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <LanguageToggle />
+          <button className="text-white p-2 -mr-2" onClick={() => setOpen(!open)}>
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -64,7 +73,9 @@ const Navbar = () => {
           ))}
           <div className="px-4 pt-1">
             <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Get Started</a>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                {t("Get Started", "Comenzar")}
+              </a>
             </Button>
           </div>
         </nav>

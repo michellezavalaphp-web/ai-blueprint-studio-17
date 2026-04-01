@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LeadCaptureDialogProps {
   open: boolean;
@@ -42,6 +43,7 @@ const LeadCaptureDialog = ({
   onSubmitSuccess,
 }: LeadCaptureDialogProps) => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -70,8 +72,11 @@ const LeadCaptureDialog = ({
       markLeadCaptured();
       setIsSubmitting(false);
       toast({
-        title: "You're all set!",
-        description: `Your results for "${toolTitle}" are ready.`,
+        title: t("You're all set!", "¡Todo listo!"),
+        description: t(
+          `Your results for "${toolTitle}" are ready.`,
+          `Sus resultados para "${toolTitle}" están listos.`
+        ),
       });
       onOpenChange(false);
       onSubmitSuccess();
@@ -83,18 +88,20 @@ const LeadCaptureDialog = ({
       <DialogContent className="sm:max-w-md bg-card border-border">
         <DialogHeader>
           <DialogTitle className="font-display text-lg">
-            Unlock Your Results
+            {t("Unlock Your Results", "Desbloquea tus resultados")}
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm leading-relaxed">
-            Enter your details below to view your personalized results
-            instantly.
+            {t(
+              "Enter your details below to view your personalized results instantly.",
+              "Ingrese sus datos a continuación para ver sus resultados personalizados al instante."
+            )}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
           <div className="space-y-1.5">
             <Label htmlFor="name" className="text-xs">
-              Full Name <span className="text-destructive">*</span>
+              {t("Full Name", "Nombre completo")} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="name"
@@ -110,7 +117,7 @@ const LeadCaptureDialog = ({
 
           <div className="space-y-1.5">
             <Label htmlFor="email" className="text-xs">
-              Business Email <span className="text-destructive">*</span>
+              {t("Business Email", "Correo empresarial")} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="email"
@@ -127,7 +134,7 @@ const LeadCaptureDialog = ({
 
           <div className="space-y-1.5">
             <Label htmlFor="phone" className="text-xs">
-              Phone <span className="text-destructive">*</span>
+              {t("Phone", "Teléfono")} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="phone"
@@ -144,7 +151,7 @@ const LeadCaptureDialog = ({
 
           <div className="space-y-1.5">
             <Label htmlFor="company" className="text-xs">
-              Company <span className="text-destructive">*</span>
+              {t("Company", "Empresa")} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="company"
@@ -161,8 +168,10 @@ const LeadCaptureDialog = ({
           <div className="flex items-start gap-2 text-[11px] text-muted-foreground/70 pt-1">
             <CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-primary shrink-0" />
             <span>
-              Your information is secure and will only be used to deliver your
-              results and relevant insights.
+              {t(
+                "Your information is secure and will only be used to deliver your results and relevant insights.",
+                "Su información está segura y solo se utilizará para entregar sus resultados e información relevante."
+              )}
             </span>
           </div>
 
@@ -172,7 +181,9 @@ const LeadCaptureDialog = ({
             className="w-full h-11 text-sm"
             disabled={!isValid || isSubmitting}
           >
-            {isSubmitting ? "Processing…" : "View My Results"}
+            {isSubmitting
+              ? t("Processing…", "Procesando…")
+              : t("View My Results", "Ver mis resultados")}
             {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
           </Button>
         </form>
