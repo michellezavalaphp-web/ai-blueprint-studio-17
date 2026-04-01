@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
-import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon, Gauge, BrainCircuit, ShieldCheck, Building2 } from "lucide-react";
+import { ArrowRight, Lightbulb, Target, Rocket, Gauge, BrainCircuit, ShieldCheck, Building2 } from "lucide-react";
+import founderPhoto from "@/assets/founder-photo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
@@ -83,12 +84,8 @@ const About = () => {
             </div>
             <div className="dash-card">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                <div className="shrink-0 flex flex-col items-center gap-2">
-                  <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl bg-muted/40 border border-border flex flex-col items-center justify-center">
-                    <User className="h-12 w-12 text-muted-foreground/40" />
-                    <ImageIcon className="h-4 w-4 text-muted-foreground/30 mt-1" />
-                  </div>
-                  <span className="text-[10px] text-muted-foreground/50 tracking-wide">{t("Photo Coming Soon", "Foto próximamente")}</span>
+                <div className="shrink-0">
+                  <img src={founderPhoto} alt="Mardel Michelle Zavala" className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl object-cover border border-border" />
                 </div>
                 <div className="text-center md:text-left flex-1 space-y-3 sm:space-y-4 text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   <p>

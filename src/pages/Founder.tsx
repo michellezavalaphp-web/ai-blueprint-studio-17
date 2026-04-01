@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon } from "lucide-react";
+import founderPhoto from "@/assets/founder-photo.png";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -48,12 +49,8 @@ const Founder = () => {
           <div className="max-w-3xl mx-auto mb-10 sm:mb-16">
             <div className="glass-panel p-5 sm:p-8 glow-border">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                <div className="shrink-0 flex flex-col items-center gap-2">
-                  <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl bg-muted/40 border border-border/30 flex flex-col items-center justify-center">
-                    <User className="h-12 w-12 text-muted-foreground/40" />
-                    <ImageIcon className="h-4 w-4 text-muted-foreground/30 mt-1" />
-                  </div>
-                  <span className="text-[10px] text-muted-foreground/50 tracking-wide">{t("Founder Photo Coming Soon", "Foto de la fundadora próximamente")}</span>
+                <div className="shrink-0">
+                  <img src={founderPhoto} alt="Mardel Michelle Zavala" className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl object-cover border border-border/30" />
                 </div>
                 <div className="text-center md:text-left flex-1 space-y-3 sm:space-y-4 text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   <p>
