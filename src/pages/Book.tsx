@@ -44,7 +44,7 @@ const Book = () => {
             </div>
             <span className="badge-tag">{t("Free Consultation", "Consulta gratuita")}</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("Book Your Free AI Strategy Session", "Agenda tu sesión estratégica de IA gratuita")}</h1>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("Book Strategy Call", "Agendar Llamada Estratégica")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
             {t("Designed to help your organization identify automation opportunities and build a roadmap for AI implementation.", "Diseñada para ayudar a su organización a identificar oportunidades de automatización y construir una hoja de ruta para la implementación de IA.")}
           </p>
@@ -83,7 +83,7 @@ const Book = () => {
               </ul>
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Your Free Session Now", "Agenda tu sesión gratuita ahora")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <p className="text-[10px] sm:text-[11px] text-muted-foreground mt-4 tracking-wide">

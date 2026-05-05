@@ -83,7 +83,7 @@ const Contact = () => {
                 <Textarea id="message" name="message" placeholder={t("How can we help?", "¿Cómo podemos ayudarle?")} rows={5} maxLength={1000} required className="text-sm" />
               </div>
               <Button type="submit" variant="hero" size="lg" className="w-full h-12 sm:h-11 text-sm">
-                {t("Request AI Strategy Consultation", "Solicita una consulta estratégica de IA")} <Send className="ml-2 h-4 w-4" />
+                {t("Book Strategy Call", "Agendar Llamada Estratégica")} <Send className="ml-2 h-4 w-4" />
               </Button>
               <div className="text-center">
                 <Button variant="hero-outline" size="lg" className="w-full h-12 sm:h-11 text-sm" asChild>

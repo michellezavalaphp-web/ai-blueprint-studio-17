@@ -17,6 +17,7 @@ const Navbar = () => {
     { label: t("Services", "Servicios"), to: "/services" },
     { label: t("AI Tools", "Herramientas IA"), to: "/tools" },
     { label: t("Framework", "Metodología"), to: "/framework" },
+    { label: t("Store", "Tienda"), to: "/store" },
     { label: t("About", "Nosotros"), to: "/about" },
     { label: t("Contact", "Contacto"), to: "/contact" },
   ];
@@ -44,7 +45,7 @@ const Navbar = () => {
           <LanguageToggle />
           <Button variant="hero" size="sm" className="ml-3 h-8 text-xs px-4" asChild>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              {t("Get Started", "Comenzar")}
+              {t("Book Strategy Call", "Agendar Llamada Estratégica")}
             </a>
           </Button>
         </nav>
@@ -74,7 +75,7 @@ const Navbar = () => {
           <div className="px-4 pt-1">
             <Button variant="hero" size="lg" className="w-full h-12 text-sm" asChild>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
-                {t("Get Started", "Comenzar")}
+                {t("Book Strategy Call", "Agendar Llamada Estratégica")}
               </a>
             </Button>
           </div>

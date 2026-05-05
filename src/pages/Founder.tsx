@@ -94,7 +94,7 @@ const Founder = () => {
               <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">{t("Book a strategy session and work directly with the founder.", "Agenda una sesión estratégica y trabaja directamente con la fundadora.")}</p>
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Your Free AI Strategy Session", "Agenda tu sesión estratégica de IA gratuita")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>

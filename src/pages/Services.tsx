@@ -91,7 +91,7 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Your Free AI Strategy Session", "Agenda tu sesión estratégica de IA gratuita")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
