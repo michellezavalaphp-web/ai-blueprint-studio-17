@@ -21,6 +21,44 @@ export const CATEGORIES = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "5-signs-your-business-is-ready-for-ai",
+    categoryKey: "ai-strategy",
+    category: { en: "AI Strategy", es: "Estrategia de IA" },
+    title: {
+      en: "5 Signs Your Business Is Ready for AI (And What to Do First)",
+      es: "5 Señales de Que Tu Negocio Está Listo para la IA (Y Qué Hacer Primero)",
+    },
+    excerpt: {
+      en: "Not sure if your business is ready for AI? Here are 5 clear signs it's time — plus exactly where to start.",
+      es: "¿No estás seguro si tu negocio está listo para la IA? Aquí hay 5 señales claras de que es hora — y exactamente por dónde empezar.",
+    },
+    content: {
+      en: [
+        "Every week I talk to small business owners who ask me the same question: 'Am I ready for AI?' Here's the honest answer: if you're asking the question, you're probably already behind. But the good news? Catching up is faster than you think.",
+        "AI in 2026 isn't what you think it is. It's not robots. It's not science fiction. It's not a million-dollar investment. It's software that does the boring stuff so you can focus on the work that actually matters.",
+        "Sign 1: You're Spending Hours on Tasks That Feel Repetitive. If you catch yourself doing the same task more than three times a week — writing the same follow-up email, manually entering data, copying information between apps — that's your first sign. The average small business owner spends 13 hours a week on tasks AI could handle. What to do: Pick the most repetitive task on your plate this week. Write down exactly what you do, step by step. That's your first AI workflow waiting to happen.",
+        "Sign 2: You're Losing Leads Because You Can't Follow Up Fast Enough. If a lead has to wait more than 5 minutes for a response, you've already lost them to someone faster. AI agents can follow up instantly — personalized, professional, 24/7. What to do: Check your average response time to new leads. If it's more than 30 minutes, an AI agent could transform your pipeline overnight.",
+        "Sign 3: You've Got More Ideas Than Hours. You know exactly what you'd do to grow your business — if you had the time. 57% of U.S. small businesses are now investing in AI, and the #1 reason? Getting time back for higher-value work. What to do: Write down the top 3 things you'd work on if you had 10 extra hours a week. That's your AI ROI waiting to be unlocked.",
+        "Sign 4: You're Worried AI Will Make Your Business Feel Impersonal. This one might surprise you — but this fear is actually a sign you're READY. AI doesn't replace the human touch. It gives you MORE time for it. What to do: Identify the tasks that DON'T require your personal touch. Those are the ones AI should handle.",
+        "Sign 5: Your Competitors Are Already Using AI. 68% of U.S. companies with 10-100 employees now use AI regularly. But catching up doesn't mean doing everything at once. It means doing ONE thing well. What to do: Take the free AI Audit Checklist. It takes 5 minutes and shows you exactly where to start.",
+        "You don't need a tech background to use AI. You don't need a big budget. You need one thing: clarity on where AI fits in YOUR business. Now go — it's time to reclaim yours.",
+      ],
+      es: [
+        "Cada semana hablo con dueños de pequeños negocios que me hacen la misma pregunta: '¿Estoy listo para la IA?' La respuesta honesta: si estás haciendo la pregunta, probablemente ya estás atrasado. Pero la buena noticia es que ponerte al día es más rápido de lo que piensas.",
+        "La IA en 2026 no es lo que piensas. No son robots. No es ciencia ficción. No es una inversión de un millón de dólares. Es software que hace las tareas aburridas para que tú puedas enfocarte en el trabajo que realmente importa.",
+        "Señal 1: Pasas horas en tareas que se sienten repetitivas. Si te encuentras haciendo la misma tarea más de tres veces a la semana, esa es tu primera señal. El dueño promedio pasa 13 horas a la semana en tareas que la IA podría manejar. Qué hacer: Escoge la tarea más repetitiva y escribe exactamente qué haces, paso a paso.",
+        "Señal 2: Estás perdiendo leads porque no puedes dar seguimiento lo suficientemente rápido. Los agentes de IA pueden dar seguimiento al instante — personalizado, profesional, 24/7. Qué hacer: Revisa tu tiempo promedio de respuesta a nuevos leads.",
+        "Señal 3: Tienes más ideas que horas. El 57% de los pequeños negocios en EE.UU. ya están invirtiendo en IA. Qué hacer: Escribe las 3 cosas principales en las que trabajarías si tuvieras 10 horas extra a la semana.",
+        "Señal 4: Te preocupa que la IA haga tu negocio impersonal. La IA no reemplaza el toque humano. Te da MÁS tiempo para él. Qué hacer: Identifica las tareas que NO requieren tu toque personal.",
+        "Señal 5: Tus competidores ya están usando IA. El 68% de las empresas con 10-100 empleados ya usan IA regularmente. Qué hacer: Toma el Checklist gratuito de Auditoría de IA.",
+        "No necesitas un trasfondo técnico para usar IA. No necesitas un gran presupuesto. Necesitas claridad sobre dónde encaja la IA en TU negocio. Ahora ve — es hora de reclamarlo.",
+      ],
+    },
+    date: "2026-05-05",
+    readTime: 7,
+    featured: true,
+  },
+  {
     slug: "ai-is-an-operations-conversation",
     categoryKey: "ai-strategy",
     category: { en: "AI Strategy", es: "Estrategia de IA" },
