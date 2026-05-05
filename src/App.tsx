@@ -16,6 +16,7 @@ import About from "./pages/About";
 import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
+import Store from "./pages/Store";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -42,6 +43,8 @@ const App = () => (
               <Route path="/founder" element={<Founder />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/book" element={<Book />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/tienda" element={<Store />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />

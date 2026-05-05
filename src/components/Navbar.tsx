@@ -17,6 +17,7 @@ const Navbar = () => {
     { label: t("Services", "Servicios"), to: "/services" },
     { label: t("AI Tools", "Herramientas IA"), to: "/tools" },
     { label: t("Framework", "Metodología"), to: "/framework" },
+    { label: t("Store", "Tienda"), to: "/store" },
     { label: t("About", "Nosotros"), to: "/about" },
     { label: t("Contact", "Contacto"), to: "/contact" },
   ];

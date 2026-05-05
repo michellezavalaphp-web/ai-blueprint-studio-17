@@ -30,6 +30,7 @@ const Footer = () => {
               { to: "/tools", label: t("AI Tools", "Herramientas IA") },
               { to: "/framework", label: t("Framework", "Metodología") },
               { to: "/solutions", label: t("Solutions", "Soluciones") },
+              { to: "/store", label: t("Store", "Tienda") },
             ].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">{l.label}</Link>
