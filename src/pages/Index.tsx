@@ -21,6 +21,8 @@ import {
   Rocket,
   TrendingUp,
 } from "lucide-react";
+import { BLOG_POSTS } from "@/lib/blogPosts";
+import BlogCard from "@/components/BlogCard";
 
 const Index = () => {
   const { t } = useLanguage();
