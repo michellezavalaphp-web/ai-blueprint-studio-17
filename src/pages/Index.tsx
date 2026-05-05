@@ -235,6 +235,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── 5b · Latest AI Insights ── */}
+      <section className="section-light section-padding">
+        <div className="container mx-auto">
+          <SectionHeading
+            tag={t("Insights", "Perspectivas")}
+            title={t("Latest AI Insights", "Últimas Perspectivas de IA")}
+            description={t(
+              "Practical strategies and real-world ideas to help you reclaim time, improve operations, and scale smarter with AI.",
+              "Estrategias prácticas e ideas reales para ayudarte a recuperar tiempo, mejorar operaciones y escalar con inteligencia artificial."
+            )}
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {BLOG_POSTS.slice(0, 3).map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+          <div className="text-center mt-8 sm:mt-10">
+            <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
+              <Link to={t("/insights", "/es/perspectivas")}>
+                {t("View All Insights", "Ver todas las perspectivas")} <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* ── 6 · CTA ── */}
       <section className="section-dark section-padding relative overflow-hidden">
         <div className="absolute inset-0">
