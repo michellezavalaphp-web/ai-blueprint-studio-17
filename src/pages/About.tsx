@@ -132,7 +132,7 @@ const About = () => {
             <p className="text-xs sm:text-sm text-muted-foreground mb-5 leading-relaxed">{t("Book a strategy session and discover how AI can transform your organization.", "Agenda una sesión estratégica y descubre cómo la IA puede transformar tu organización.")}</p>
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                {t("Request AI Strategy Consultation", "Solicita una consulta estratégica de IA")} <ArrowRight className="ml-2 h-4 w-4" />
+                {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>

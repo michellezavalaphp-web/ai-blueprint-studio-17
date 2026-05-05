@@ -54,7 +54,7 @@ const Footer = () => {
             ))}
             <li>
               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-[13px]">
-                {t("Strategy Session", "Sesión estratégica")}
+                {t("Book Strategy Call", "Agendar Llamada Estratégica")}
               </a>
             </li>
           </ul>

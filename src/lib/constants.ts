@@ -1,4 +1,4 @@
-export const BOOKING_URL = "https://api.growthhub365.com/widget/bookings/goaiinnovation-discovery-call";
+export const BOOKING_URL = "https://api.growthhub365.com/widget/booking/2t9zp9Jcf8KpPG8MBvDG";
 
 export const TOOL_URLS: Record<string, string> = {
   "AI Readiness Assessment": "https://aireadiness-assessment.lovable.app",

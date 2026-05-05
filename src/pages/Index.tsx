@@ -82,7 +82,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 justify-center max-w-2xl mx-auto">
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Request AI Strategy Consultation", "Solicita una consulta estratégica de IA")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
@@ -251,7 +251,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Request AI Strategy Consultation", "Solicita una consulta estratégica de IA")} <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
