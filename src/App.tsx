@@ -17,6 +17,8 @@ import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
 import Store from "./pages/Store";
+import Insights from "./pages/Insights";
+import InsightPost from "./pages/InsightPost";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
@@ -45,6 +47,10 @@ const App = () => (
               <Route path="/book" element={<Book />} />
               <Route path="/store" element={<Store />} />
               <Route path="/tienda" element={<Store />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightPost />} />
+              <Route path="/es/perspectivas" element={<Insights />} />
+              <Route path="/es/perspectivas/:slug" element={<InsightPost />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
