@@ -154,17 +154,36 @@ const ExitIntentPopup = () => {
             )}
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} noValidate className="space-y-2">
             <Input
               type="email"
               required
               maxLength={255}
               placeholder={t("you@company.com", "usted@empresa.com")}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="h-11 text-sm"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError(validate(e.target.value));
+              }}
+              onBlur={() => setError(validate(email))}
+              aria-invalid={!!error}
+              aria-describedby={error ? "exit-popup-error" : undefined}
+              className={
+                error
+                  ? "h-11 text-sm border-destructive focus-visible:ring-destructive"
+                  : "h-11 text-sm"
+              }
             />
-            <Button type="submit" variant="hero" className="w-full h-11 text-sm">
+            {error && (
+              <p
+                id="exit-popup-error"
+                role="alert"
+                className="text-xs text-destructive font-medium"
+              >
+                {error}
+              </p>
+            )}
+            <Button type="submit" variant="hero" className="w-full h-11 text-sm mt-1">
               {t("Get My Free Score", "Obtener mi puntuación gratis")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
