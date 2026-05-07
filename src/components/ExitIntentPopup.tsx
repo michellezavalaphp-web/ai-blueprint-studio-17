@@ -18,9 +18,23 @@ const ExitIntentPopup = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const triggeredRef = useRef(false);
   const lastScrollY = useRef(0);
   const lastScrollT = useRef(0);
+
+  const validate = (value: string): string | null => {
+    const v = value.trim();
+    if (!v) return t("Please enter your email.", "Por favor ingrese su correo.");
+    if (v.length > 255)
+      return t("Email is too long.", "El correo es demasiado largo.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))
+      return t(
+        "Please enter a valid email address.",
+        "Por favor ingrese un correo electrónico válido.",
+      );
+    return null;
+  };
 
   useEffect(() => {
     if (isExcludedPath(pathname)) return;
