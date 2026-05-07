@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowRight, BookOpen, Shirt, Store as StoreIcon, Sparkles } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Store = () => {
   const { t } = useLanguage();
@@ -20,6 +21,7 @@ const Store = () => {
 
   return (
     <>
+      <SEO title={"Resources — Time Reclaimed™ Book & Tools | Go AI Innovation"} description={"AI implementation resources including Time Reclaimed™ — the published book by Mardel Michelle Zavala. Tools and guides for business leaders."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container mx-auto relative z-10">
