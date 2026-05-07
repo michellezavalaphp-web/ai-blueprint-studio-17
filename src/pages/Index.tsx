@@ -25,6 +25,7 @@ import { BLOG_POSTS } from "@/lib/blogPosts";
 import BlogCard from "@/components/BlogCard";
 import SEO from "@/components/SEO";
 import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   const { t } = useLanguage();
