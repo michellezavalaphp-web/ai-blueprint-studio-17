@@ -30,6 +30,18 @@ const Contact = () => {
       return;
     }
 
+    const isSpeaking =
+      typeof window !== "undefined" && window.location.search.includes("ref=speaking");
+    const [firstName, ...rest] = name.split(" ");
+    sendToGrowthHub({
+      email,
+      firstName,
+      lastName: rest.join(" ") || undefined,
+      phone,
+      source: isSpeaking ? "speaking-inquiry" : "contact-form",
+      message: `Company: ${company}\n\n${message}`,
+    });
+
     setSubmitted(true);
     toast({ title: t("Message sent!", "¡Mensaje enviado!"), description: t("We'll be in touch soon.", "Nos pondremos en contacto pronto.") });
   };
