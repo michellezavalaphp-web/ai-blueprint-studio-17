@@ -89,7 +89,7 @@ const About = () => {
             <div className="dash-card">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
                 <div className="shrink-0">
-                  <img src={founderPhoto} alt="Mardel Michelle Zavala" className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl object-cover border border-border" />
+                  <img src={founderPhoto} alt="Mardel Michelle Zavala" loading="lazy" className="w-36 h-36 sm:w-40 sm:h-40 rounded-xl object-cover border border-border" />
                 </div>
                 <div className="text-center md:text-left flex-1 space-y-3 sm:space-y-4 text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   <p>

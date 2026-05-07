@@ -120,7 +120,7 @@ const Index = () => {
               ))}
             </div>
             <div className="hidden lg:block overflow-hidden rounded-xl border border-border">
-              <img src={consultingHero} alt={t("Executive AI strategy consulting session", "Sesión de consultoría estratégica de IA ejecutiva")} className="w-full h-full object-cover" />
+              <img src={consultingHero} alt={t("Executive AI strategy consulting session", "Sesión de consultoría estratégica de IA ejecutiva")} loading="lazy" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="text-center mt-8 sm:mt-10">
@@ -268,7 +268,7 @@ const Index = () => {
       {/* ── 6 · CTA ── */}
       <section className="section-dark section-padding relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={aiAbstract} alt="AI systems visualization" className="w-full h-full object-cover opacity-[0.08]" />
+          <img src={aiAbstract} alt="AI systems visualization" loading="lazy" className="w-full h-full object-cover opacity-[0.08]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
         </div>
         <div className="container mx-auto max-w-xl relative z-10">
