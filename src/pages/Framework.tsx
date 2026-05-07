@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
-import SEO from "@/components/SEO";
   Search,
   Stethoscope,
   Compass,
@@ -14,6 +13,7 @@ import SEO from "@/components/SEO";
   ArrowRight,
   Layers,
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Framework = () => {
   const { t } = useLanguage();
