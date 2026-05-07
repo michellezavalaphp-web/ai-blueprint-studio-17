@@ -4,6 +4,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
+import SEO from "@/components/SEO";
   Star, Quote, ArrowRight, BarChart3, TrendingUp, Users, Award,
 } from "lucide-react";
 
@@ -70,6 +71,7 @@ const Impact = () => {
 
   return (
     <>
+      <SEO title={"Our Impact — AI for Business & Community | Go AI Innovation"} description={"Go AI Innovation's impact: workforce development, small business empowerment, and responsible AI adoption. Serving Miami and nationwide."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

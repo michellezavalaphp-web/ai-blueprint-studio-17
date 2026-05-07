@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { BLOG_POSTS, CATEGORIES } from "@/lib/blogPosts";
 import BlogCard from "@/components/BlogCard";
 import { BOOKING_URL } from "@/lib/constants";
+import SEO from "@/components/SEO";
 
 const Insights = () => {
   const { t, language } = useLanguage();
@@ -27,6 +28,7 @@ const Insights = () => {
 
   return (
     <>
+      <SEO title={"AI Insights & Blog for Business Leaders | Go AI Innovation"} description={"Practical AI insights, tips, and strategies for business leaders. Learn how to implement AI, save time, and transform operations."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

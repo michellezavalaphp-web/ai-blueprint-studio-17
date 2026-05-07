@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Send, CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -34,6 +35,7 @@ const Contact = () => {
 
   return (
     <>
+      <SEO title={"Contact Go AI Innovation — Book a Free AI Strategy Call"} description={"Ready to implement AI in your business? Book a free strategy call with Go AI Innovation. Miami-based AI consulting serving businesses nationwide. EN/ES."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

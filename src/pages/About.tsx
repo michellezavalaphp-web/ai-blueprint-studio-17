@@ -4,6 +4,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import { ArrowRight, Lightbulb, Target, Rocket, Gauge, BrainCircuit, ShieldCheck, Building2 } from "lucide-react";
 import founderPhoto from "@/assets/founder-photo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const { t } = useLanguage();
@@ -34,6 +35,7 @@ const About = () => {
 
   return (
     <>
+      <SEO title={"About Mardel Michelle Zavala — AI Consultant, Speaker & Author | Go AI Innovation"} description={"20+ years in operations & business transformation. CPD Accredited AI Consultant. Creator of the Time Reclaimed™ Framework. Published author. Bilingual (EN/ES). Miami, FL."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
