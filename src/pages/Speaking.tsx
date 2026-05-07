@@ -85,8 +85,67 @@ const SPEAKER_SCHEMA = {
   ],
 };
 
+const EVENT_TYPES = [
+  "Corporate Event",
+  "Conference",
+  "Summit",
+  "Workshop",
+  "Panel",
+  "Virtual/Hybrid",
+  "Other",
+] as const;
+
 const Speaking = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [submitted, setSubmitted] = useState(false);
+  const [eventDate, setEventDate] = useState<Date | undefined>(undefined);
+  const [eventType, setEventType] = useState<string>("");
+
+  const handleSpeakingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = (data.get("name") as string)?.trim();
+    const email = (data.get("email") as string)?.trim();
+    const phone = (data.get("phone") as string)?.trim();
+    const organization = (data.get("organization") as string)?.trim();
+    const message = (data.get("message") as string)?.trim();
+
+    if (!name || !email || !organization) {
+      toast({
+        title: t("Please fill in all required fields", "Por favor complete todos los campos requeridos"),
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const [firstName, ...rest] = name.split(" ");
+    const dateStr = eventDate ? format(eventDate, "yyyy-MM-dd") : "";
+
+    sendToGrowthHub({
+      email,
+      firstName,
+      lastName: rest.join(" ") || undefined,
+      phone: phone || undefined,
+      source: "speaking-inquiry",
+      message: [
+        `Organization/Event: ${organization}`,
+        eventType ? `Event Type: ${eventType}` : "",
+        dateStr ? `Event Date: ${dateStr}` : "",
+        message ? `\nDetails:\n${message}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    });
+
+    setSubmitted(true);
+    toast({
+      title: t("Thank you!", "¡Gracias!"),
+      description: t("We'll be in touch within 24 hours.", "Nos pondremos en contacto dentro de 24 horas."),
+    });
+  };
+
 
   const topics = [
     {
