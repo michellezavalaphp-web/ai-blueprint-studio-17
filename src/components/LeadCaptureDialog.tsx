@@ -69,6 +69,18 @@ const LeadCaptureDialog = ({
 
     setIsSubmitting(true);
 
+    const [firstName, ...rest] = formData.name.trim().split(" ");
+    const source =
+      toolTitle === "AI Readiness Assessment" ? "ai-readiness-assessment" : "ai-tools-access";
+    sendToGrowthHub({
+      email: formData.email.trim(),
+      firstName,
+      lastName: rest.join(" ") || undefined,
+      phone: formData.phone.trim(),
+      source,
+      message: `Tool: ${toolTitle}\nCompany: ${formData.company.trim()}`,
+    });
+
     setTimeout(() => {
       markLeadCaptured();
       setIsSubmitting(false);
