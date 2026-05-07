@@ -18,6 +18,7 @@ import Founder from "./pages/Founder";
 import Contact from "./pages/Contact";
 import Book from "./pages/Book";
 import Store from "./pages/Store";
+import Speaking from "./pages/Speaking";
 import Insights from "./pages/Insights";
 import InsightPost from "./pages/InsightPost";
 import TermsOfService from "./pages/TermsOfService";
