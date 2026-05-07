@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import StickyCTA from "./StickyCTA";
 import SchemaMarkup, { ORGANIZATION_SCHEMA } from "./SchemaMarkup";
+import ExitIntentPopup from "./ExitIntentPopup";
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen flex flex-col">
@@ -10,6 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     <main className="flex-1 pt-14">{children}</main>
     <Footer />
     <StickyCTA />
+    <ExitIntentPopup />
   </div>
 );
 
