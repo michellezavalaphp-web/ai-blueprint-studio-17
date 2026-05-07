@@ -5,6 +5,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 import SchemaMarkup, { SERVICES_SCHEMA } from "@/components/SchemaMarkup";
+import FAQSection from "@/components/FAQSection";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -82,6 +83,35 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        id="services"
+        tag={t("FAQ", "Preguntas frecuentes")}
+        title={t("Common Questions About Our Services", "Preguntas Comunes Sobre Nuestros Servicios")}
+        items={[
+          {
+            question: t("What's included in the free AI Readiness Assessment?", "¿Qué incluye la Evaluación de Preparación para IA gratuita?"),
+            answer: t(
+              "Our free AI Readiness Assessment evaluates your current operations, technology stack, and team capabilities to identify the highest-impact opportunities for AI implementation. You'll receive a personalized report showing exactly where AI can save you time and money, with a prioritized action plan.",
+              "Nuestra Evaluación de Preparación para IA gratuita evalúa sus operaciones actuales, su stack tecnológico y las capacidades del equipo para identificar las oportunidades de mayor impacto para implementar IA. Recibirá un informe personalizado mostrando exactamente dónde la IA puede ahorrarle tiempo y dinero, con un plan de acción priorizado.",
+            ),
+          },
+          {
+            question: t("Can you work with our existing software and tools?", "¿Pueden trabajar con nuestro software y herramientas existentes?"),
+            answer: t(
+              "Yes. We specialize in integrating AI capabilities with your existing tech stack — whether you use Salesforce, HubSpot, QuickBooks, Microsoft 365, or industry-specific software. We find AI solutions that enhance what you already have rather than forcing you to start over.",
+              "Sí. Nos especializamos en integrar capacidades de IA con su stack tecnológico existente — ya sea que use Salesforce, HubSpot, QuickBooks, Microsoft 365 o software específico de su industria. Encontramos soluciones de IA que mejoran lo que ya tiene en lugar de forzarlo a empezar de cero.",
+            ),
+          },
+          {
+            question: t("What makes the Time Reclaimed™ Framework different from other AI consulting approaches?", "¿Qué hace diferente al marco Time Reclaimed™ de otros enfoques de consultoría de IA?"),
+            answer: t(
+              "The Time Reclaimed™ Framework is a proprietary 7-stage methodology designed specifically for businesses that want practical results, not theoretical reports. Each stage builds on the last — from assessment through full optimization — ensuring measurable time savings at every step. It's refined through 20+ years of operations experience and documented in the published book Time Reclaimed™ (May 2026) by Mardel Michelle Zavala.",
+              "El marco Time Reclaimed™ es una metodología propietaria de 7 etapas diseñada específicamente para empresas que quieren resultados prácticos, no informes teóricos. Cada etapa se construye sobre la anterior — desde la evaluación hasta la optimización completa — asegurando ahorros de tiempo medibles en cada paso. Está refinado por más de 20 años de experiencia operativa y documentado en el libro publicado Time Reclaimed™ (mayo 2026) por Mardel Michelle Zavala.",
+            ),
+          },
+        ]}
+      />
 
       <section className="section-padding bg-secondary/20">
         <div className="container mx-auto max-w-xl">

@@ -25,6 +25,7 @@ import { BLOG_POSTS } from "@/lib/blogPosts";
 import BlogCard from "@/components/BlogCard";
 import SEO from "@/components/SEO";
 import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -264,6 +265,57 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ── 5c · FAQ ── */}
+      <FAQSection
+        id="home"
+        tag={t("FAQ", "Preguntas frecuentes")}
+        title={t("Frequently Asked Questions", "Preguntas Frecuentes")}
+        items={[
+          {
+            question: t("What does an AI consultant do?", "¿Qué hace un consultor de IA?"),
+            answer: t(
+              "An AI consultant evaluates your business operations, identifies where artificial intelligence can save time and money, and helps you implement AI tools strategically. At Go AI Innovation, we use our proprietary Time Reclaimed™ Framework to help businesses save 10+ hours per week through AI automation — without disrupting your current operations.",
+              "Un consultor de IA evalúa las operaciones de su negocio, identifica dónde la inteligencia artificial puede ahorrar tiempo y dinero, y le ayuda a implementar herramientas de IA estratégicamente. En Go AI Innovation, usamos nuestro marco propietario Time Reclaimed™ para ayudar a las empresas a ahorrar más de 10 horas por semana mediante la automatización con IA — sin interrumpir sus operaciones actuales.",
+            ),
+          },
+          {
+            question: t("How much does AI consulting cost for a small business?", "¿Cuánto cuesta la consultoría de IA para una pequeña empresa?"),
+            answer: t(
+              "AI consulting costs vary based on scope and complexity. Go AI Innovation offers a free AI Readiness Assessment to help you understand where AI can help your business before any commitment. Our engagements range from strategy sessions to full implementation programs.",
+              "Los costos de la consultoría de IA varían según el alcance y la complejidad. Go AI Innovation ofrece una Evaluación de Preparación para IA gratuita para ayudarle a entender dónde la IA puede ayudar a su negocio antes de cualquier compromiso. Nuestros servicios van desde sesiones de estrategia hasta programas de implementación completos.",
+            ),
+          },
+          {
+            question: t("How long does it take to implement AI in a business?", "¿Cuánto tiempo toma implementar IA en un negocio?"),
+            answer: t(
+              "Most businesses see initial results within 2–4 weeks using our Time Reclaimed™ Framework. The full 7-stage transformation typically takes 3–6 months depending on the complexity of your operations and the number of processes being automated.",
+              "La mayoría de las empresas ven resultados iniciales en 2–4 semanas usando nuestro marco Time Reclaimed™. La transformación completa de 7 etapas suele tomar de 3 a 6 meses dependiendo de la complejidad de sus operaciones y la cantidad de procesos a automatizar.",
+            ),
+          },
+          {
+            question: t("Is AI going to replace my employees?", "¿La IA reemplazará a mis empleados?"),
+            answer: t(
+              "No. Our approach focuses on augmenting your team, not replacing them. AI handles repetitive, time-consuming tasks so your employees can focus on higher-value work that requires human creativity, judgment, and relationships. Most clients report higher employee satisfaction after AI implementation.",
+              "No. Nuestro enfoque se centra en potenciar a su equipo, no en reemplazarlo. La IA maneja tareas repetitivas y tediosas para que sus empleados puedan enfocarse en trabajo de mayor valor que requiere creatividad humana, juicio y relaciones. La mayoría de los clientes reportan mayor satisfacción del personal tras la implementación de IA.",
+            ),
+          },
+          {
+            question: t("Do I need technical skills to use AI in my business?", "¿Necesito conocimientos técnicos para usar IA en mi negocio?"),
+            answer: t(
+              "Not at all. That's exactly why businesses work with an AI consultant. Go AI Innovation handles the technical implementation while training your team to use the new tools effectively. Our goal is to make AI accessible to every business leader, regardless of technical background.",
+              "Para nada. Por eso las empresas trabajan con un consultor de IA. Go AI Innovation se encarga de la implementación técnica mientras capacita a su equipo para usar las nuevas herramientas de forma efectiva. Nuestro objetivo es hacer que la IA sea accesible para todo líder empresarial, independientemente de su trasfondo técnico.",
+            ),
+          },
+          {
+            question: t("What industries do you work with?", "¿Con qué industrias trabajan?"),
+            answer: t(
+              "We work with businesses across all industries, with particular expertise in professional services, healthcare, real estate, insurance, retail, and government organizations. Our Time Reclaimed™ Framework is industry-agnostic — it works wherever there are repetitive processes consuming your team's time.",
+              "Trabajamos con empresas de todas las industrias, con experiencia particular en servicios profesionales, salud, bienes raíces, seguros, retail y organizaciones gubernamentales. Nuestro marco Time Reclaimed™ es agnóstico a la industria — funciona dondequiera que haya procesos repetitivos consumiendo el tiempo de su equipo.",
+            ),
+          },
+        ]}
+      />
 
       {/* ── 6 · CTA ── */}
       <section className="section-dark section-padding relative overflow-hidden">
