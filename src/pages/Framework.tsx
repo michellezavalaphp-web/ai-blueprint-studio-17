@@ -14,6 +14,7 @@ import {
   Layers,
 } from "lucide-react";
 import SEO from "@/components/SEO";
+import SchemaMarkup, { FRAMEWORK_HOWTO_SCHEMA } from "@/components/SchemaMarkup";
 
 const Framework = () => {
   const { t } = useLanguage();
@@ -66,6 +67,7 @@ const Framework = () => {
   return (
     <>
       <SEO title={"Time Reclaimed™ Framework — 7-Stage AI Transformation Methodology"} description={"The proprietary 7-stage methodology helping businesses save thousands of hours through strategic AI implementation. Assess, strategize, implement, optimize, scale."} />
+      <SchemaMarkup id="framework-howto" schema={FRAMEWORK_HOWTO_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
