@@ -329,7 +329,7 @@ const Speaking = () => {
             {events.map((e) => (
               <div key={e.name} className="dash-card flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Calendar className="h-5 w-5 text-primary" />
+                  <CalendarIcon className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-display text-base sm:text-lg font-semibold mb-1">
