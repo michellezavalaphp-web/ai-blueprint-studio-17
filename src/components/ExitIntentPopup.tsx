@@ -18,9 +18,23 @@ const ExitIntentPopup = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const triggeredRef = useRef(false);
   const lastScrollY = useRef(0);
   const lastScrollT = useRef(0);
+
+  const validate = (value: string): string | null => {
+    const v = value.trim();
+    if (!v) return t("Please enter your email.", "Por favor ingrese su correo.");
+    if (v.length > 255)
+      return t("Email is too long.", "El correo es demasiado largo.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))
+      return t(
+        "Please enter a valid email address.",
+        "Por favor ingrese un correo electrónico válido.",
+      );
+    return null;
+  };
 
   useEffect(() => {
     if (isExcludedPath(pathname)) return;
@@ -81,10 +95,13 @@ const ExitIntentPopup = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = email.trim();
-    if (!trimmed || !/^\S+@\S+\.\S+$/.test(trimmed)) return;
-
-    sendToGrowthHub({ email: trimmed, source: "exit-popup" });
+    const err = validate(email);
+    if (err) {
+      setError(err);
+      return;
+    }
+    setError(null);
+    sendToGrowthHub({ email: email.trim(), source: "exit-popup" });
     setOpen(false);
     window.location.href = ASSESSMENT_URL;
   };
@@ -137,17 +154,36 @@ const ExitIntentPopup = () => {
             )}
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} noValidate className="space-y-2">
             <Input
               type="email"
               required
               maxLength={255}
               placeholder={t("you@company.com", "usted@empresa.com")}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="h-11 text-sm"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError(validate(e.target.value));
+              }}
+              onBlur={() => setError(validate(email))}
+              aria-invalid={!!error}
+              aria-describedby={error ? "exit-popup-error" : undefined}
+              className={
+                error
+                  ? "h-11 text-sm border-destructive focus-visible:ring-destructive"
+                  : "h-11 text-sm"
+              }
             />
-            <Button type="submit" variant="hero" className="w-full h-11 text-sm">
+            {error && (
+              <p
+                id="exit-popup-error"
+                role="alert"
+                className="text-xs text-destructive font-medium"
+              >
+                {error}
+              </p>
+            )}
+            <Button type="submit" variant="hero" className="w-full h-11 text-sm mt-1">
               {t("Get My Free Score", "Obtener mi puntuación gratis")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
