@@ -50,6 +50,8 @@ const App = () => (
               <Route path="/book" element={<Book />} />
               <Route path="/store" element={<Store />} />
               <Route path="/tienda" element={<Store />} />
+              <Route path="/speaking" element={<Speaking />} />
+              <Route path="/es/conferencias" element={<Speaking />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<InsightPost />} />
               <Route path="/es/perspectivas" element={<Insights />} />
