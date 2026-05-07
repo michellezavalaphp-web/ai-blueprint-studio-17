@@ -8,6 +8,7 @@ import { Send, CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import { sendToGrowthHub } from "@/utils/growthHub";
 
 const Contact = () => {
   const { toast } = useToast();
