@@ -24,6 +24,7 @@ import {
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import BlogCard from "@/components/BlogCard";
 import SEO from "@/components/SEO";
+import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -63,6 +64,7 @@ const Index = () => {
   return (
     <>
       <SEO title={"Go AI Innovation — AI Consulting & Implementation | Miami"} description={"Go AI Innovation helps businesses implement AI systems that save 10+ hours per week. Led by CPD Accredited AI Consultant Mardel Michelle Zavala. Free AI Readiness Assessment."} />
+      <SchemaMarkup id="local-business" schema={LOCAL_BUSINESS_SCHEMA} />
       {/* ── 1 · Hero ── */}
       <section className="section-light relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden bg-white">
         <div className="absolute inset-0 bg-white" />

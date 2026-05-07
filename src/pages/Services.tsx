@@ -4,6 +4,7 @@ import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, ArrowRight, Settings 
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import SchemaMarkup, { SERVICES_SCHEMA } from "@/components/SchemaMarkup";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -44,6 +45,7 @@ const Services = () => {
   return (
     <>
       <SEO title={"AI Strategy & Implementation Services | Go AI Innovation"} description={"From AI readiness assessment to full implementation — our Time Reclaimed™ Framework helps businesses automate operations, reduce costs, and scale with AI. Miami-based, serving nationwide."} />
+      <SchemaMarkup id="services" schema={SERVICES_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
