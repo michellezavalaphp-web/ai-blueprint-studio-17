@@ -8,6 +8,7 @@ import { Send, CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import { sendToGrowthHub } from "@/utils/growthHub";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -28,6 +29,18 @@ const Contact = () => {
       toast({ title: t("Please fill in all required fields", "Por favor complete todos los campos requeridos"), variant: "destructive" });
       return;
     }
+
+    const isSpeaking =
+      typeof window !== "undefined" && window.location.search.includes("ref=speaking");
+    const [firstName, ...rest] = name.split(" ");
+    sendToGrowthHub({
+      email,
+      firstName,
+      lastName: rest.join(" ") || undefined,
+      phone,
+      source: isSpeaking ? "speaking-inquiry" : "contact-form",
+      message: `Company: ${company}\n\n${message}`,
+    });
 
     setSubmitted(true);
     toast({ title: t("Message sent!", "¡Mensaje enviado!"), description: t("We'll be in touch soon.", "Nos pondremos en contacto pronto.") });
