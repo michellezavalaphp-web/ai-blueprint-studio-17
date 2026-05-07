@@ -1,5 +1,20 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 import {
   Mic,
   ArrowRight,
@@ -9,15 +24,18 @@ import {
   Briefcase,
   Globe,
   HeartHandshake,
-  Calendar,
+  Calendar as CalendarIcon,
   Mail,
   Download,
   CheckCircle2,
+  Send,
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import SectionHeading from "@/components/SectionHeading";
+import { sendToGrowthHub } from "@/utils/growthHub";
 
 const SPEAKER_SCHEMA = {
   "@context": "https://schema.org",
@@ -67,8 +85,67 @@ const SPEAKER_SCHEMA = {
   ],
 };
 
+const EVENT_TYPES = [
+  "Corporate Event",
+  "Conference",
+  "Summit",
+  "Workshop",
+  "Panel",
+  "Virtual/Hybrid",
+  "Other",
+] as const;
+
 const Speaking = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  const [submitted, setSubmitted] = useState(false);
+  const [eventDate, setEventDate] = useState<Date | undefined>(undefined);
+  const [eventType, setEventType] = useState<string>("");
+
+  const handleSpeakingSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = (data.get("name") as string)?.trim();
+    const email = (data.get("email") as string)?.trim();
+    const phone = (data.get("phone") as string)?.trim();
+    const organization = (data.get("organization") as string)?.trim();
+    const message = (data.get("message") as string)?.trim();
+
+    if (!name || !email || !organization) {
+      toast({
+        title: t("Please fill in all required fields", "Por favor complete todos los campos requeridos"),
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const [firstName, ...rest] = name.split(" ");
+    const dateStr = eventDate ? format(eventDate, "yyyy-MM-dd") : "";
+
+    sendToGrowthHub({
+      email,
+      firstName,
+      lastName: rest.join(" ") || undefined,
+      phone: phone || undefined,
+      source: "speaking-inquiry",
+      message: [
+        `Organization/Event: ${organization}`,
+        eventType ? `Event Type: ${eventType}` : "",
+        dateStr ? `Event Date: ${dateStr}` : "",
+        message ? `\nDetails:\n${message}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    });
+
+    setSubmitted(true);
+    toast({
+      title: t("Thank you!", "¡Gracias!"),
+      description: t("We'll be in touch within 24 hours.", "Nos pondremos en contacto dentro de 24 horas."),
+    });
+  };
+
 
   const topics = [
     {
@@ -311,7 +388,7 @@ const Speaking = () => {
             {events.map((e) => (
               <div key={e.name} className="dash-card flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Calendar className="h-5 w-5 text-primary" />
+                  <CalendarIcon className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-display text-base sm:text-lg font-semibold mb-1">
@@ -330,6 +407,112 @@ const Speaking = () => {
               "Se agregan más eventos con regularidad. Consulte disponibilidad abajo.",
             )}
           </p>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="section-padding section-light">
+        <div className="container mx-auto max-w-2xl">
+          <SectionHeading
+            tag={t("Inquire", "Consultar")}
+            title={t(
+              "Book Mardel Michelle for Your Next Event",
+              "Reserve a Mardel Michelle para su próximo evento",
+            )}
+            description={t(
+              "Share a few details about your event and we'll be in touch within 24 hours.",
+              "Comparta algunos detalles sobre su evento y nos pondremos en contacto en menos de 24 horas.",
+            )}
+          />
+          {submitted ? (
+            <div className="dash-card p-10 sm:p-14 text-center glow-border">
+              <CheckCircle2 className="h-10 w-10 sm:h-12 sm:w-12 text-primary mx-auto mb-5" />
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-3">
+                {t("Thank you!", "¡Gracias!")}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">
+                {t("We'll be in touch within 24 hours.", "Nos pondremos en contacto dentro de 24 horas.")}
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSpeakingSubmit} className="dash-card p-6 sm:p-10 space-y-5 glow-border">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div className="space-y-1.5">
+                  <Label htmlFor="sp-name" className="text-xs sm:text-[13px]">
+                    {t("Full Name", "Nombre completo")} <span className="text-destructive">*</span>
+                  </Label>
+                  <Input id="sp-name" name="name" maxLength={100} required className="h-11 sm:h-10 text-sm" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="sp-email" className="text-xs sm:text-[13px]">
+                    {t("Email", "Correo")} <span className="text-destructive">*</span>
+                  </Label>
+                  <Input id="sp-email" name="email" type="email" maxLength={255} required className="h-11 sm:h-10 text-sm" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="sp-phone" className="text-xs sm:text-[13px]">{t("Phone", "Teléfono")}</Label>
+                  <Input id="sp-phone" name="phone" type="tel" maxLength={20} className="h-11 sm:h-10 text-sm" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="sp-org" className="text-xs sm:text-[13px]">
+                    {t("Organization / Event Name", "Organización / Nombre del evento")}{" "}
+                    <span className="text-destructive">*</span>
+                  </Label>
+                  <Input id="sp-org" name="organization" maxLength={200} required className="h-11 sm:h-10 text-sm" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label className="text-xs sm:text-[13px]">{t("Event Date", "Fecha del evento")}</Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className={cn(
+                          "w-full h-11 sm:h-10 justify-start text-left font-normal text-sm",
+                          !eventDate && "text-muted-foreground",
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {eventDate ? format(eventDate, "PPP") : t("Pick a date", "Seleccione una fecha")}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={eventDate}
+                        onSelect={setEventDate}
+                        disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
+                        initialFocus
+                        className={cn("p-3 pointer-events-auto")}
+                      />
+                    </PopoverContent>
+                  </Popover>
+                </div>
+                <div className="space-y-1.5">
+                  <Label className="text-xs sm:text-[13px]">{t("Event Type", "Tipo de evento")}</Label>
+                  <Select value={eventType} onValueChange={setEventType}>
+                    <SelectTrigger className="h-11 sm:h-10 text-sm">
+                      <SelectValue placeholder={t("Select type", "Seleccione tipo")} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {EVENT_TYPES.map((type) => (
+                        <SelectItem key={type} value={type} className="text-sm">{type}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="sp-message" className="text-xs sm:text-[13px]">
+                  {t("Message / Details", "Mensaje / Detalles")}
+                </Label>
+                <Textarea id="sp-message" name="message" rows={5} maxLength={1500} className="text-sm" />
+              </div>
+              <Button type="submit" variant="hero" size="lg" className="w-full h-12 sm:h-11 text-sm">
+                {t("Submit Inquiry", "Enviar consulta")} <Send className="ml-2 h-4 w-4" />
+              </Button>
+            </form>
+          )}
         </div>
       </section>
 
