@@ -95,10 +95,13 @@ const ExitIntentPopup = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = email.trim();
-    if (!trimmed || !/^\S+@\S+\.\S+$/.test(trimmed)) return;
-
-    sendToGrowthHub({ email: trimmed, source: "exit-popup" });
+    const err = validate(email);
+    if (err) {
+      setError(err);
+      return;
+    }
+    setError(null);
+    sendToGrowthHub({ email: email.trim(), source: "exit-popup" });
     setOpen(false);
     window.location.href = ASSESSMENT_URL;
   };
