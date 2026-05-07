@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { sendToGrowthHub } from "@/utils/growthHub";
 
 interface LeadCaptureDialogProps {
   open: boolean;
