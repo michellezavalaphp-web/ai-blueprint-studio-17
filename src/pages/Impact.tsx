@@ -4,9 +4,9 @@ import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
-import SEO from "@/components/SEO";
   Star, Quote, ArrowRight, BarChart3, TrendingUp, Users, Award,
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Impact = () => {
   const { t } = useLanguage();
