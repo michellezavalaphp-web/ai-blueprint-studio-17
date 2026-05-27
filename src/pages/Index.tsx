@@ -20,6 +20,9 @@ import {
   Layers,
   Rocket,
   TrendingUp,
+  Filter,
+  Lightbulb,
+  Diamond,
 } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import BlogCard from "@/components/BlogCard";
