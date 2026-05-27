@@ -53,14 +53,6 @@ const Index = () => {
     { icon: ScanSearch, title: t("AI Opportunity Finder", "Buscador de oportunidades de IA"), desc: t("Uncover processes ripe for automation and AI enhancement.", "Identifique procesos listos para automatización y mejora con IA.") },
   ];
 
-  const methodology = [
-    { step: "01", title: t("Discovery", "Descubrimiento"), desc: t("Assess current operations, workflows, and pain points to identify high-impact AI opportunities.", "Evalúe las operaciones, flujos de trabajo y puntos críticos actuales para identificar oportunidades de IA de alto impacto.") },
-    { step: "02", title: t("Analysis", "Análisis"), desc: t("Data-driven evaluation of inefficiencies, resource allocation, and automation potential.", "Evaluación basada en datos de ineficiencias, asignación de recursos y potencial de automatización.") },
-    { step: "03", title: t("Design", "Diseño"), desc: t("Architect a custom AI implementation strategy aligned with your organizational goals.", "Diseñe una estrategia de implementación de IA personalizada alineada con los objetivos de su organización.") },
-    { step: "04", title: t("Integration", "Integración"), desc: t("Deploy AI systems within your existing technology stack with minimal disruption.", "Implemente sistemas de IA dentro de su infraestructura tecnológica existente con mínima interrupción.") },
-    { step: "05", title: t("Deployment", "Despliegue"), desc: t("Launch with hands-on support, ensuring smooth adoption across your team.", "Lance con soporte práctico, asegurando una adopción fluida en todo su equipo.") },
-    { step: "06", title: t("Optimization", "Optimización"), desc: t("Monitor performance, refine systems, and drive continuous operational improvement.", "Monitoree el rendimiento, refine los sistemas e impulse la mejora operativa continua.") },
-  ];
 
   return (
     <>
@@ -216,31 +208,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── 5 · Methodology ── */}
-      <section className="section-light-alt section-padding">
-        <div className="container mx-auto">
-          <SectionHeading
-            tag={t("Implementation Approach", "Enfoque de implementación")}
-            title={t("AI Implementation Methodology", "Metodología de implementación de IA")}
-            description={t("A structured consulting process designed to deliver measurable results at every stage.", "Un proceso de consultoría estructurado diseñado para entregar resultados medibles en cada etapa.")}
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto">
-            {methodology.map((m) => (
-              <div key={m.title} className="dash-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-[10px] uppercase tracking-widest text-primary font-bold bg-primary/8 rounded-full px-2.5 py-1">
-                    {m.step}
-                  </span>
-                  <h3 className="font-display text-sm sm:text-base font-semibold">{m.title}</h3>
-                </div>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── 5b · Latest AI Insights ── */}
+      {/* ── 5 · Latest AI Insights ── */}
       <section className="section-light section-padding">
         <div className="container mx-auto">
           <SectionHeading
@@ -266,7 +235,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── 5c · FAQ ── */}
+      {/* ── 6 · FAQ ── */}
       <FAQSection
         id="home"
         tag={t("FAQ", "Preguntas frecuentes")}
