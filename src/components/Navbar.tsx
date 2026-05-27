@@ -13,15 +13,11 @@ const Navbar = () => {
   const { t } = useLanguage();
 
   const navLinks = [
-    { label: t("Home", "Inicio"), to: "/" },
     { label: t("Services", "Servicios"), to: "/services" },
-    { label: t("AI Tools", "Herramientas IA"), to: "/tools" },
     { label: t("Framework", "Metodología"), to: "/framework" },
-    { label: t("Store", "Tienda"), to: "/store" },
-    { label: t("Insights", "Perspectivas"), to: t("/insights", "/es/perspectivas") },
     { label: t("Speaking", "Conferencias"), to: t("/speaking", "/es/conferencias") },
-    { label: t("Impact", "Impacto"), to: "/impact" },
     { label: t("About", "Nosotros"), to: "/about" },
+    { label: t("Store", "Tienda"), to: "/store" },
     { label: t("Contact", "Contacto"), to: "/contact" },
   ];
 
