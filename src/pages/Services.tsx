@@ -84,6 +84,29 @@ const Services = () => {
         </div>
       </section>
 
+      <section className="section-padding bg-secondary/20">
+        <div className="container mx-auto max-w-xl">
+          <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
+              {t("Ready to Stop Guessing and Start Implementing?", "¿Listo para dejar de adivinar y empezar a implementar?")}
+            </h2>
+            <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
+              {t("Book a free strategy call and let's map out exactly where AI can give you back time, money, and margin.", "Agenda una llamada estratégica gratuita y descubramos exactamente dónde la IA puede devolverte tiempo, dinero y margen.")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
+                <Link to="/tools">{t("Explore AI Tools", "Explora las herramientas de IA")}</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FAQSection
         id="services"
         tag={t("FAQ", "Preguntas frecuentes")}
@@ -112,29 +135,6 @@ const Services = () => {
           },
         ]}
       />
-
-      <section className="section-padding bg-secondary/20">
-        <div className="container mx-auto max-w-xl">
-          <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
-            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
-              {t("Start Your AI Transformation", "Inicia tu transformación con IA")}
-            </h2>
-            <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
-              {t("Every organization is unique. Let us build an AI strategy that fits your operations, goals, and team.", "Cada organización es única. Permítanos crear una estrategia de IA que se adapte a sus operaciones, objetivos y equipo.")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
-                <Link to="/tools">{t("Explore AI Tools", "Explora las herramientas de IA")}</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
