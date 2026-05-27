@@ -443,6 +443,12 @@ const Index = () => {
             title={t("The Time Reclaimed™ Framework", "El marco Time Reclaimed™")}
             description={t("Seven stages from operational inefficiency to AI-powered transformation.", "Siete etapas desde la ineficiencia operativa hasta la transformación impulsada por IA.")}
           />
+          <p className="text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-10 sm:mb-14 leading-relaxed">
+            {t(
+              "Every engagement we lead is built on this system. Seven stages from operational chaos to AI-powered clarity.",
+              "Cada proyecto que lideramos se construye sobre este sistema. Siete etapas del caos operativo a la claridad impulsada por IA."
+            )}
+          </p>
           {/* Desktop */}
           <div className="hidden lg:flex items-center justify-center max-w-5xl mx-auto">
             {frameworkStages.map((stage, i) => (
@@ -485,6 +491,23 @@ const Index = () => {
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Quote Divider */}
+      <section className="bg-white py-12 sm:py-16">
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto px-4">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-px bg-primary/25" />
+            <Diamond className="h-3 w-3 text-primary/40" />
+            <div className="w-8 h-px bg-primary/25" />
+          </div>
+          <p className="text-sm sm:text-base italic text-muted-foreground leading-relaxed">
+            {t(
+              "Strategy without execution is a daydream. Execution without strategy is a nightmare.",
+              "La estrategia sin ejecución es una fantasía. La ejecución sin estrategia es una pesadilla."
+            )}
+          </p>
         </div>
       </section>
 
