@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import michellePortrait from "@/assets/michelle-portrait.png";
+import michelleStory from "@/assets/michelle-story.jpg";
 
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
