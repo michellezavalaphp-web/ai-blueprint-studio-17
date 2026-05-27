@@ -4,6 +4,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import michellePortrait from "@/assets/michelle-portrait.png";
 import michelleStory from "@/assets/michelle-story.jpg";
+import michelleSpeaking from "@/assets/michelle-speaking.jpg";
 
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -510,6 +511,60 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      {/* Speaking & Book Section */}
+      <section className="bg-white section-padding">
+        <div className="container mx-auto max-w-4xl text-center px-4">
+          <p className="text-xs tracking-[0.25em] uppercase text-primary font-semibold mb-4">
+            {t("SPEAKING & EVENTS", "CONFERENCIAS Y EVENTOS")}
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
+            {t("Book Michelle for Your Next Event", "Reserva a Michelle para tu próximo evento")}
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
+            {t(
+              "Bringing the message of AI implementation, time reclamation, and operational freedom to stages across the country. Available for keynotes, panels, workshops, and summits.",
+              "Llevando el mensaje de implementación de IA, recuperación del tiempo y libertad operativa a escenarios de todo el país. Disponible para conferencias magistrales, paneles, talleres y cumbres."
+            )}
+          </p>
+          <p className="text-sm text-muted-foreground/80 mb-10">
+            {t("Upcoming:", "Próximos eventos:")} <span className="font-medium text-foreground/70">AI Edge Summit (May 2026)</span> <span className="text-primary/50 mx-2">•</span> <span className="font-medium text-foreground/70">AI Clarity Summit (June 2026)</span>
+          </p>
+
+          <div className="bg-primary/5 border-l-[3px] border-primary rounded-r-lg p-6 sm:p-8 text-left max-w-3xl mx-auto mb-10 shadow-sm">
+            <p className="text-xs tracking-[0.2em] uppercase text-primary font-semibold mb-3">
+              {t("📖 Coming June 2026", "📖 Próximamente Junio 2026")}
+            </p>
+            <p className="font-display text-lg sm:text-xl font-semibold leading-snug">
+              Time Reclaimed™ — {t(
+                "7 Practical Steps to Create Margin, Lead Confidently, and Reclaim Your Time in a Distracted, AI-Powered World",
+                "7 pasos prácticos para crear margen, liderar con confianza y recuperar tu tiempo en un mundo distraído y potenciado por IA"
+              )}
+            </p>
+          </div>
+
+          <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
+            <Link to="/speaking">
+              {t("Request Speaking Info", "Solicitar información de conferencias")} <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+
+        {/* Speaking photo - navy gradient area */}
+        <div className="mt-16 sm:mt-20 relative overflow-hidden bg-gradient-to-br from-[hsl(222,30%,5%)] via-[hsl(222,35%,10%)] to-[hsl(222,30%,5%)]">
+          <div className="container mx-auto px-4 py-12 sm:py-16">
+            <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={michelleSpeaking}
+                alt={t("Michelle speaking at the Leadership Summit", "Michelle dando una conferencia en el Leadership Summit")}
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* ── 4 · AI Readiness Diagnostics ── */}
       <section className="section-light section-padding">
