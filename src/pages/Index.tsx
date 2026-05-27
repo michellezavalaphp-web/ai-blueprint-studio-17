@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
-import logo from "@/assets/logo.png";
+import michellePortrait from "@/assets/michelle-portrait.png";
 import consultingHero from "@/assets/consulting-hero.jpg";
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -59,34 +59,53 @@ const Index = () => {
       <SEO title={"Go AI Innovation — AI Consulting & Implementation | Miami"} description={"Go AI Innovation helps businesses implement AI systems that save 10+ hours per week. Led by CPD Accredited AI Consultant Mardel Michelle Zavala. Free AI Readiness Assessment."} />
       <SchemaMarkup id="local-business" schema={LOCAL_BUSINESS_SCHEMA} />
       {/* ── 1 · Hero ── */}
-      <section className="section-light relative min-h-[72vh] sm:min-h-[80vh] md:min-h-[88vh] flex items-center overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-white" />
-        <div className="container mx-auto px-4 relative z-10 py-8 sm:py-14 md:py-16">
-          <div className="max-w-3xl mx-auto text-center animate-fade-up">
-            <img src={logo} alt="Go AI Innovation" className="h-28 sm:h-40 md:h-48 w-auto mx-auto mb-5 sm:mb-7" />
-            <span className="badge-tag mb-5 sm:mb-6">
-              <Activity className="h-3 w-3" />
-              {t("AI Implementation Strategist", "Estratega de implementación de IA")}
-            </span>
-            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.12] mb-4 sm:mb-5 mt-3 sm:mt-4">
-              {t("Reclaim Time. Transform Operations.", "Recupera tu tiempo. Transforma operaciones.")}{" "}
-              <span className="text-gradient">{t("Lead the AI Era.", "Lidera la era de la IA.")}</span>
-            </h1>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg mx-auto mb-8 sm:mb-10 leading-relaxed">
-              {t(
-                "Go AI Innovation helps organizations design and implement intelligent AI systems that improve operational efficiency, reduce manual work, and drive strategic growth.",
-                "Go AI Innovation ayuda a las organizaciones a diseñar e implementar sistemas inteligentes de IA que mejoran la eficiencia operativa, reducen el trabajo manual e impulsan el crecimiento estratégico."
-              )}
-            </p>
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 justify-center max-w-2xl mx-auto">
-              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-                <Link to="/tools">{t("Start AI Readiness Assessment", "Inicia la evaluación de preparación para IA")}</Link>
-              </Button>
+      <section className="section-light relative flex items-center overflow-hidden bg-white">
+        <div className="container mx-auto px-4 relative z-10 py-12 sm:py-16 md:py-24">
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
+            {/* Left: Text (60%) */}
+            <div className="lg:col-span-3 order-2 lg:order-1 animate-fade-up text-center lg:text-left">
+              <span className="block text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-primary mb-5 sm:mb-6 uppercase">
+                {t("International CPD Accredited AI Consultant", "Consultora de IA Acreditada Internacional CPD")}
+              </span>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] mb-5 sm:mb-6 tracking-tight">
+                {t("Less Overwhelm. More Freedom. ", "Menos agobio. Más libertad. ")}
+                <span className="text-gradient">{t("Powered by AI.", "Impulsado por IA.")}</span>
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-7 sm:mb-8 leading-relaxed">
+                {t(
+                  "I help overwhelmed business owners and organizations implement AI systems that reclaim time, reduce chaos, and drive real growth — without the hype, without the overwhelm.",
+                  "Ayudo a dueños de negocios y organizaciones agobiadas a implementar sistemas de IA que recuperan tiempo, reducen el caos e impulsan crecimiento real — sin hype, sin agobio."
+                )}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start max-w-xl mx-auto lg:mx-0">
+                <Button variant="hero" size="lg" className="h-12 text-sm w-full sm:w-auto" asChild>
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    {t("Book a Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="hero-outline" size="lg" className="h-12 text-sm w-full sm:w-auto" asChild>
+                  <Link to="/assessment">{t("Take the AI Readiness Assessment", "Evaluación de preparación para IA")}</Link>
+                </Button>
+              </div>
+              <p className="mt-6 text-xs sm:text-sm italic text-muted-foreground/80 max-w-xl mx-auto lg:mx-0">
+                {t(
+                  "Freedom isn't a reward for working harder. It's what happens when you work smarter.",
+                  "La libertad no es una recompensa por trabajar más duro. Es lo que ocurre cuando trabajas con más inteligencia."
+                )}
+              </p>
+            </div>
+
+            {/* Right: Portrait (40%) */}
+            <div className="lg:col-span-2 order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-up">
+              <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/15 to-transparent rounded-3xl blur-2xl" aria-hidden="true" />
+                <img
+                  src={michellePortrait}
+                  alt={t("Mardel Michelle Zavala, AI Implementation Consultant", "Mardel Michelle Zavala, Consultora de Implementación de IA")}
+                  className="relative w-full h-auto rounded-2xl shadow-2xl object-cover aspect-square"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </div>
