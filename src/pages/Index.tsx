@@ -443,6 +443,12 @@ const Index = () => {
             title={t("The Time Reclaimed™ Framework", "El marco Time Reclaimed™")}
             description={t("Seven stages from operational inefficiency to AI-powered transformation.", "Siete etapas desde la ineficiencia operativa hasta la transformación impulsada por IA.")}
           />
+          <p className="text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-10 sm:mb-14 leading-relaxed">
+            {t(
+              "Every engagement we lead is built on this system. Seven stages from operational chaos to AI-powered clarity.",
+              "Cada proyecto que lideramos se construye sobre este sistema. Siete etapas del caos operativo a la claridad impulsada por IA."
+            )}
+          </p>
           {/* Desktop */}
           <div className="hidden lg:flex items-center justify-center max-w-5xl mx-auto">
             {frameworkStages.map((stage, i) => (
