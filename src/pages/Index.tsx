@@ -111,6 +111,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── 1b · Credentials Bar ── */}
+      <section className="py-5 sm:py-6 bg-muted border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[11px] sm:text-xs text-muted-foreground tracking-wide">
+            <span>{t("International CPD Accredited", "Acreditada Internacional CPD")}</span>
+            <span className="text-primary/40 select-none" aria-hidden="true">•</span>
+            <span>{t("AI Implementation Strategist", "Estratega de Implementación de IA")}</span>
+            <span className="text-primary/40 select-none" aria-hidden="true">•</span>
+            <span>{t("Bilingual: English & Español", "Bilingüe: Inglés y Español")}</span>
+            <span className="text-primary/40 select-none" aria-hidden="true">•</span>
+            <span>{t("Author — Time Reclaimed™ (June 2026)", "Autora — Time Reclaimed™ (Junio 2026)")}</span>
+            <span className="text-primary/40 select-none" aria-hidden="true">•</span>
+            <span>{t("Featured Speaker", "Oradora Destacada")}</span>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2 · Services ── */}
       <section className="section-light section-padding">
         <div className="container mx-auto">
