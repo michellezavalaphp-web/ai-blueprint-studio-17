@@ -364,6 +364,76 @@ const Index = () => {
       </div>
     </section>
 
+      {/* ── Personal Story ── */}
+      <section className="section-light section-padding bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-[45fr_55fr] gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+            {/* Left: Photo */}
+            <div className="order-1">
+              <div className="relative w-full max-w-md mx-auto lg:max-w-none">
+                <img
+                  src={michelleStory}
+                  alt={t("Mardel Michelle Zavala at her AI strategy workspace", "Mardel Michelle Zavala en su espacio de trabajo de estrategia de IA")}
+                  className="w-full aspect-[4/5] object-cover rounded-2xl shadow-elegant"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            {/* Right: Text */}
+            <div className="order-2">
+              <span className="block text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-primary mb-4 uppercase">
+                {t("My Story", "Mi Historia")}
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-bold leading-[1.12] mb-6 tracking-tight">
+                {t("The Tuesday Night That Changed Everything", "El martes por la noche que lo cambió todo")}
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <p>{t(
+                  "You were a capable professional running at full capacity — with nothing left in reserve. Watching opportunities pass because you didn't have the margin to pursue them.",
+                  "Eras una profesional capaz funcionando al máximo — sin nada en reserva. Viendo pasar oportunidades porque no tenías el margen para perseguirlas."
+                )}</p>
+                <p>{t(
+                  "You weren't lazy. You weren't disorganized. You were overloaded in a way no amount of harder work was going to fix.",
+                  "No eras perezosa. No eras desorganizada. Estabas sobrecargada de una manera que ningún esfuerzo adicional iba a resolver."
+                )}</p>
+                <p>{t(
+                  "That Tuesday night, sitting at your desk after the house went quiet, looking at a list of unfinished things — you felt the grief of someone who could see exactly what they were capable of… and couldn't quite reach it. Not from lack of effort. From lack of margin.",
+                  "Ese martes por la noche, sentada en tu escritorio después de que la casa quedó en silencio, mirando una lista de cosas sin terminar — sentiste el dolor de alguien que podía ver exactamente de lo que era capaz… y no podía alcanzarlo. No por falta de esfuerzo. Por falta de margen."
+                )}</p>
+                <p>{t(
+                  "That's why I built Go AI Innovation. Not to sell you tools. To give you back the time, clarity, and freedom to do the work that actually matters.",
+                  "Por eso construí Go AI Innovation. No para venderte herramientas. Para devolverte el tiempo, la claridad y la libertad de hacer el trabajo que realmente importa."
+                )}</p>
+              </div>
+              <div className="mt-8">
+                <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    {t("Book a Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote Divider */}
+          <div className="mt-16 sm:mt-20 flex flex-col items-center text-center max-w-2xl mx-auto">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-px bg-primary/25" />
+              <Diamond className="h-3 w-3 text-primary/40" />
+              <div className="w-8 h-px bg-primary/25" />
+            </div>
+            <p className="text-sm sm:text-base italic text-muted-foreground leading-relaxed">
+              {t(
+                "I didn't start this company because AI was trending. I started it because I was tired of watching capable people run out of time.",
+                "No comencé esta empresa porque la IA estuviera de moda. La comencé porque estaba cansada de ver a personas capaces quedarse sin tiempo."
+              )}
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ── 3 · Framework ── */}
       <section className="section-dark section-padding">
         <div className="container mx-auto">
