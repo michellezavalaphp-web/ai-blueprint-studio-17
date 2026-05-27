@@ -494,6 +494,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Quote Divider */}
+      <section className="bg-white py-12 sm:py-16">
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto px-4">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-px bg-primary/25" />
+            <Diamond className="h-3 w-3 text-primary/40" />
+            <div className="w-8 h-px bg-primary/25" />
+          </div>
+          <p className="text-sm sm:text-base italic text-muted-foreground leading-relaxed">
+            {t(
+              "Strategy without execution is a daydream. Execution without strategy is a nightmare.",
+              "La estrategia sin ejecución es una fantasía. La ejecución sin estrategia es una pesadilla."
+            )}
+          </p>
+        </div>
+      </section>
+
       {/* ── 4 · AI Readiness Diagnostics ── */}
       <section className="section-light section-padding">
         <div className="container mx-auto">
