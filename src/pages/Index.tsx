@@ -214,7 +214,155 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+    </section>
+
+    {/* ── 2b · Services ── */}
+    <section className="section-padding bg-muted">
+      <div className="container mx-auto">
+        {/* Badge */}
+        <span className="block text-center text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-primary mb-4 sm:mb-5 uppercase">
+          {t("WHAT WE DO", "QUÉ HACEMOS")}
+        </span>
+        {/* Heading */}
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-4 sm:mb-5 max-w-3xl mx-auto">
+          {t("Practical AI Support for Real Organizations", "Apoyo práctico de IA para organizaciones reales")}
+        </h2>
+        {/* Subheading */}
+        <p className="text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed">
+          {t(
+            "Whether you need a clear strategy or full implementation, we meet you where you are — with structure, clarity, and zero hype.",
+            "Ya sea que necesite una estrategia clara o implementación completa, lo acompañamos donde esté — con estructura, claridad y cero hype."
+          )}
+        </p>
+        {/* Italic gold text */}
+        <p className="text-center text-xs sm:text-sm italic text-primary/90 max-w-xl mx-auto mb-10 sm:mb-14">
+          {t(
+            "We work best with people who want to get this right, not just get it done.",
+            "Trabajamos mejor con personas que quieren hacer esto bien, no solo terminarlo."
+          )}
+        </p>
+
+        {/* 3 service cards */}
+        <div className="grid md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+          {/* Card 1 */}
+          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+            <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">01</span>
+            <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("AI Strategy & Roadmaps", "Estrategia de IA y hojas de ruta")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5">
+                {t(
+                  "We assess where you are, identify your highest-impact opportunities, and build a custom AI roadmap that fits your budget, team, and goals.",
+                  "Evaluamos dónde se encuentra, identificamos sus oportunidades de mayor impacto y construimos una hoja de ruta de IA personalizada que se ajusta a su presupuesto, equipo y objetivos."
+                )}
+              </p>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-2.5">
+                {t("WHAT'S INCLUDED", "QUÉ INCLUYE")}
+              </p>
+              <ul className="space-y-1.5 text-xs sm:text-sm text-muted-foreground mb-5">
+                <li>{t("Current-state assessment", "Evaluación del estado actual")}</li>
+                <li>{t("Risk analysis", "Análisis de riesgos")}</li>
+                <li>{t("Custom integration roadmap", "Hoja de ruta de integración personalizada")}</li>
+                <li>{t("Tool evaluation & vendor guidance", "Evaluación de herramientas y guía de proveedores")}</li>
+              </ul>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-1.5">
+                {t("OUTCOME", "RESULTADO")}
+              </p>
+              <p className="text-xs sm:text-sm italic text-muted-foreground">
+                {t(
+                  "You get a clear, actionable strategy — no guessing, no wasted tools.",
+                  "Obtiene una estrategia clara y accionable — sin adivinanzas, sin herramientas desperdiciadas."
+                )}
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+            <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">02</span>
+            <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("Workflow Automation Systems", "Sistemas de automatización de flujos de trabajo")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5">
+                {t(
+                  "We design and implement the automated systems that eliminate bottlenecks — from lead capture to client onboarding to internal operations.",
+                  "Diseñamos e implementamos los sistemas automatizados que eliminan cuellos de botella — desde la captura de leads hasta la incorporación de clientes y las operaciones internas."
+                )}
+              </p>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-2.5">
+                {t("WHAT'S INCLUDED", "QUÉ INCLUYE")}
+              </p>
+              <ul className="space-y-1.5 text-xs sm:text-sm text-muted-foreground mb-5">
+                <li>{t("Process mapping", "Mapeo de procesos")}</li>
+                <li>{t("Automation design & build", "Diseño y construcción de automatización")}</li>
+                <li>{t("CRM integration", "Integración de CRM")}</li>
+                <li>{t("Testing & optimization", "Pruebas y optimización")}</li>
+              </ul>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-1.5">
+                {t("OUTCOME", "RESULTADO")}
+              </p>
+              <p className="text-xs sm:text-sm italic text-muted-foreground">
+                {t(
+                  "Your business runs tighter, faster, and without you being the bottleneck.",
+                  "Su negocio funciona de manera más eficiente, rápida y sin que usted sea el cuello de botella."
+                )}
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+            <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">03</span>
+            <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("AI Training & Implementation", "Capacitación e implementación de IA")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5">
+                {t(
+                  "We train your team to actually use the tools — confidently and correctly. Not just a demo, but real adoption that sticks.",
+                  "Capacitamos a su equipo para usar las herramientas con confianza y correctamente. No solo una demo, sino una adopción real que perdura."
+                )}
+              </p>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-2.5">
+                {t("WHAT'S INCLUDED", "QUÉ INCLUYE")}
+              </p>
+              <ul className="space-y-1.5 text-xs sm:text-sm text-muted-foreground mb-5">
+                <li>{t("Team training sessions", "Sesiones de capacitación para el equipo")}</li>
+                <li>{t("AI literacy workshops", "Talleres de alfabetización en IA")}</li>
+                <li>{t("Implementation support", "Soporte de implementación")}</li>
+                <li>{t("Ongoing advisory", "Asesoría continua")}</li>
+              </ul>
+              <p className="text-[10px] sm:text-[11px] font-bold tracking-[0.15em] text-primary uppercase mb-1.5">
+                {t("OUTCOME", "RESULTADO")}
+              </p>
+              <p className="text-xs sm:text-sm italic text-muted-foreground">
+                {t(
+                  "Your team operates with confidence, not confusion — and adoption actually sticks.",
+                  "Su equipo opera con confianza, no confusión — y la adopción realmente perdura."
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote Divider */}
+        <div className="mt-12 sm:mt-16 flex flex-col items-center text-center max-w-xl mx-auto">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-px bg-primary/25" />
+            <Diamond className="h-3 w-3 text-primary/40" />
+            <div className="w-8 h-px bg-primary/25" />
+          </div>
+          <p className="text-sm sm:text-base italic text-muted-foreground leading-relaxed">
+            {t(
+              "Freedom isn't a reward for working harder. It's what happens when you work smarter.",
+              "La libertad no es una recompensa por trabajar más duro. Es lo que ocurre cuando trabajas con más inteligencia."
+            )}
+          </p>
+        </div>
+      </div>
+    </section>
 
       {/* ── 3 · Framework ── */}
       <section className="section-dark section-padding">
