@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import michellePortrait from "@/assets/michelle-portrait.png";
-import consultingHero from "@/assets/consulting-hero.jpg";
+
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
@@ -33,12 +33,6 @@ import FAQSection from "@/components/FAQSection";
 const Index = () => {
   const { t } = useLanguage();
 
-  const services = [
-    { title: t("AI Strategy & Roadmaps", "Estrategia y hojas de ruta de IA"), desc: t("Custom AI roadmaps aligned with your organization's operational goals and growth targets.", "Hojas de ruta de IA personalizadas alineadas con los objetivos operativos y metas de crecimiento de su organización.") },
-    { title: t("Workflow Automation Systems", "Sistemas de automatización de flujos de trabajo"), desc: t("Eliminate repetitive tasks and accelerate throughput with intelligent process automation.", "Elimine tareas repetitivas y acelere la productividad con automatización inteligente de procesos.") },
-    { title: t("AI Implementation & Integration", "Implementación e integración de IA"), desc: t("End-to-end deployment of AI systems into your existing operations and technology stack.", "Implementación integral de sistemas de IA en sus operaciones y tecnología existentes.") },
-    { title: t("AI Adoption & Training", "Adopción y capacitación en IA"), desc: t("Empower your team to leverage AI tools confidently with hands-on training and change management.", "Capacite a su equipo para usar herramientas de IA con confianza mediante entrenamiento práctico y gestión del cambio.") },
-  ];
 
   const frameworkStages = [
     { step: "01", name: t("Discover", "Descubrir"), icon: ScanSearch },
