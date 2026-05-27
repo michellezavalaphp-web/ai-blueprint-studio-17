@@ -235,7 +235,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── 5c · FAQ ── */}
+      {/* ── 6 · FAQ ── */}
       <FAQSection
         id="home"
         tag={t("FAQ", "Preguntas frecuentes")}
