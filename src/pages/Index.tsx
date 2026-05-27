@@ -131,36 +131,93 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── 2 · Services ── */}
-      <section className="section-light section-padding">
+      {/* ── 2 · Sound Familiar? ── */}
+      <section className="section-light section-padding bg-white">
         <div className="container mx-auto">
-          <SectionHeading
-            tag={t("Services", "Servicios")}
-            title={t("AI Strategy & Implementation Services", "Servicios de estrategia e implementación de IA")}
-            description={t("End-to-end consulting to bring intelligent systems into your organization — from strategy to execution.", "Consultoría integral para incorporar sistemas inteligentes en su organización — desde la estrategia hasta la ejecución.")}
-          />
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto items-center">
-            <div className="grid sm:grid-cols-1 gap-4 sm:gap-5">
-              {services.map((s, i) => (
-                <div key={s.title} className="dash-card flex items-start gap-4">
-                  <span className="text-[10px] uppercase tracking-widest text-primary font-bold mt-1">0{i + 1}</span>
-                  <div>
-                    <h3 className="font-display text-sm sm:text-base font-semibold mb-1.5">{s.title}</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  </div>
-                </div>
-              ))}
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+              {t("Sound Familiar?", "¿Te suena familiar?")}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow duration-300 p-6 sm:p-7 flex flex-col">
+              <div className="h-10 w-10 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mb-4">
+                <Clock className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("Drowning in Manual Processes", "Ahogándose en procesos manuales")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
+                {t(
+                  "You're spending hours on tasks that should take minutes. We implement AI systems that automate the repetitive work so you can focus on what actually grows your business.",
+                  "Pasa horas en tareas que deberían tomar minutos. Implementamos sistemas de IA que automatizan el trabajo repetitivo para que pueda enfocarse en lo que realmente hace crecer su negocio."
+                )}
+              </p>
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
+              >
+                {t("See How →", "Ver cómo →")}
+              </Link>
             </div>
-            <div className="hidden lg:block overflow-hidden rounded-xl border border-border">
-              <img src={consultingHero} alt={t("Executive AI strategy consulting session", "Sesión de consultoría estratégica de IA ejecutiva")} loading="lazy" className="w-full h-full object-cover" />
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow duration-300 p-6 sm:p-7 flex flex-col">
+              <div className="h-10 w-10 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mb-4">
+                <Filter className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("Losing Leads to Slow Follow-Up", "Perdiendo clientes por seguimiento lento")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
+                {t(
+                  "Every hour a lead waits, your close rate drops. We build automated workflows that respond instantly — so no opportunity slips through the cracks.",
+                  "Cada hora que un cliente potencial espera, su tasa de cierre baja. Construimos flujos de trabajo automatizados que responden al instante — para que ninguna oportunidad se escape."
+                )}
+              </p>
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
+              >
+                {t("See How →", "Ver cómo →")}
+              </Link>
+            </div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl border border-border/60 shadow-sm hover:shadow-md transition-shadow duration-300 p-6 sm:p-7 flex flex-col">
+              <div className="h-10 w-10 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mb-4">
+                <Lightbulb className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
+                {t("AI-Curious but Overwhelmed", "Curioso sobre IA pero abrumado")}
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
+                {t(
+                  "You know AI can help but don't know where to start. We give you a clear roadmap — strategy first, tools second — so you move forward with confidence, not confusion.",
+                  "Sabe que la IA puede ayudar pero no sabe por dónde empezar. Le damos una hoja de ruta clara — estrategia primero, herramientas después — para que avance con confianza, no confusión."
+                )}
+              </p>
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
+              >
+                {t("See How →", "Ver cómo →")}
+              </Link>
             </div>
           </div>
-          <div className="text-center mt-8 sm:mt-10">
-            <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to="/services">
-                {t("View All Services", "Ver todos los servicios")} <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+
+          {/* Quote Divider */}
+          <div className="mt-12 sm:mt-16 flex flex-col items-center text-center max-w-xl mx-auto">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-px bg-primary/25" />
+              <Diamond className="h-3 w-3 text-primary/40" />
+              <div className="w-8 h-px bg-primary/25" />
+            </div>
+            <p className="text-sm sm:text-base italic text-muted-foreground leading-relaxed">
+              {t(
+                "Real AI transformation starts with understanding your operations — not buying software.",
+                "La transformación real con IA comienza con entender sus operaciones — no comprando software."
+              )}
+            </p>
           </div>
         </div>
       </section>
