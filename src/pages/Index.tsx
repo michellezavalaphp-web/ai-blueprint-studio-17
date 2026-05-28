@@ -36,7 +36,6 @@ import FAQSection from "@/components/FAQSection";
   const { t } = useLanguage();
   const { posts } = useBlogPosts();
 
-  const { t } = useLanguage();
 
 
   const frameworkStages = [
