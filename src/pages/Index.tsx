@@ -4,7 +4,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import michellePortrait from "@/assets/michelle-portrait.png";
 import michelleStory from "@/assets/michelle-story.jpg";
-import michelleSpeaking from "@/assets/michelle-speaking.jpg";
+
 
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -550,19 +550,6 @@ const Index = () => {
           </Button>
         </div>
 
-        {/* Speaking photo - navy gradient area */}
-        <div className="mt-16 sm:mt-20 relative overflow-hidden bg-gradient-to-br from-[hsl(222,30%,5%)] via-[hsl(222,35%,10%)] to-[hsl(222,30%,5%)]">
-          <div className="container mx-auto px-4 py-12 sm:py-16">
-            <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={michelleSpeaking}
-                alt={t("Michelle speaking at the Leadership Summit", "Michelle dando una conferencia en el Leadership Summit")}
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
       </section>
 
 
