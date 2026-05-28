@@ -561,17 +561,6 @@ const Index = () => {
             title={t("Assess Your AI Readiness", "Evalúa tu preparación para la IA")}
             description={t("Evaluate your organization's AI readiness and uncover high-impact opportunities before implementation.", "Evalúe la preparación de su organización para la IA y descubra oportunidades de alto impacto antes de la implementación.")}
           />
-          <div className="grid sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
-            {diagnostics.map((d) => (
-              <div key={d.title} className="dash-card text-center">
-                <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mx-auto mb-4">
-                  <d.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{d.title}</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
-              </div>
-            ))}
-          </div>
           <div className="text-center mt-8 sm:mt-10">
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/tools">
