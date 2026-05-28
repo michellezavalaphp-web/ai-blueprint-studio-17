@@ -13,7 +13,7 @@ const Tools = () => {
       icon: Gauge,
       title: "AI Readiness Assessment",
       titleDisplay: t("AI Readiness Assessment", "Evaluación de preparación para IA"),
-      description: t("Answer a few questions about your organization to discover your AI Readiness Score and get tailored recommendations.", "Responda algunas preguntas sobre su organización para descubrir su puntuación de preparación para IA y recibir recomendaciones personalizadas."),
+      description: t("Not sure where to start with AI? Take this free 5-minute assessment and find out exactly where your business stands — and what to do first.", "¿No sabes por dónde empezar con la IA? Toma esta evaluación gratuita de 5 minutos y descubre exactamente dónde está tu negocio — y qué hacer primero."),
       benefit: t("Identify your biggest AI opportunities in minutes", "Identifique sus mayores oportunidades de IA en minutos"),
     },
     {
