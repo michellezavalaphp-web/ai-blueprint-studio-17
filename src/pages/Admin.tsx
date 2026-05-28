@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,7 @@ const Admin = () => {
   const [selected, setSelected] = useState<BlogPostRow | null>(null);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const coverInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
@@ -105,26 +106,38 @@ const Admin = () => {
   const onUploadCover = async (file: File) => {
     if (!selected) return;
     setUploading(true);
-    const ext = file.name.split(".").pop();
-    const path = `${selected.slug}-${Date.now()}.${ext}`;
-    const { error: upErr } = await supabase.storage.from("blog-covers").upload(path, file, {
-      cacheControl: "3600",
-      upsert: true,
-    });
-    if (upErr) {
+    try {
+      if (!file.type.startsWith("image/")) throw new Error("Please choose an image file.");
+      const ext = file.name.split(".").pop()?.toLowerCase() || "jpg";
+      const safeSlug = selected.slug.replace(/[^a-z0-9-]/gi, "-").toLowerCase();
+      const path = `${safeSlug}/${crypto.randomUUID()}.${ext}`;
+
+      const { error: upErr } = await supabase.storage.from("blog-covers").upload(path, file, {
+        cacheControl: "3600",
+        contentType: file.type,
+      });
+      if (upErr) throw upErr;
+
+      const { data: pub } = supabase.storage.from("blog-covers").getPublicUrl(path);
+      const publicUrl = `${pub.publicUrl}?v=${Date.now()}`;
+      const { data: updatedPost, error } = await supabase
+        .from("blog_posts")
+        .update({ cover_image_url: publicUrl })
+        .eq("id", selected.id)
+        .select("*")
+        .single();
+      if (error) throw error;
+      if (!updatedPost) throw new Error("Cover uploaded, but the post could not be updated.");
+
+      setSelected(updatedPost as BlogPostRow);
+      setPosts((current) => current.map((post) => (post.id === updatedPost.id ? (updatedPost as BlogPostRow) : post)));
+      toast.success("Cover image uploaded");
+    } catch (error: any) {
+      toast.error(error?.message || "Image upload failed");
+    } finally {
       setUploading(false);
-      return toast.error(upErr.message);
+      if (coverInputRef.current) coverInputRef.current.value = "";
     }
-    const { data: pub } = supabase.storage.from("blog-covers").getPublicUrl(path);
-    updateField("cover_image_url", pub.publicUrl);
-    const { error } = await supabase
-      .from("blog_posts")
-      .update({ cover_image_url: pub.publicUrl })
-      .eq("id", selected.id);
-    setUploading(false);
-    if (error) return toast.error(error.message);
-    toast.success("Cover image uploaded");
-    loadPosts();
   };
 
   if (!session) {
@@ -224,13 +237,14 @@ const Admin = () => {
                 </div>
                 <div>
                   <input
+                    ref={coverInputRef}
                     id="cover-upload"
                     type="file"
                     accept="image/*"
                     className="hidden"
                     onChange={(e) => e.target.files?.[0] && onUploadCover(e.target.files[0])}
                   />
-                  <Button type="button" variant="outline" disabled={uploading} onClick={() => document.getElementById("cover-upload")?.click()}>
+                  <Button type="button" variant="outline" disabled={uploading} onClick={() => coverInputRef.current?.click()}>
                     {uploading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Upload className="h-4 w-4 mr-2" />}
                     Upload image
                   </Button>
