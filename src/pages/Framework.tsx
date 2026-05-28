@@ -101,22 +101,53 @@ const Framework = () => {
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-primary/5 hidden md:block" />
             <div className="space-y-4 sm:space-y-6">
               {stages.map((stage) => (
-                <div key={stage.number} className="relative flex gap-3 sm:gap-5 md:gap-8">
-                  <div className="relative z-10 flex-shrink-0">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
-                      <stage.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                <div key={stage.number}>
+                  <div className="relative flex gap-3 sm:gap-5 md:gap-8">
+                    <div className="relative z-10 flex-shrink-0">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
+                        <stage.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                      </div>
+                    </div>
+                    <div className="glass-panel p-4 sm:p-6 flex-1 hover:glow-border transition-all duration-300">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                        <span className="text-[10px] uppercase tracking-widest text-primary font-semibold rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
+                          {t("Step", "Paso")} {stage.number}
+                        </span>
+                        <h3 className="font-display text-base sm:text-lg font-bold">{stage.title}</h3>
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
                     </div>
                   </div>
-                  <div className="glass-panel p-4 sm:p-6 flex-1 hover:glow-border transition-all duration-300">
-                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                      <span className="text-[10px] uppercase tracking-widest text-primary font-semibold rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
-                        {t("Stage", "Etapa")} {stage.number}
-                      </span>
-                      <h3 className="font-display text-base sm:text-lg font-bold">{stage.title}</h3>
+
+                  {stage.number === "05" && (
+                    <div className="md:ml-20 mt-4 sm:mt-6 rounded-xl border-l-[3px] border-primary bg-primary/5 p-5 sm:p-7">
+                      <div className="text-[10px] uppercase tracking-widest text-primary font-semibold mb-2">
+                        {t("Inside Step 5", "Dentro del Paso 5")}
+                      </div>
+                      <h4 className="font-display text-base sm:text-lg font-bold mb-3">
+                        {t("The T.I.M.E. Method™", "El Método T.I.M.E.™")}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">
+                        {t(
+                          "The T.I.M.E. Method™ lives inside Step 5 and is the implementation engine of the entire framework.",
+                          "El Método T.I.M.E.™ vive dentro del Paso 5 y es el motor de implementación de todo el marco."
+                        )}
+                      </p>
+                      <ul className="space-y-2 text-xs sm:text-sm mb-4">
+                        <li><span className="text-primary font-bold">T</span> — <span className="font-semibold">{t("Task", "Tarea")}:</span> <span className="text-muted-foreground">{t("What do you need AI to do?", "¿Qué necesitas que haga la IA?")}</span></li>
+                        <li><span className="text-primary font-bold">I</span> — <span className="font-semibold">{t("Instructions", "Instrucciones")}:</span> <span className="text-muted-foreground">{t("Give clear, specific direction and background context.", "Da una dirección clara y específica con contexto de fondo.")}</span></li>
+                        <li><span className="text-primary font-bold">M</span> — <span className="font-semibold">{t("Mode", "Modo")}:</span> <span className="text-muted-foreground">{t("Define the tone, format, or style you need.", "Define el tono, formato o estilo que necesitas.")}</span></li>
+                        <li><span className="text-primary font-bold">E</span> — <span className="font-semibold">{t("Execute", "Ejecutar")}:</span> <span className="text-muted-foreground">{t("Run it, review it, refine it.", "Ejecútalo, revísalo, refínalo.")}</span></li>
+                      </ul>
+                      <p className="text-xs sm:text-sm text-foreground/80 italic leading-relaxed">
+                        {t(
+                          "Use this every time you interact with AI. If you don't, you're guessing. If you do, you're building.",
+                          "Úsalo cada vez que interactúes con la IA. Si no lo haces, estás adivinando. Si lo haces, estás construyendo."
+                        )}
+                      </p>
                     </div>
-                    <p className="text-[11px] sm:text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
