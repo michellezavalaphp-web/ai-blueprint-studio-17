@@ -102,9 +102,9 @@ const Contact = () => {
               </Button>
               <div className="text-center">
                 <Button variant="hero-outline" size="lg" className="w-full h-12 sm:h-11 text-sm" asChild>
-                  <Link to="/tools">
+                  <a href="https://aireadiness-assessment.lovable.app" target="_blank" rel="noopener noreferrer">
                     {t("Start AI Readiness Assessment", "Inicia la evaluación de preparación para IA")} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </form>
