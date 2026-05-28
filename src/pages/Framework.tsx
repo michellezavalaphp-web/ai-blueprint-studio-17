@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
+  Lightbulb,
+  Filter,
   Search,
-  Stethoscope,
-  Compass,
+  Diamond,
   Hammer,
-  Rocket,
-  TrendingUp,
+  Clock,
   Crown,
   ArrowRight,
   Layers,
@@ -21,52 +21,52 @@ const Framework = () => {
 
   const stages = [
     {
-      icon: Search, number: "01",
-      title: t("Discover", "Descubrir"),
-      subtitle: t("Understand Your Current State", "Comprenda su estado actual"),
-      description: t("We assess your organization's operations, workflows, and pain points to identify where time is being lost and where AI can create the most impact.", "Evaluamos las operaciones, flujos de trabajo y puntos críticos de su organización para identificar dónde se pierde tiempo y dónde la IA puede generar mayor impacto."),
+      icon: Lightbulb, number: "01",
+      title: t("Awaken", "Despertar"),
+      subtitle: t("See What's Changing", "Vea lo que está cambiando"),
+      description: t("Understand what's changing in the age of AI and why it matters for your life, not just your work.", "Comprenda lo que está cambiando en la era de la IA y por qué importa para su vida, no solo para su trabajo."),
     },
     {
-      icon: Stethoscope, number: "02",
-      title: t("Diagnose", "Diagnosticar"),
-      subtitle: t("Pinpoint Inefficiencies", "Identifique ineficiencias"),
-      description: t("Using data-driven analysis, we diagnose the root causes of operational bottlenecks and quantify the time and resources being wasted.", "Mediante análisis basado en datos, diagnosticamos las causas raíz de los cuellos de botella operativos y cuantificamos el tiempo y los recursos desperdiciados."),
+      icon: Filter, number: "02",
+      title: t("Clarify", "Clarificar"),
+      subtitle: t("Filter the Noise", "Filtre el ruido"),
+      description: t("Focus on what matters most. Filter the noise and identify what actually deserves your attention using the Clarity Filter.", "Enfóquese en lo que más importa. Filtre el ruido e identifique lo que realmente merece su atención usando el Filtro de Claridad."),
     },
     {
-      icon: Compass, number: "03",
-      title: t("Design", "Diseñar"),
-      subtitle: t("Architect the Solution", "Diseñe la solución"),
-      description: t("We design a custom AI implementation strategy tailored to your goals, team, and industry — a blueprint for intelligent transformation.", "Diseñamos una estrategia de implementación de IA personalizada adaptada a sus objetivos, equipo e industria — un plan para la transformación inteligente."),
+      icon: Search, number: "03",
+      title: t("Uncover", "Descubrir"),
+      subtitle: t("Find the Hidden Leaks", "Encuentre las fugas ocultas"),
+      description: t("Identify where your time, money, and energy are quietly leaking — often in places you've stopped noticing.", "Identifique dónde su tiempo, dinero y energía se están escapando silenciosamente — a menudo en lugares que ha dejado de notar."),
     },
     {
-      icon: Hammer, number: "04",
-      title: t("Develop", "Desarrollar"),
-      subtitle: t("Build Intelligent Systems", "Construya sistemas inteligentes"),
-      description: t("Our team develops and configures AI agents, automation workflows, and intelligent operational systems built for your organization.", "Nuestro equipo desarrolla y configura agentes de IA, flujos de automatización y sistemas operativos inteligentes construidos para su organización."),
+      icon: Diamond, number: "04",
+      title: t("Choose", "Elegir"),
+      subtitle: t("Pick the Right Workflow", "Elija el flujo correcto"),
+      description: t("Select one high-impact workflow to improve. Not ten. One. The right one changes everything.", "Seleccione un flujo de trabajo de alto impacto para mejorar. No diez. Uno. El correcto lo cambia todo."),
     },
     {
-      icon: Rocket, number: "05",
-      title: t("Deploy", "Desplegar"),
-      subtitle: t("Launch with Confidence", "Lance con confianza"),
-      description: t("We deploy your AI systems with hands-on support, ensuring a smooth rollout with minimal disruption to your operations.", "Desplegamos sus sistemas de IA con soporte práctico, asegurando un lanzamiento fluido con mínima interrupción en sus operaciones."),
+      icon: Hammer, number: "05",
+      title: t("Build", "Construir"),
+      subtitle: t("Create Your First AI System", "Cree su primer sistema de IA"),
+      description: t("Create your first AI-powered system using the T.I.M.E. Method™ — a simple four-step process that gets consistent results from AI without a technical background.", "Cree su primer sistema impulsado por IA usando el Método T.I.M.E.™ — un proceso simple de cuatro pasos que obtiene resultados consistentes de la IA sin formación técnica."),
     },
     {
-      icon: TrendingUp, number: "06",
-      title: t("Drive", "Impulsar"),
-      subtitle: t("Accelerate Results", "Acelere resultados"),
-      description: t("We monitor performance, optimize systems, and drive measurable improvements in productivity, efficiency, and time savings.", "Monitoreamos el rendimiento, optimizamos los sistemas e impulsamos mejoras medibles en productividad, eficiencia y ahorro de tiempo."),
+      icon: Clock, number: "06",
+      title: t("Reclaim", "Recuperar"),
+      subtitle: t("Recover Your Time", "Recupere su tiempo"),
+      description: t("Recover time through smarter workflows and intentional automation. Experience what margin feels like — and what it makes possible.", "Recupere tiempo a través de flujos de trabajo más inteligentes y automatización intencional. Experimente lo que se siente tener margen — y lo que hace posible."),
     },
     {
       icon: Crown, number: "07",
-      title: t("Dominate", "Dominar"),
-      subtitle: t("Lead Your Industry", "Lidere su industria"),
-      description: t("With AI embedded in your operations, your organization operates at peak efficiency — positioning you as a leader in your industry.", "Con la IA integrada en sus operaciones, su organización funciona con máxima eficiencia — posicionándolo como líder en su industria."),
+      title: t("Lead", "Liderar"),
+      subtitle: t("Help Others Adapt", "Ayude a otros a adaptarse"),
+      description: t("Help your team, your family, and your community adapt with confidence. Your breakthrough becomes someone else's beginning.", "Ayude a su equipo, su familia y su comunidad a adaptarse con confianza. Su avance se convierte en el comienzo de alguien más."),
     },
   ];
 
   return (
     <>
-      <SEO title={"Time Reclaimed™ Framework — 7-Stage AI Transformation Methodology"} description={"The proprietary 7-stage methodology helping businesses save thousands of hours through strategic AI implementation. Assess, strategize, implement, optimize, scale."} />
+      <SEO title={"Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI"} description={"The Time Reclaimed™ Framework: 7 steps — Awaken, Clarify, Uncover, Choose, Build, Reclaim, Lead — powered by the T.I.M.E. Method™ for practical AI implementation."} />
       <SchemaMarkup id="framework-howto" schema={FRAMEWORK_HOWTO_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
@@ -77,9 +77,9 @@ const Framework = () => {
             </div>
             <span className="badge-tag">{t("Methodology", "Metodología")}</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("Time Reclaimed™ Framework", "Marco Time Reclaimed™")}</h1>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("The Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI", "El marco Time Reclaimed™ — 7 pasos para recuperar tu tiempo con la IA")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
-            {t("Our proprietary seven-stage methodology for transforming organizations from operational inefficiency to intelligent, AI-powered systems.", "Nuestra metodología propietaria de siete etapas para transformar organizaciones desde la ineficiencia operativa hacia sistemas inteligentes impulsados por IA.")}
+            {t("Our proprietary seven-step methodology for reclaiming your time, clarity, and focus in an AI-powered world.", "Nuestra metodología propietaria de siete pasos para recuperar tu tiempo, claridad y enfoque en un mundo impulsado por IA.")}
           </p>
         </div>
       </div>
@@ -88,8 +88,8 @@ const Framework = () => {
         <div className="container mx-auto max-w-2xl text-center">
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {t(
-              "The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine. Each stage builds on the last, moving your organization from manual, time-consuming operations to intelligent, automated systems that free your team to focus on what matters most.",
-              "El marco Time Reclaimed™ es más que un proceso de consultoría — es un motor de transformación. Cada etapa se construye sobre la anterior, llevando a su organización de operaciones manuales y que consumen tiempo a sistemas inteligentes y automatizados que liberan a su equipo para enfocarse en lo más importante."
+              "The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine. Each step builds on the last, taking you from operational chaos to AI-powered clarity, focus, and freedom.",
+              "El marco Time Reclaimed™ es más que un proceso de consultoría — es un motor de transformación. Cada paso se construye sobre el anterior, llevándolo del caos operativo a la claridad, el enfoque y la libertad impulsados por IA."
             )}
           </p>
         </div>
@@ -101,22 +101,53 @@ const Framework = () => {
             <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-primary/5 hidden md:block" />
             <div className="space-y-4 sm:space-y-6">
               {stages.map((stage) => (
-                <div key={stage.number} className="relative flex gap-3 sm:gap-5 md:gap-8">
-                  <div className="relative z-10 flex-shrink-0">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
-                      <stage.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                <div key={stage.number}>
+                  <div className="relative flex gap-3 sm:gap-5 md:gap-8">
+                    <div className="relative z-10 flex-shrink-0">
+                      <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-primary/10 border border-primary/15 flex items-center justify-center">
+                        <stage.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                      </div>
+                    </div>
+                    <div className="glass-panel p-4 sm:p-6 flex-1 hover:glow-border transition-all duration-300">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                        <span className="text-[10px] uppercase tracking-widest text-primary font-semibold rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
+                          {t("Step", "Paso")} {stage.number}
+                        </span>
+                        <h3 className="font-display text-base sm:text-lg font-bold">{stage.title}</h3>
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
                     </div>
                   </div>
-                  <div className="glass-panel p-4 sm:p-6 flex-1 hover:glow-border transition-all duration-300">
-                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-                      <span className="text-[10px] uppercase tracking-widest text-primary font-semibold rounded-full px-2.5 py-1" style={{ backgroundColor: 'hsl(207 90% 54% / 0.08)' }}>
-                        {t("Stage", "Etapa")} {stage.number}
-                      </span>
-                      <h3 className="font-display text-base sm:text-lg font-bold">{stage.title}</h3>
+
+                  {stage.number === "05" && (
+                    <div className="md:ml-20 mt-4 sm:mt-6 rounded-xl border-l-[3px] border-primary bg-primary/5 p-5 sm:p-7">
+                      <div className="text-[10px] uppercase tracking-widest text-primary font-semibold mb-2">
+                        {t("Inside Step 5", "Dentro del Paso 5")}
+                      </div>
+                      <h4 className="font-display text-base sm:text-lg font-bold mb-3">
+                        {t("The T.I.M.E. Method™", "El Método T.I.M.E.™")}
+                      </h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">
+                        {t(
+                          "The T.I.M.E. Method™ lives inside Step 5 and is the implementation engine of the entire framework.",
+                          "El Método T.I.M.E.™ vive dentro del Paso 5 y es el motor de implementación de todo el marco."
+                        )}
+                      </p>
+                      <ul className="space-y-2 text-xs sm:text-sm mb-4">
+                        <li><span className="text-primary font-bold">T</span> — <span className="font-semibold">{t("Task", "Tarea")}:</span> <span className="text-muted-foreground">{t("What do you need AI to do?", "¿Qué necesitas que haga la IA?")}</span></li>
+                        <li><span className="text-primary font-bold">I</span> — <span className="font-semibold">{t("Instructions", "Instrucciones")}:</span> <span className="text-muted-foreground">{t("Give clear, specific direction and background context.", "Da una dirección clara y específica con contexto de fondo.")}</span></li>
+                        <li><span className="text-primary font-bold">M</span> — <span className="font-semibold">{t("Mode", "Modo")}:</span> <span className="text-muted-foreground">{t("Define the tone, format, or style you need.", "Define el tono, formato o estilo que necesitas.")}</span></li>
+                        <li><span className="text-primary font-bold">E</span> — <span className="font-semibold">{t("Execute", "Ejecutar")}:</span> <span className="text-muted-foreground">{t("Run it, review it, refine it.", "Ejecútalo, revísalo, refínalo.")}</span></li>
+                      </ul>
+                      <p className="text-xs sm:text-sm text-foreground/80 italic leading-relaxed">
+                        {t(
+                          "Use this every time you interact with AI. If you don't, you're guessing. If you do, you're building.",
+                          "Úsalo cada vez que interactúes con la IA. Si no lo haces, estás adivinando. Si lo haces, estás construyendo."
+                        )}
+                      </p>
                     </div>
-                    <p className="text-[11px] sm:text-xs text-primary font-medium mb-2">{stage.subtitle}</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{stage.description}</p>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
