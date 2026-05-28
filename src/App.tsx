@@ -24,6 +24,8 @@ import InsightPost from "./pages/InsightPost";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
+
 
 const queryClient = new QueryClient();
 
@@ -72,6 +74,8 @@ const App = () => (
               <Route path="/es/perspectivas/:slug" element={<EsPerspectivasSlugRedirect />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/admin" element={<Admin />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

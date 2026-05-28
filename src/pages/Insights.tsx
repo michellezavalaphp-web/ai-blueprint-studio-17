@@ -4,28 +4,33 @@ import { Newspaper, Search, ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { BLOG_POSTS, CATEGORIES } from "@/lib/blogPosts";
+import { CATEGORIES } from "@/lib/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import BlogCard from "@/components/BlogCard";
 import { BOOKING_URL } from "@/lib/constants";
 import SEO from "@/components/SEO";
 
 const Insights = () => {
   const { t, language } = useLanguage();
+  const { posts } = useBlogPosts();
   const [query, setQuery] = useState("");
   const [activeCat, setActiveCat] = useState<string>("all");
   const basePath = language === "es" ? "/es/blog" : "/blog";
 
-  const featured = BLOG_POSTS.find((p) => p.featured) ?? BLOG_POSTS[0];
+  const featured = posts.find((p) => p.featured) ?? posts[0];
 
   const filtered = useMemo(() => {
-    return BLOG_POSTS.filter((p) => {
+    if (!featured) return [];
+    return posts.filter((p) => {
       if (p.slug === featured.slug) return false;
       const inCat = activeCat === "all" || p.categoryKey === activeCat;
       const text = (language === "es" ? p.title.es + p.excerpt.es : p.title.en + p.excerpt.en).toLowerCase();
       const inQuery = !query || text.includes(query.toLowerCase());
       return inCat && inQuery;
     });
-  }, [query, activeCat, language, featured.slug]);
+  }, [posts, query, activeCat, language, featured?.slug]);
+
+  if (!featured) return null;
 
   return (
     <>
@@ -59,9 +64,13 @@ const Insights = () => {
             className="block dash-card group overflow-hidden"
           >
             <div className="grid md:grid-cols-2 gap-6 items-center">
-              <div className="relative h-56 sm:h-64 -m-6 md:m-0 md:rounded-lg bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center">
-                <FileText className="h-14 w-14 text-primary/40" />
-                <span className="absolute top-4 left-4 text-[10px] uppercase tracking-widest font-bold rounded-full px-3 py-1 bg-primary/15 text-primary border border-primary/20">
+              <div className="relative h-56 sm:h-64 -m-6 md:m-0 md:rounded-lg overflow-hidden bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center">
+                {featured.coverImageUrl ? (
+                  <img src={featured.coverImageUrl} alt={language === "es" ? featured.title.es : featured.title.en} className="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <FileText className="h-14 w-14 text-primary/40" />
+                )}
+                <span className="absolute top-4 left-4 z-10 text-[10px] uppercase tracking-widest font-bold rounded-full px-3 py-1 bg-primary/15 text-primary border border-primary/20 backdrop-blur-sm">
                   {t("Featured", "Destacado")}
                 </span>
               </div>
