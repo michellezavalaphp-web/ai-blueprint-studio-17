@@ -13,12 +13,12 @@ export type BlogPost = {
 
 
 export const CATEGORIES = [
+  { key: "ai-readiness", en: "AI Readiness", es: "Preparación para IA" },
   { key: "ai-strategy", en: "AI Strategy", es: "Estrategia de IA" },
-  { key: "automation-systems", en: "Automation & Systems", es: "Automatización y Sistemas" },
   { key: "ai-agents", en: "AI Agents", es: "Agentes de IA" },
-  { key: "industry-insights", en: "Industry Blog", es: "Blog de la Industria" },
-  { key: "case-studies", en: "Case Studies", es: "Casos de Estudio" },
-  { key: "time-reclaimed", en: "Time Reclaimed™", es: "Tiempo Recuperado™" },
+  { key: "lead-generation", en: "Lead Generation", es: "Generación de Leads" },
+  { key: "workflow-automation", en: "Workflow Automation", es: "Automatización de Flujos" },
+  { key: "content-strategy", en: "Content Strategy", es: "Estrategia de Contenido" },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
