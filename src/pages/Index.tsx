@@ -441,8 +441,8 @@ const Index = () => {
         <div className="container mx-auto">
           <SectionHeading
             tag={t("Our Methodology", "Nuestra metodología")}
-            title={t("The Time Reclaimed™ Framework", "El marco Time Reclaimed™")}
-            description={t("Seven stages from operational inefficiency to AI-powered transformation.", "Siete etapas desde la ineficiencia operativa hasta la transformación impulsada por IA.")}
+            title={t("The Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI", "El marco Time Reclaimed™ — 7 pasos para recuperar tu tiempo con la IA")}
+            description={t("Seven steps from operational inefficiency to AI-powered transformation.", "Siete pasos desde la ineficiencia operativa hasta la transformación impulsada por IA.")}
           />
           <p className="text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-10 sm:mb-14 leading-relaxed">
             {t(
