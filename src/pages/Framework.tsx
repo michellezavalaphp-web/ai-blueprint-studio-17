@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
+  Lightbulb,
+  Filter,
   Search,
-  Stethoscope,
-  Compass,
+  Diamond,
   Hammer,
-  Rocket,
-  TrendingUp,
+  Clock,
   Crown,
   ArrowRight,
   Layers,
