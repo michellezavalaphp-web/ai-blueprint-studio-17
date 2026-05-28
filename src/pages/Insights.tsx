@@ -13,7 +13,7 @@ const Insights = () => {
   const { t, language } = useLanguage();
   const [query, setQuery] = useState("");
   const [activeCat, setActiveCat] = useState<string>("all");
-  const basePath = language === "es" ? "/es/perspectivas" : "/insights";
+  const basePath = language === "es" ? "/es/blog" : "/blog";
 
   const featured = BLOG_POSTS.find((p) => p.featured) ?? BLOG_POSTS[0];
 
@@ -28,7 +28,7 @@ const Insights = () => {
 
   return (
     <>
-      <SEO title={"AI Insights & Blog for Business Leaders | Go AI Innovation"} description={"Practical AI insights, tips, and strategies for business leaders. Learn how to implement AI, save time, and transform operations."} />
+      <SEO title={"AI Blog for Business Leaders | Go AI Innovation"} description={"Practical AI insights, tips, and strategies for business leaders. Learn how to implement AI, save time, and transform operations."} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
@@ -36,10 +36,10 @@ const Insights = () => {
             <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
               <Newspaper className="h-4 w-4 text-primary" />
             </div>
-            <span className="badge-tag">{t("Insights", "Perspectivas")}</span>
+            <span className="badge-tag">{t("Blog", "Blog")}</span>
           </div>
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
-            {t("AI Insights for Business Leaders", "Perspectivas de IA para Líderes Empresariales")}
+            {t("AI Blog for Business Leaders", "Blog de IA para Líderes Empresariales")}
           </h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-2xl leading-relaxed">
             {t(
@@ -117,7 +117,7 @@ const Insights = () => {
               <Input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder={t("Search insights...", "Buscar perspectivas...")}
+                placeholder={t("Search blog...", "Buscar en el blog...")}
                 className="pl-9 h-10 text-sm"
               />
             </div>
@@ -125,7 +125,7 @@ const Insights = () => {
 
           {filtered.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-12">
-              {t("No insights match your search.", "No hay perspectivas que coincidan con tu búsqueda.")}
+              {t("No blog posts match your search.", "No hay entradas que coincidan con tu búsqueda.")}
             </p>
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
