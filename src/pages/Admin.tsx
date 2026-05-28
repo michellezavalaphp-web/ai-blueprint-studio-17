@@ -9,6 +9,8 @@ import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Loader2, Upload, ArrowLeft, LogOut, ImageIcon } from "lucide-react";
 import type { BlogPostRow } from "@/hooks/useBlogPosts";
+import { CATEGORIES } from "@/lib/blogPosts";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SEO from "@/components/SEO";
 
 const Admin = () => {
