@@ -33,7 +33,9 @@ import SEO from "@/components/SEO";
 import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
 import FAQSection from "@/components/FAQSection";
 
-const Index = () => {
+  const { t } = useLanguage();
+  const { posts } = useBlogPosts();
+
   const { t } = useLanguage();
 
 
@@ -584,9 +586,10 @@ const Index = () => {
               "Estrategias prácticas e ideas reales para ayudarte a recuperar tiempo, mejorar operaciones y escalar con inteligencia artificial."
             )}
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {BLOG_POSTS.slice(0, 1).map((post) => (
+            {posts.slice(0, 1).map((post) => (
               <BlogCard key={post.slug} post={post} />
+            ))}
+
             ))}
           </div>
           <div className="text-center mt-8 sm:mt-10">

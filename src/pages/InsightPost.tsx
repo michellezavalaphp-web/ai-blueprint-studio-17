@@ -2,19 +2,21 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Calendar, Clock, FileText, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { BLOG_POSTS } from "@/lib/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { BOOKING_URL } from "@/lib/constants";
 import BlogCard from "@/components/BlogCard";
 
 const InsightPost = () => {
   const { slug } = useParams();
   const { t, language } = useLanguage();
+  const { posts, loading } = useBlogPosts();
   const basePath = language === "es" ? "/es/blog" : "/blog";
 
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+  const post = posts.find((p) => p.slug === slug);
+  if (loading && !post) return null;
   if (!post) return <Navigate to={basePath} replace />;
 
-  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const related = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
   const dateStr = new Date(post.date).toLocaleDateString(language === "es" ? "es-ES" : "en-US", {
     year: "numeric",
     month: "long",
@@ -42,8 +44,12 @@ const InsightPost = () => {
             <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {post.readTime} {t("min read", "min de lectura")}</span>
           </div>
 
-          <div className="relative h-56 sm:h-72 mb-10 rounded-xl bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center border border-primary/10">
-            <FileText className="h-14 w-14 text-primary/40" />
+          <div className="relative h-56 sm:h-72 mb-10 rounded-xl overflow-hidden bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center border border-primary/10">
+            {post.coverImageUrl ? (
+              <img src={post.coverImageUrl} alt={language === "es" ? post.title.es : post.title.en} className="absolute inset-0 w-full h-full object-cover" />
+            ) : (
+              <FileText className="h-14 w-14 text-primary/40" />
+            )}
           </div>
 
           <div className="space-y-5 text-sm sm:text-base leading-relaxed text-foreground/90">
