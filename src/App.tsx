@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
@@ -26,6 +26,16 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+const InsightsSlugRedirect = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/blog/${slug}`} replace />;
+};
+
+const EsPerspectivasSlugRedirect = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/es/blog/${slug}`} replace />;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -52,10 +62,14 @@ const App = () => (
               <Route path="/tienda" element={<Store />} />
               <Route path="/speaking" element={<Speaking />} />
               <Route path="/es/conferencias" element={<Speaking />} />
-              <Route path="/insights" element={<Insights />} />
-              <Route path="/insights/:slug" element={<InsightPost />} />
-              <Route path="/es/perspectivas" element={<Insights />} />
-              <Route path="/es/perspectivas/:slug" element={<InsightPost />} />
+              <Route path="/blog" element={<Insights />} />
+              <Route path="/blog/:slug" element={<InsightPost />} />
+              <Route path="/es/blog" element={<Insights />} />
+              <Route path="/es/blog/:slug" element={<InsightPost />} />
+              <Route path="/insights" element={<Navigate to="/blog" replace />} />
+              <Route path="/insights/:slug" element={<InsightsSlugRedirect />} />
+              <Route path="/es/perspectivas" element={<Navigate to="/es/blog" replace />} />
+              <Route path="/es/perspectivas/:slug" element={<EsPerspectivasSlugRedirect />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />

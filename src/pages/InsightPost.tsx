@@ -9,7 +9,7 @@ import BlogCard from "@/components/BlogCard";
 const InsightPost = () => {
   const { slug } = useParams();
   const { t, language } = useLanguage();
-  const basePath = language === "es" ? "/es/perspectivas" : "/insights";
+  const basePath = language === "es" ? "/es/blog" : "/blog";
 
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return <Navigate to={basePath} replace />;
@@ -26,7 +26,7 @@ const InsightPost = () => {
       <article className="section-padding">
         <div className="container mx-auto max-w-3xl">
           <Link to={basePath} className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary mb-6 hover:gap-2.5 transition-all">
-            <ArrowLeft className="h-3.5 w-3.5" /> {t("Back to Insights", "Volver a Perspectivas")}
+            <ArrowLeft className="h-3.5 w-3.5" /> {t("Back to Blog", "Volver al Blog")}
           </Link>
 
           <span className="text-[10px] uppercase tracking-widest font-bold text-primary">
@@ -58,7 +58,7 @@ const InsightPost = () => {
       <section className="section-light-alt section-padding">
         <div className="container mx-auto">
           <h2 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">
-            {t("Related Insights", "Perspectivas relacionadas")}
+            {t("Related Blog Posts", "Artículos relacionados")}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {related.map((p) => <BlogCard key={p.slug} post={p} />)}
