@@ -33,8 +33,8 @@ const App = () => (
       <LanguageProvider>
         <Toaster />
         <Sonner />
+        <BrowserRouter>
           <ScrollToTop />
-          <Layout>
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
