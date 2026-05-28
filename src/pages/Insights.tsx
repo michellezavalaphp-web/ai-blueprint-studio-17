@@ -19,12 +19,13 @@ const Insights = () => {
 
   const filtered = useMemo(() => {
     return BLOG_POSTS.filter((p) => {
+      if (p.slug === featured.slug) return false;
       const inCat = activeCat === "all" || p.categoryKey === activeCat;
       const text = (language === "es" ? p.title.es + p.excerpt.es : p.title.en + p.excerpt.en).toLowerCase();
       const inQuery = !query || text.includes(query.toLowerCase());
       return inCat && inQuery;
     });
-  }, [query, activeCat, language]);
+  }, [query, activeCat, language, featured.slug]);
 
   return (
     <>
