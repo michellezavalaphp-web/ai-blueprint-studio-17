@@ -293,6 +293,22 @@ const Admin = () => {
 
             <div className="grid sm:grid-cols-3 gap-4">
               <div>
+                <Label htmlFor="category_key">Category key</Label>
+                <Input id="category_key" value={selected.category_key} onChange={(e) => updateField("category_key", e.target.value)} placeholder="ai-strategy" />
+              </div>
+              <div>
+                <Label htmlFor="category_en">Category (English)</Label>
+                <Input id="category_en" value={selected.category_en} onChange={(e) => updateField("category_en", e.target.value)} placeholder="AI Strategy" />
+              </div>
+              <div>
+                <Label htmlFor="category_es">Category (Spanish)</Label>
+                <Input id="category_es" value={selected.category_es} onChange={(e) => updateField("category_es", e.target.value)} placeholder="Estrategia IA" />
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4">
+
+              <div>
                 <Label htmlFor="date">Date</Label>
                 <Input id="date" type="date" value={selected.date} onChange={(e) => updateField("date", e.target.value)} />
               </div>
