@@ -41,6 +41,16 @@ const Services = () => {
       title: t("AI Training for Teams", "Capacitación en IA para equipos"),
       description: t("Empower your team with hands-on AI training so they can leverage new tools and stay ahead of the curve.", "Capacite a su equipo con entrenamiento práctico en IA para que puedan aprovechar las nuevas herramientas y mantenerse a la vanguardia."),
     },
+    {
+      icon: Globe,
+      title: t("Website Development & Optimization", "Desarrollo y optimización de sitios web"),
+      description: t("We help organizations build and optimize websites that get found — across search engines, AI tools, and voice search. From structure and design to SEO, AEO, and GEO, we make sure your digital presence works as hard as you do.", "Ayudamos a las organizaciones a construir y optimizar sitios web que sean encontrados — en motores de búsqueda, herramientas de IA y búsqueda por voz. Desde la estructura y el diseño hasta SEO, AEO y GEO, nos aseguramos de que su presencia digital trabaje tan duro como usted."),
+    },
+    {
+      icon: PenLine,
+      title: t("Content Strategy", "Estrategia de contenido"),
+      description: t("We help organizations create content with purpose. From social media and email newsletters to blogs and beyond — we build AI-powered content strategies that are consistent, intentional, and aligned with real business goals.", "Ayudamos a las organizaciones a crear contenido con propósito. Desde redes sociales y boletines por correo hasta blogs y más allá — construimos estrategias de contenido impulsadas por IA que son consistentes, intencionales y alineadas con objetivos de negocio reales."),
+    },
   ];
 
   return (
