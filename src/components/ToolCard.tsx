@@ -12,14 +12,16 @@ interface ToolCardProps {
 
 const ToolCard = ({ icon: Icon, title, description, benefit }: ToolCardProps) => {
   const { t } = useLanguage();
-  const toolUrl = TOOL_URLS[title];
+const ToolCard = ({ icon: Icon, title, description, benefit }: ToolCardProps) => {
+  const { t, language } = useLanguage();
+  const baseUrl = TOOL_URLS[title];
 
   const handleLaunch = () => {
-    if (toolUrl) {
-      window.open(toolUrl, "_blank", "noopener,noreferrer");
+    if (baseUrl) {
+      const url = language === "es" ? `${baseUrl}?lang=es` : baseUrl;
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
-
   return (
     <div className="dash-card flex flex-col gap-3 sm:gap-4 group">
       <div className="flex items-start justify-between">
