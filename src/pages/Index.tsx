@@ -585,13 +585,12 @@ import FAQSection from "@/components/FAQSection";
               "Practical strategies and real-world ideas to help you reclaim time, improve operations, and scale smarter with AI.",
               "Estrategias prácticas e ideas reales para ayudarte a recuperar tiempo, mejorar operaciones y escalar con inteligencia artificial."
             )}
-          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {posts.slice(0, 1).map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
-
-            ))}
           </div>
+
           <div className="text-center mt-8 sm:mt-10">
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to={t("/blog", "/es/blog")}>
