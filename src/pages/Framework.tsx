@@ -66,7 +66,7 @@ const Framework = () => {
 
   return (
     <>
-      <SEO title={"Time Reclaimed™ Framework — 7-Stage AI Transformation Methodology"} description={"The proprietary 7-stage methodology helping businesses save thousands of hours through strategic AI implementation. Assess, strategize, implement, optimize, scale."} />
+      <SEO title={"Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI"} description={"The Time Reclaimed™ Framework: 7 steps — Awaken, Clarify, Uncover, Choose, Build, Reclaim, Lead — powered by the T.I.M.E. Method™ for practical AI implementation."} />
       <SchemaMarkup id="framework-howto" schema={FRAMEWORK_HOWTO_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
@@ -77,9 +77,9 @@ const Framework = () => {
             </div>
             <span className="badge-tag">{t("Methodology", "Metodología")}</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("Time Reclaimed™ Framework", "Marco Time Reclaimed™")}</h1>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("The Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI", "El marco Time Reclaimed™ — 7 pasos para recuperar tu tiempo con la IA")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
-            {t("Our proprietary seven-stage methodology for transforming organizations from operational inefficiency to intelligent, AI-powered systems.", "Nuestra metodología propietaria de siete etapas para transformar organizaciones desde la ineficiencia operativa hacia sistemas inteligentes impulsados por IA.")}
+            {t("Our proprietary seven-step methodology for reclaiming your time, clarity, and focus in an AI-powered world.", "Nuestra metodología propietaria de siete pasos para recuperar tu tiempo, claridad y enfoque en un mundo impulsado por IA.")}
           </p>
         </div>
       </div>
