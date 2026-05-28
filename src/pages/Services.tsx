@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, ArrowRight, Settings } from "lucide-react";
+import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, Globe, PenLine, ArrowRight, Settings } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
