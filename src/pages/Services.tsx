@@ -14,32 +14,32 @@ const Services = () => {
     {
       icon: Brain,
       title: t("AI Transformation Strategy", "Estrategia de transformación con IA"),
-      description: t("Using our Time Reclaimed™ Framework, we assess your operations, identify AI opportunities, and create a strategic roadmap tailored to your organization's goals.", "Utilizando nuestro marco Time Reclaimed™, evaluamos sus operaciones, identificamos oportunidades de IA y creamos una hoja de ruta estratégica adaptada a los objetivos de su organización."),
+      description: t("We assess your operations, identify your biggest AI opportunities, and build a strategic roadmap using the Time Reclaimed™ Framework — so you move forward with clarity, not guesswork.", "Evaluamos tus operaciones, identificamos tus mayores oportunidades de IA y construimos una hoja de ruta estratégica utilizando el marco Time Reclaimed™ — para que avances con claridad, no con conjeturas."),
     },
     {
       icon: Cog,
       title: t("Workflow Automation", "Automatización de flujos de trabajo"),
-      description: t("Streamline repetitive tasks with intelligent automation — from data entry and reporting to client communications.", "Optimice tareas repetitivas con automatización inteligente — desde ingreso de datos e informes hasta comunicaciones con clientes."),
+      description: t("We eliminate the repetitive work draining your team's time — from client communications and reporting to data management and follow-up — so your people can focus on what actually moves the needle.", "Eliminamos el trabajo repetitivo que drena el tiempo de tu equipo — desde comunicaciones con clientes e informes hasta gestión de datos y seguimiento — para que tu gente pueda enfocarse en lo que realmente mueve la aguja."),
     },
     {
       icon: Bot,
       title: t("AI Agent Implementation", "Implementación de agentes de IA"),
-      description: t("Deploy custom AI agents that handle customer inquiries, lead follow-up, scheduling, and more — autonomously.", "Implemente agentes de IA personalizados que gestionan consultas de clientes, seguimiento de leads, programación y más — de forma autónoma."),
+      description: t("We design and deploy custom AI agents that handle customer inquiries, lead follow-up, scheduling, and more — working autonomously so your business keeps moving even when you're not in the room.", "Diseñamos e implementamos agentes de IA personalizados que gestionan consultas de clientes, seguimiento de leads, programación y más — trabajando de forma autónoma para que tu negocio siga avanzando incluso cuando no estés en la sala."),
     },
     {
       icon: Workflow,
       title: t("Intelligent Operational Systems", "Sistemas operativos inteligentes"),
-      description: t("Re-engineer your workflows to eliminate bottlenecks, reduce errors, and accelerate throughput across your organization.", "Rediseñe sus flujos de trabajo para eliminar cuellos de botella, reducir errores y acelerar la productividad en toda su organización."),
+      description: t("We rebuild the workflows slowing you down — eliminating bottlenecks, reducing errors, and creating systems that scale with your organization instead of breaking under pressure.", "Reconstruimos los flujos de trabajo que te están ralentizando — eliminando cuellos de botella, reduciendo errores y creando sistemas que escalan con tu organización en lugar de romperse bajo presión."),
     },
     {
       icon: Layers,
       title: t("Organizational Efficiency Consulting", "Consultoría de eficiencia organizacional"),
-      description: t("Holistic consulting to align your people, processes, and technology around AI-driven efficiency gains.", "Consultoría integral para alinear a su equipo, procesos y tecnología en torno a mejoras de eficiencia impulsadas por IA."),
+      description: t("We align your people, processes, and technology around one goal — a more efficient, AI-ready organization. Less friction. More output. Built to last.", "Alineamos a tu equipo, procesos y tecnología alrededor de un solo objetivo — una organización más eficiente y preparada para la IA. Menos fricción. Más output. Construido para durar."),
     },
     {
       icon: GraduationCap,
       title: t("AI Training for Teams", "Capacitación en IA para equipos"),
-      description: t("Empower your team with hands-on AI training so they can leverage new tools and stay ahead of the curve.", "Capacite a su equipo con entrenamiento práctico en IA para que puedan aprovechar las nuevas herramientas y mantenerse a la vanguardia."),
+      description: t("We equip your team with the skills and confidence to use AI effectively — through hands-on training that goes beyond theory and delivers real results from day one.", "Equipamos a tu equipo con las habilidades y la confianza para usar la IA de manera efectiva — a través de capacitación práctica que va más allá de la teoría y entrega resultados reales desde el primer día."),
     },
     {
       icon: Globe,
@@ -64,11 +64,11 @@ const Services = () => {
             <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
               <Settings className="h-4 w-4 text-primary" />
             </div>
-            <span className="badge-tag">{t("Strategy & Implementation", "Estrategia e implementación")}</span>
+            <span className="badge-tag">{t("STRATEGY & IMPLEMENTATION", "ESTRATEGIA E IMPLEMENTACIÓN")}</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("AI Strategy & Implementation", "Estrategia e implementación de IA")}</h1>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("AI Solutions for Every Stage of Growth", "Soluciones de IA para cada etapa de crecimiento")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
-            {t("End-to-end AI solutions — from strategy to execution — so you can focus on what matters most: transforming your organization.", "Soluciones de IA de principio a fin — desde la estrategia hasta la ejecución — para que pueda enfocarse en lo más importante: transformar su organización.")}
+            {t("From startups to corporations — we meet you where you are and build what you need. Bilingual delivery. Real implementation. Measurable results.", "Desde startups hasta corporaciones — te encontramos donde estás y construimos lo que necesitas. Entrega bilingüe. Implementación real. Resultados medibles.")}
           </p>
         </div>
       </div>
