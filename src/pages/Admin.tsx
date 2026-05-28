@@ -127,6 +127,7 @@ const Admin = () => {
         .select("*")
         .single();
       if (error) throw error;
+      if (!updatedPost) throw new Error("Cover uploaded, but the post could not be updated.");
 
       setSelected(updatedPost as BlogPostRow);
       setPosts((current) => current.map((post) => (post.id === updatedPost.id ? (updatedPost as BlogPostRow) : post)));
