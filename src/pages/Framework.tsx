@@ -88,8 +88,8 @@ const Framework = () => {
         <div className="container mx-auto max-w-2xl text-center">
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {t(
-              "The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine. Each stage builds on the last, moving your organization from manual, time-consuming operations to intelligent, automated systems that free your team to focus on what matters most.",
-              "El marco Time Reclaimed™ es más que un proceso de consultoría — es un motor de transformación. Cada etapa se construye sobre la anterior, llevando a su organización de operaciones manuales y que consumen tiempo a sistemas inteligentes y automatizados que liberan a su equipo para enfocarse en lo más importante."
+              "The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine. Each step builds on the last, taking you from operational chaos to AI-powered clarity, focus, and freedom.",
+              "El marco Time Reclaimed™ es más que un proceso de consultoría — es un motor de transformación. Cada paso se construye sobre el anterior, llevándolo del caos operativo a la claridad, el enfoque y la libertad impulsados por IA."
             )}
           </p>
         </div>
