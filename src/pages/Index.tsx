@@ -83,7 +83,7 @@ const Index = () => {
                   </a>
                 </Button>
                 <Button variant="hero-outline" size="lg" className="h-12 text-sm w-full sm:w-auto" asChild>
-                  <Link to="/assessment">{t("Take the AI Readiness Assessment", "Evaluación de preparación para IA")}</Link>
+                  <a href="https://aireadiness-assessment.lovable.app" target="_blank" rel="noopener noreferrer">{t("Take the AI Readiness Assessment", "Evaluación de preparación para IA")}</a>
                 </Button>
               </div>
               <p className="mt-6 text-xs sm:text-sm italic text-muted-foreground/80 max-w-xl mx-auto lg:mx-0">
