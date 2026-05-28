@@ -8,7 +8,9 @@ export type BlogPost = {
   date: string;
   readTime: number;
   featured?: boolean;
+  coverImageUrl?: string;
 };
+
 
 export const CATEGORIES = [
   { key: "ai-strategy", en: "AI Strategy", es: "Estrategia de IA" },

@@ -9,10 +9,14 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
 
   return (
     <article className="dash-card flex flex-col overflow-hidden group">
-      <div className="relative h-40 -mx-6 -mt-6 mb-4 bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center border-b border-primary/10">
-        <FileText className="h-10 w-10 text-primary/40" />
-        <div className="absolute top-3 left-3">
-          <span className="text-[10px] uppercase tracking-widest font-bold rounded-full px-2.5 py-1 bg-primary/15 text-primary border border-primary/20">
+      <div className="relative h-40 -mx-6 -mt-6 mb-4 overflow-hidden bg-gradient-to-br from-[hsl(222,30%,12%)] via-[hsl(222,30%,8%)] to-[hsl(222,30%,5%)] flex items-center justify-center border-b border-primary/10">
+        {post.coverImageUrl ? (
+          <img src={post.coverImageUrl} alt={language === "es" ? post.title.es : post.title.en} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        ) : (
+          <FileText className="h-10 w-10 text-primary/40" />
+        )}
+        <div className="absolute top-3 left-3 z-10">
+          <span className="text-[10px] uppercase tracking-widest font-bold rounded-full px-2.5 py-1 bg-primary/15 text-primary border border-primary/20 backdrop-blur-sm">
             {language === "es" ? post.category.es : post.category.en}
           </span>
         </div>
