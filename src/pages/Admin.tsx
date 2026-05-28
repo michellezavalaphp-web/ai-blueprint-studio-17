@@ -291,6 +291,8 @@ const Admin = () => {
               <Label htmlFor="content_es">Full Content (Spanish)</Label>
               <p className="text-xs text-muted-foreground mb-2">Separa los párrafos con una línea en blanco.</p>
               <Textarea id="content_es" rows={18} value={selected.content_es} onChange={(e) => updateField("content_es", e.target.value)} />
+            </div>
+
             <div>
               <Label htmlFor="category">Category</Label>
               <Select
@@ -319,8 +321,6 @@ const Admin = () => {
               </Select>
             </div>
 
-              </div>
-            </div>
 
             <div className="grid sm:grid-cols-3 gap-4">
 
