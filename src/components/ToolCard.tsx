@@ -12,7 +12,6 @@ interface ToolCardProps {
 
 const ToolCard = ({ icon: Icon, title, description, benefit }: ToolCardProps) => {
   const { t, language } = useLanguage();
-  const { t, language } = useLanguage();
   const baseUrl = TOOL_URLS[title];
 
   const handleLaunch = () => {
