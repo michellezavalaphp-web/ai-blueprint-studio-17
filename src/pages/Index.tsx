@@ -37,13 +37,13 @@ const Index = () => {
 
 
   const frameworkStages = [
-    { step: "01", name: t("Discover", "Descubrir"), icon: ScanSearch },
-    { step: "02", name: t("Diagnose", "Diagnosticar"), icon: Activity },
-    { step: "03", name: t("Design", "Diseñar"), icon: BrainCircuit },
-    { step: "04", name: t("Develop", "Desarrollar"), icon: Cpu },
-    { step: "05", name: t("Deploy", "Desplegar"), icon: ArrowRight },
-    { step: "06", name: t("Drive", "Impulsar"), icon: BarChart3 },
-    { step: "07", name: t("Dominate", "Dominar"), icon: Gauge },
+    { step: "01", name: t("Awaken", "Despertar"), icon: Lightbulb },
+    { step: "02", name: t("Clarify", "Clarificar"), icon: Filter },
+    { step: "03", name: t("Uncover", "Descubrir"), icon: ScanSearch },
+    { step: "04", name: t("Choose", "Elegir"), icon: Diamond },
+    { step: "05", name: t("Build", "Construir"), icon: Cpu },
+    { step: "06", name: t("Reclaim", "Recuperar"), icon: Clock },
+    { step: "07", name: t("Lead", "Liderar"), icon: TrendingUp },
   ];
 
   const diagnostics = [
