@@ -572,12 +572,12 @@ const Index = () => {
       </section>
 
 
-      {/* ── 5 · Latest AI Insights ── */}
+      {/* ── 5 · Latest AI Blog ── */}
       <section className="section-light section-padding">
         <div className="container mx-auto">
           <SectionHeading
-            tag={t("Insights", "Perspectivas")}
-            title={t("Latest AI Insights", "Últimas Perspectivas de IA")}
+            tag={t("Blog", "Blog")}
+            title={t("Latest AI Blog Posts", "Últimas entradas del Blog de IA")}
             description={t(
               "Practical strategies and real-world ideas to help you reclaim time, improve operations, and scale smarter with AI.",
               "Estrategias prácticas e ideas reales para ayudarte a recuperar tiempo, mejorar operaciones y escalar con inteligencia artificial."
@@ -590,8 +590,8 @@ const Index = () => {
           </div>
           <div className="text-center mt-8 sm:mt-10">
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to={t("/insights", "/es/perspectivas")}>
-                {t("View All Insights", "Ver todas las perspectivas")} <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to={t("/blog", "/es/blog")}>
+                {t("View All Blog Posts", "Ver todas las entradas del blog")} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

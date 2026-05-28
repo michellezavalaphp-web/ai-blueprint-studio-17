@@ -47,7 +47,7 @@ const Footer = () => {
               { to: "/about", label: t("About", "Nosotros") },
               { to: "/impact", label: t("Impact & Results", "Impacto y resultados") },
               { to: "/resources", label: t("Resources", "Recursos") },
-              { to: t("/insights", "/es/perspectivas"), label: t("Insights", "Perspectivas") },
+              { to: t("/blog", "/es/blog"), label: t("Blog", "Blog") },
               { to: "/contact", label: t("Contact", "Contacto") },
             ].map((l) => (
               <li key={l.to}>

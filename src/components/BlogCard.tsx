@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const BlogCard = ({ post }: { post: BlogPost }) => {
   const { language, t } = useLanguage();
-  const basePath = language === "es" ? "/es/perspectivas" : "/insights";
+  const basePath = language === "es" ? "/es/blog" : "/blog";
 
   return (
     <article className="dash-card flex flex-col overflow-hidden group">
