@@ -26,8 +26,9 @@ import {
   Lightbulb,
   Diamond,
 } from "lucide-react";
-import { BLOG_POSTS } from "@/lib/blogPosts";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
 import BlogCard from "@/components/BlogCard";
+
 import SEO from "@/components/SEO";
 import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
 import FAQSection from "@/components/FAQSection";
