@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, ArrowRight, Settings } from "lucide-react";
+import { Brain, Cog, Bot, Workflow, GraduationCap, Layers, Globe, PenLine, ArrowRight, Settings } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
@@ -40,6 +40,16 @@ const Services = () => {
       icon: GraduationCap,
       title: t("AI Training for Teams", "Capacitación en IA para equipos"),
       description: t("Empower your team with hands-on AI training so they can leverage new tools and stay ahead of the curve.", "Capacite a su equipo con entrenamiento práctico en IA para que puedan aprovechar las nuevas herramientas y mantenerse a la vanguardia."),
+    },
+    {
+      icon: Globe,
+      title: t("Website Development & Optimization", "Desarrollo y optimización de sitios web"),
+      description: t("We help organizations build and optimize websites that get found — across search engines, AI tools, and voice search. From structure and design to SEO, AEO, and GEO, we make sure your digital presence works as hard as you do.", "Ayudamos a las organizaciones a construir y optimizar sitios web que sean encontrados — en motores de búsqueda, herramientas de IA y búsqueda por voz. Desde la estructura y el diseño hasta SEO, AEO y GEO, nos aseguramos de que su presencia digital trabaje tan duro como usted."),
+    },
+    {
+      icon: PenLine,
+      title: t("Content Strategy", "Estrategia de contenido"),
+      description: t("We help organizations create content with purpose. From social media and email newsletters to blogs and beyond — we build AI-powered content strategies that are consistent, intentional, and aligned with real business goals.", "Ayudamos a las organizaciones a crear contenido con propósito. Desde redes sociales y boletines por correo hasta blogs y más allá — construimos estrategias de contenido impulsadas por IA que son consistentes, intencionales y alineadas con objetivos de negocio reales."),
     },
   ];
 
@@ -92,6 +102,9 @@ const Services = () => {
             </h2>
             <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed">
               {t("Book a free strategy call and let's map out exactly where AI can give you back time, money, and margin.", "Agenda una llamada estratégica gratuita y descubramos exactamente dónde la IA puede devolverte tiempo, dinero y margen.")}
+            </p>
+            <p className="text-muted-foreground mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed italic">
+              {t("Don't see exactly what you need? If it moves your organization forward — we can make it happen. Let's talk.", "¿No ves exactamente lo que necesitas? Si impulsa tu organización hacia adelante, nosotros podemos hacerlo realidad. Hablemos.")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
