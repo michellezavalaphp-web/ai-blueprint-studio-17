@@ -115,8 +115,8 @@ const Services = () => {
           {
             question: t("What's included in the free AI Readiness Assessment?", "¿Qué incluye la Evaluación de Preparación para IA gratuita?"),
             answer: t(
-              "Our free AI Readiness Assessment evaluates your current operations, technology stack, and team capabilities to identify the highest-impact opportunities for AI implementation. You'll receive a personalized report showing exactly where AI can save you time and money, with a prioritized action plan.",
-              "Nuestra Evaluación de Preparación para IA gratuita evalúa sus operaciones actuales, su stack tecnológico y las capacidades del equipo para identificar las oportunidades de mayor impacto para implementar IA. Recibirá un informe personalizado mostrando exactamente dónde la IA puede ahorrarle tiempo y dinero, con un plan de acción priorizado.",
+              "Not sure where to start with AI? Take this free 5-minute assessment and find out exactly where your business stands — and what to do first.",
+              "¿No sabes por dónde empezar con la IA? Toma esta evaluación gratuita de 5 minutos y descubre exactamente dónde está tu negocio — y qué hacer primero.",
             ),
           },
           {

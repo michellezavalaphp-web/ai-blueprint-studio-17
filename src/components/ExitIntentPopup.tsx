@@ -149,8 +149,8 @@ const ExitIntentPopup = () => {
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-5">
             {t(
-              "Join 500+ business leaders using AI to save 10+ hours per week.",
-              "Únase a más de 500 líderes empresariales que usan IA para ahorrar más de 10 horas por semana.",
+              "Not sure where to start with AI? Take this free 5-minute assessment and find out exactly where your business stands — and what to do first.",
+              "¿No sabes por dónde empezar con la IA? Toma esta evaluación gratuita de 5 minutos y descubre exactamente dónde está tu negocio — y qué hacer primero.",
             )}
           </p>
 
