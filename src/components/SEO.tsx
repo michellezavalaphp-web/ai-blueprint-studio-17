@@ -5,6 +5,8 @@ interface SEOProps {
   description: string;
   /** Path beginning with "/" — used to build canonical, og:url, and hreflang. Defaults to current path. */
   path?: string;
+  /** Open Graph type. Defaults to "website". Use "article" for blog posts. */
+  ogType?: string;
 }
 
 const SITE_URL = "https://www.goaiinnovation.com";
@@ -30,7 +32,7 @@ const upsertLink = (id: string, rel: string, href: string, hreflang?: string) =>
   if (hreflang) el.setAttribute("hreflang", hreflang);
 };
 
-const SEO = ({ title, description, path }: SEOProps) => {
+const SEO = ({ title, description, path, ogType = "website" }: SEOProps) => {
   useEffect(() => {
     const currentPath = path ?? window.location.pathname;
     const canonical = `${SITE_URL}${currentPath}`;
@@ -57,6 +59,11 @@ const SEO = ({ title, description, path }: SEOProps) => {
       m.setAttribute("property", "og:url");
       return m;
     }, canonical);
+    upsertMeta('meta[property="og:type"]', () => {
+      const m = document.createElement("meta");
+      m.setAttribute("property", "og:type");
+      return m;
+    }, ogType);
     upsertMeta('meta[name="twitter:title"]', () => {
       const m = document.createElement("meta");
       m.setAttribute("name", "twitter:title");
@@ -77,7 +84,7 @@ const SEO = ({ title, description, path }: SEOProps) => {
       "es",
     );
     upsertLink("hreflang-default", "alternate", canonical, "x-default");
-  }, [title, description, path]);
+  }, [title, description, path, ogType]);
 
   return null;
 };

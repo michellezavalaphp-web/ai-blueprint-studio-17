@@ -257,7 +257,7 @@ const Speaking = () => {
   return (
     <>
       <SEO
-        title={"Book Michelle Zavala — AI Keynote Speaker | Go AI Innovation"}
+        title={"AI Keynote Speaker — Michelle Zavala | Go AI Innovation"}
         description={
           "Book Mardel Michelle Zavala for your next event. Keynote speaker on AI strategy, Time Reclaimed™ Framework, and digital transformation. Bilingual (EN/ES). Miami, FL."
         }

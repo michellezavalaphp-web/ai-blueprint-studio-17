@@ -1,0 +1,23 @@
+# Go AI Innovation
+
+> AI consulting and implementation firm helping businesses, professional service firms, nonprofits, and government departments save time and operate intelligently using the Time Reclaimed™ Framework. Based in Miami, FL. Bilingual (English/Spanish).
+
+## Pages
+
+- [Home](/): Overview of Go AI Innovation, the Time Reclaimed™ Framework, and AI implementation services.
+- [Services](/services): AI strategy, workflow automation, AI agents, and team training services.
+- [Solutions](/solutions): AI solutions for businesses, professional services, insurance, real estate, nonprofits, and government.
+- [Framework](/framework): The proprietary 7-stage Time Reclaimed™ AI transformation methodology.
+- [AI Readiness Tools](/tools): Free diagnostics — AI Readiness Assessment, Time Reclaimed™ Calculator, AI Opportunity Finder.
+- [Resources](/resources): Books, training programs, implementation guides, and workshops.
+- [About](/about): About Go AI Innovation, mission, vision, and approach.
+- [Founder](/founder): Mardel Michelle Zavala — founder, CPD Accredited AI Consultant, and author of Time Reclaimed™.
+- [Speaking](/speaking): Book Michelle as an AI keynote speaker for corporate events, conferences, and summits.
+- [Blog](/blog): Insights on AI strategy, automation, lead generation, and workflow transformation.
+- [Book a Strategy Call](/book): Free AI strategy consultation and roadmap.
+- [Contact](/contact): Get in touch with Go AI Innovation.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)
