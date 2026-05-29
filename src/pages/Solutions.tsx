@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import {
   Building2, Briefcase, Shield, Home, Heart, Landmark,
   ArrowRight, CheckCircle2, Globe,
@@ -51,6 +52,7 @@ const Solutions = () => {
 
   return (
     <>
+      <SEO title="AI Solutions by Industry — Business, Insurance, Real Estate" description="Tailored AI solutions for businesses, professional services, insurance, real estate, nonprofits, and government departments. Powered by the Time Reclaimed™ Framework." />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

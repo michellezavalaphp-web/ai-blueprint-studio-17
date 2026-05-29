@@ -4,6 +4,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import ToolCard from "@/components/ToolCard";
 import { Gauge, Clock, ScanSearch, ArrowRight, LayoutDashboard } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const Tools = () => {
   const { t } = useLanguage();
@@ -34,6 +35,7 @@ const Tools = () => {
 
   return (
     <>
+      <SEO title="Free AI Readiness Tools & Diagnostics | Go AI Innovation" description="Free AI tools: Readiness Assessment, Time Reclaimed™ Calculator, and Opportunity Finder. Identify automation opportunities for your business in minutes." />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
