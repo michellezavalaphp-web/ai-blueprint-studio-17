@@ -532,7 +532,7 @@ const Index = () => {
             )}
           </p>
           <p className="text-sm text-muted-foreground/80 mb-10">
-            {t("Upcoming:", "Próximos eventos:")} <span className="font-medium text-foreground/70">AI Edge Summit (May 2026)</span> <span className="text-primary/50 mx-2">•</span> <span className="font-medium text-foreground/70">AI Clarity Summit (June 2026)</span>
+            {t("Upcoming:", "Próximos eventos:")} <a href="https://yourhotaisummer.com/?am_id=mardelmichelle1207" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground/70 hover:text-primary transition-colors underline underline-offset-2">{t("Hot AI Summit — May 30 speaking at 1pm", "Hot AI Summit — 30 de mayo, presentación a la 1pm")}</a> <span className="text-primary/50 mx-2">•</span> <a href="https://go.aiclaritysummit.com/summit-registration?ref=michelle" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground/70 hover:text-primary transition-colors underline underline-offset-2">{t("AI Clarity Summit — June 1-14, speaking Day 13", "AI Clarity Summit — 1-14 de junio, presentación Día 13")}</a>
           </p>
 
           <div className="bg-primary/5 border-l-[3px] border-primary rounded-r-lg p-6 sm:p-8 text-left max-w-3xl mx-auto mb-10 shadow-sm">
