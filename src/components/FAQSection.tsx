@@ -19,9 +19,10 @@ interface FAQSectionProps {
   description?: string;
   items: FAQItem[];
   variant?: "light" | "muted";
+  className?: string;
 }
 
-const FAQSection = ({ id, tag, title, description, items, variant = "muted" }: FAQSectionProps) => {
+const FAQSection = ({ id, tag, title, description, items, variant = "muted", className }: FAQSectionProps) => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -37,7 +38,7 @@ const FAQSection = ({ id, tag, title, description, items, variant = "muted" }: F
 
   return (
     <section
-      className={`section-padding ${variant === "light" ? "section-light" : "bg-secondary/20"}`}
+      className={`${className ?? "section-padding"} ${variant === "light" ? "section-light" : "bg-secondary/20"}`}
     >
       <SchemaMarkup id={`faq-${id}`} schema={schema} />
       <div className="container mx-auto max-w-3xl">

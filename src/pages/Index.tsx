@@ -132,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* ── 2 · Sound Familiar? ── */}
-      <section className="section-light section-padding bg-white">
+      <section className="section-light bg-white py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
@@ -206,7 +206,7 @@ const Index = () => {
           </div>
 
           {/* Quote Divider */}
-          <div className="mt-12 sm:mt-16 flex flex-col items-center text-center max-w-xl mx-auto">
+          <div className="mt-8 sm:mt-10 flex flex-col items-center text-center max-w-xl mx-auto">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-px bg-primary/25" />
               <Diamond className="h-3 w-3 text-primary/40" />
@@ -223,7 +223,7 @@ const Index = () => {
     </section>
 
     {/* ── 2b · Services ── */}
-    <section className="section-padding bg-muted">
+    <section className="bg-muted py-10 sm:py-12 md:py-16 px-4">
       <div className="container mx-auto">
         {/* Badge */}
         <span className="block text-center text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-primary mb-4 sm:mb-5 uppercase">
@@ -354,7 +354,7 @@ const Index = () => {
         </div>
 
         {/* Quote Divider */}
-        <div className="mt-12 sm:mt-16 flex flex-col items-center text-center max-w-xl mx-auto">
+        <div className="mt-8 sm:mt-10 flex flex-col items-center text-center max-w-xl mx-auto">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-px bg-primary/25" />
             <Diamond className="h-3 w-3 text-primary/40" />
@@ -371,7 +371,7 @@ const Index = () => {
     </section>
 
       {/* ── Personal Story ── */}
-      <section className="section-light section-padding bg-white">
+      <section className="section-light bg-white py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-[45fr_55fr] gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
             {/* Left: Photo */}
@@ -422,7 +422,7 @@ const Index = () => {
           </div>
 
           {/* Quote Divider */}
-          <div className="mt-16 sm:mt-20 flex flex-col items-center text-center max-w-2xl mx-auto">
+          <div className="mt-10 sm:mt-12 flex flex-col items-center text-center max-w-2xl mx-auto">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-px bg-primary/25" />
               <Diamond className="h-3 w-3 text-primary/40" />
@@ -441,7 +441,7 @@ const Index = () => {
 
 
       {/* ── 3 · Framework ── */}
-      <section className="section-dark section-padding">
+      <section className="section-dark py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto">
           <SectionHeading
             tag={t("Our Methodology", "Nuestra metodología")}
@@ -500,7 +500,7 @@ const Index = () => {
       </section>
 
       {/* Quote Divider */}
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-white py-8 sm:py-10">
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto px-4">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-8 h-px bg-primary/25" />
@@ -517,7 +517,7 @@ const Index = () => {
       </section>
 
       {/* Speaking & Book Section */}
-      <section className="bg-white section-padding">
+      <section className="bg-white py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center px-4">
           <p className="text-xs tracking-[0.25em] uppercase text-primary font-semibold mb-4">
             {t("SPEAKING & EVENTS", "CONFERENCIAS Y EVENTOS")}
@@ -558,7 +558,7 @@ const Index = () => {
 
 
       {/* ── 4 · AI Readiness Diagnostics ── */}
-      <section className="section-light section-padding">
+      <section className="section-light py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto">
           <SectionHeading
             tag={t("AI Readiness Diagnostics", "Diagnóstico de preparación para IA")}
@@ -577,7 +577,7 @@ const Index = () => {
 
 
       {/* ── 5 · Latest AI Blog ── */}
-      <section className="section-light section-padding">
+      <section className="section-light py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto">
           <SectionHeading
             tag={t("Blog", "Blog")}
@@ -606,6 +606,7 @@ const Index = () => {
 
       {/* ── 6 · FAQ ── */}
       <FAQSection
+        className="py-10 sm:py-12 md:py-16 px-4"
         id="home"
         tag={t("FAQ", "Preguntas frecuentes")}
         title={t("Frequently Asked Questions", "Preguntas Frecuentes")}
@@ -656,7 +657,7 @@ const Index = () => {
       />
 
       {/* ── 6 · CTA ── */}
-      <section className="section-dark section-padding relative overflow-hidden">
+      <section className="section-dark py-10 sm:py-12 md:py-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={aiAbstract} alt="AI systems visualization" loading="lazy" className="w-full h-full object-cover opacity-[0.08]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
