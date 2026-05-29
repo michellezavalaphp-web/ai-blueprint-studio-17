@@ -606,6 +606,7 @@ const Index = () => {
 
       {/* ── 6 · FAQ ── */}
       <FAQSection
+        className="py-10 sm:py-12 md:py-16 px-4"
         id="home"
         tag={t("FAQ", "Preguntas frecuentes")}
         title={t("Frequently Asked Questions", "Preguntas Frecuentes")}
