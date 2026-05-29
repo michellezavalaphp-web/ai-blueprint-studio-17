@@ -38,7 +38,7 @@ const FAQSection = ({ id, tag, title, description, items, variant = "muted", cla
 
   return (
     <section
-      className={`section-padding ${variant === "light" ? "section-light" : "bg-secondary/20"}`}
+      className={`${className ?? "section-padding"} ${variant === "light" ? "section-light" : "bg-secondary/20"}`}
     >
       <SchemaMarkup id={`faq-${id}`} schema={schema} />
       <div className="container mx-auto max-w-3xl">
