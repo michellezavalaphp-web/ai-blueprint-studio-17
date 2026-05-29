@@ -19,6 +19,7 @@ interface FAQSectionProps {
   description?: string;
   items: FAQItem[];
   variant?: "light" | "muted";
+  className?: string;
 }
 
 const FAQSection = ({ id, tag, title, description, items, variant = "muted" }: FAQSectionProps) => {
