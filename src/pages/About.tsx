@@ -36,7 +36,7 @@ const About = () => {
 
   return (
     <>
-      <SEO title={"About Mardel Michelle Zavala — AI Consultant, Speaker & Author | Go AI Innovation"} description={"20+ years in operations & business transformation. CPD Accredited AI Consultant. Creator of the Time Reclaimed™ Framework. Published author. Bilingual (EN/ES). Miami, FL."} />
+      <SEO title={"About Go AI Innovation — Michelle Zavala, Miami"} description={"CPD Accredited AI Consultant with 20+ years in operations. Creator of the Time Reclaimed™ Framework. Bilingual (EN/ES). Based in Miami, FL."} />
       <SchemaMarkup id="person" schema={PERSON_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
@@ -70,7 +70,7 @@ const About = () => {
                 <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mx-auto mb-4">
                   <p.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{p.title}</h3>
+                <h2 className="font-display text-sm sm:text-base font-semibold mb-2">{p.title}</h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             ))}
@@ -121,7 +121,7 @@ const About = () => {
                 <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <v.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold mb-2">{v.title}</h3>
+                <h2 className="font-display text-sm sm:text-base font-semibold mb-2">{v.title}</h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{v.description}</p>
               </div>
             ))}

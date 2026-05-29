@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import {
   Building2, Briefcase, Shield, Home, Heart, Landmark,
   ArrowRight, CheckCircle2, Globe,
@@ -51,6 +52,7 @@ const Solutions = () => {
 
   return (
     <>
+      <SEO title="AI Solutions by Industry — Business, Insurance, Real Estate" description="Tailored AI solutions for businesses, professional services, insurance, real estate, nonprofits, and government departments. Powered by the Time Reclaimed™ Framework." />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">
@@ -77,7 +79,7 @@ const Solutions = () => {
                     <s.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-display text-sm sm:text-base font-semibold">{s.title}</h3>
+                <h2 className="font-display text-sm sm:text-base font-semibold">{s.title}</h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.description}</p>
                 <ul className="space-y-2 mt-auto pt-3 border-t border-border/30">
                   {s.benefits.map((b) => (

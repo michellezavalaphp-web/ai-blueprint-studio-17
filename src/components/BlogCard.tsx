@@ -29,9 +29,10 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
       </p>
       <Link
         to={`${basePath}/${post.slug}`}
+        aria-label={t(`Read full article: ${post.title.en}`, `Leer artículo completo: ${post.title.es}`)}
         className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:gap-2.5 transition-all"
       >
-        {t("Read More", "Leer más")} <ArrowRight className="h-3.5 w-3.5" />
+        {t("Read full article", "Leer artículo completo")} <ArrowRight className="h-3.5 w-3.5" />
       </Link>
     </article>
   );

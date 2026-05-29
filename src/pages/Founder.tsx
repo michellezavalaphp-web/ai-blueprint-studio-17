@@ -4,6 +4,7 @@ import { ArrowRight, Lightbulb, Target, Rocket, User, ImageIcon } from "lucide-r
 import founderPhoto from "@/assets/founder-photo.png";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const Founder = () => {
   const { t } = useLanguage();
@@ -28,6 +29,7 @@ const Founder = () => {
 
   return (
     <>
+      <SEO title="Mardel Michelle Zavala — Founder, Go AI Innovation" description="Meet Mardel Michelle Zavala, founder of Go AI Innovation, CPD Accredited AI Consultant, and creator of the Time Reclaimed™ Framework. Bilingual AI strategist." />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

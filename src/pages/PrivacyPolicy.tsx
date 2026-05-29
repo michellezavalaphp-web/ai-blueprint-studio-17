@@ -1,12 +1,14 @@
 import SectionHeading from "@/components/SectionHeading";
 import { ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const PrivacyPolicy = () => {
   const { t } = useLanguage();
 
   return (
     <>
+      <SEO title="Privacy Policy | Go AI Innovation" description="How Go AI Innovation collects, uses, and protects your personal information when you visit our website or use our AI consulting services." />
       <section className="page-header">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-up">

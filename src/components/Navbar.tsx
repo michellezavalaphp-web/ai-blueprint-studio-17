@@ -51,7 +51,12 @@ const Navbar = () => {
 
         <div className="lg:hidden flex items-center gap-2">
           <LanguageToggle />
-          <button className="text-white p-2 -mr-2" onClick={() => setOpen(!open)}>
+          <button
+            className="text-white p-2 -mr-2"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? t("Close menu", "Cerrar menú") : t("Open menu", "Abrir menú")}
+            aria-expanded={open}
+          >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import {
   BookOpen, GraduationCap, FileText, Presentation, ArrowRight, Library,
 } from "lucide-react";
@@ -38,6 +39,7 @@ const Resources = () => {
 
   return (
     <>
+      <SEO title="AI Learning Resources & Knowledge Hub | Go AI Innovation" description="Books, training programs, implementation guides, and workshops to help organizations adopt AI and build internal AI capabilities." />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
         <div className="container mx-auto relative z-10">

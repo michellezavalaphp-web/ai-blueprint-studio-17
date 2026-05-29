@@ -1,12 +1,14 @@
 import SectionHeading from "@/components/SectionHeading";
 import { FileText } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 const TermsOfService = () => {
   const { t } = useLanguage();
 
   return (
     <>
+      <SEO title="Terms of Service | Go AI Innovation" description="Terms governing your use of the Go AI Innovation website and AI consulting services provided by Agape Advisory Group LLC." />
       <section className="page-header">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-up">

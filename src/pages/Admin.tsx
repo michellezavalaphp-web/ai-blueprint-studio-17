@@ -232,7 +232,7 @@ const Admin = () => {
               <div className="flex items-center gap-4">
                 <div className="h-24 w-40 rounded-md border border-border overflow-hidden bg-muted flex items-center justify-center">
                   {selected.cover_image_url ? (
-                    <img src={selected.cover_image_url} alt="cover" className="h-full w-full object-cover" />
+                    <img src={selected.cover_image_url} alt={`Blog cover for ${selected.title_en}`} className="h-full w-full object-cover" />
                   ) : (
                     <ImageIcon className="h-6 w-6 text-muted-foreground" />
                   )}

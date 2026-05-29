@@ -5,6 +5,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import { BOOKING_URL } from "@/lib/constants";
 import BlogCard from "@/components/BlogCard";
+import SEO from "@/components/SEO";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const InsightPost = () => {
   const { slug } = useParams();
@@ -23,8 +25,30 @@ const InsightPost = () => {
     day: "numeric",
   });
 
+  const postTitle = language === "es" ? post.title.es : post.title.en;
+  const postExcerpt = language === "es" ? post.excerpt.es : post.excerpt.en;
+  const seoTitle = `${postTitle}`.slice(0, 60);
+  const seoDesc = `${postExcerpt}`.slice(0, 160);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: postTitle,
+    description: postExcerpt,
+    datePublished: post.date,
+    image: post.coverImageUrl || undefined,
+    author: { "@type": "Organization", name: "Go AI Innovation" },
+    publisher: {
+      "@type": "Organization",
+      name: "Go AI Innovation",
+      logo: { "@type": "ImageObject", url: "https://www.goaiinnovation.com/logo.png" },
+    },
+    mainEntityOfPage: `https://www.goaiinnovation.com${basePath}/${post.slug}`,
+  };
+
   return (
     <>
+      <SEO title={seoTitle} description={seoDesc} ogType="article" />
+      <SchemaMarkup id={`article-${post.slug}`} schema={articleSchema} />
       <article className="section-padding">
         <div className="container mx-auto max-w-3xl">
           <Link to={basePath} className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary mb-6 hover:gap-2.5 transition-all">

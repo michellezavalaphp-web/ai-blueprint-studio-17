@@ -30,7 +30,7 @@ const ToolCard = ({ icon: Icon, title, description, benefit }: ToolCardProps) =>
           {t("Tool", "Herramienta")}
         </span>
       </div>
-      <h3 className="font-display text-sm sm:text-base font-semibold leading-snug">{title}</h3>
+      <h2 className="font-display text-sm sm:text-base font-semibold leading-snug">{title}</h2>
       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">{description}</p>
       <div className="flex items-center gap-2 text-[11px] sm:text-xs text-primary font-medium">
         <div className="h-1.5 w-1.5 rounded-full bg-primary" />
