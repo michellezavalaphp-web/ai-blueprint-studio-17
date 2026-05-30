@@ -464,53 +464,76 @@ const Index = () => {
       {/* ── 3 · Framework ── */}
       <section className="section-dark py-10 sm:py-12 md:py-16 px-4">
         <div className="container mx-auto">
-          <SectionHeading
-            tag={t("Our Methodology", "Nuestra metodología")}
-            title={t("The Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI", "El marco Time Reclaimed™ — 7 pasos para recuperar tu tiempo con la IA")}
-            description={t("Seven steps from operational inefficiency to AI-powered transformation.", "Siete pasos desde la ineficiencia operativa hasta la transformación impulsada por IA.")}
-          />
-          <p className="text-center text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mb-10 sm:mb-14 leading-relaxed">
-            {t(
-              "Every engagement we lead is built on this system. Seven stages from operational chaos to AI-powered clarity.",
-              "Cada proyecto que lideramos se construye sobre este sistema. Siete etapas del caos operativo a la claridad impulsada por IA."
-            )}
-          </p>
-          {/* Desktop */}
-          <div className="hidden lg:flex items-center justify-center max-w-5xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <span className="badge-tag mb-4 inline-flex">
+              {t("The Time Reclaimed™ Framework", "El marco Time Reclaimed™")}
+            </span>
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem] font-bold mb-4 leading-[1.15]">
+              {t("7 Steps to Reclaim Your Time with AI", "7 pasos para recuperar tu tiempo con IA")}
+            </h2>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3">
+              {t(
+                "A proven system for leaders and organizations ready to move from overwhelm to operational clarity — and from busyness to real impact.",
+                "Un sistema probado para líderes y organizaciones listas para pasar del agobio a la claridad operativa — y del ajetreo al impacto real."
+              )}
+            </p>
+            <p className="text-muted-foreground/80 text-xs sm:text-sm leading-relaxed italic">
+              {t(
+                "Every step is intentional. Every stage builds on the last. This is not a productivity hack. This is a transformation system.",
+                "Cada paso es intencional. Cada etapa se construye sobre la anterior. Esto no es un truco de productividad. Es un sistema de transformación."
+              )}
+            </p>
+          </div>
+
+          {/* Desktop / Tablet roadmap */}
+          <div className="hidden md:block max-w-6xl mx-auto">
+            {/* Row 1: steps 1-4 */}
+            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-stretch gap-y-6">
+              {frameworkStages.slice(0, 4).map((stage, i) => (
+                <>
+                  <FrameworkCard key={stage.step} stage={stage} index={i} total={7} />
+                  {i < 3 && (
+                    <div key={`arr-${i}`} className="flex items-center justify-center px-1">
+                      <ArrowRight className="h-5 w-5 text-primary/60" />
+                    </div>
+                  )}
+                </>
+              ))}
+            </div>
+            {/* Connector down arrow */}
+            <div className="flex justify-center my-4">
+              <ArrowDown className="h-5 w-5 text-primary/60" />
+            </div>
+            {/* Row 2: steps 5-7 centered */}
+            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch max-w-4xl mx-auto">
+              {frameworkStages.slice(4).map((stage, i) => (
+                <>
+                  <FrameworkCard key={stage.step} stage={stage} index={i + 4} total={7} />
+                  {i < 2 && (
+                    <div key={`arr2-${i}`} className="flex items-center justify-center px-1">
+                      <ArrowRight className="h-5 w-5 text-primary/60" />
+                    </div>
+                  )}
+                </>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile stack */}
+          <div className="md:hidden flex flex-col items-stretch max-w-sm mx-auto">
             {frameworkStages.map((stage, i) => (
-              <div key={stage.name} className="flex items-center">
-                <div className="flex flex-col items-center text-center w-[100px] group">
-                  <div className="text-[10px] font-bold text-primary tracking-wider mb-1.5">{stage.step}</div>
-                  <div className="w-12 h-12 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center group-hover:shadow-md transition-all duration-300">
-                    <stage.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="font-display text-xs font-semibold mt-2 text-foreground">{stage.name}</div>
-                </div>
+              <div key={stage.step} className="flex flex-col items-stretch">
+                <FrameworkCard stage={stage} index={i} total={7} />
                 {i < frameworkStages.length - 1 && (
-                  <div className="flex items-center mx-1">
-                    <div className="w-6 h-px bg-primary/20" />
-                    <ArrowRight className="h-3 w-3 text-primary/30 -ml-0.5" />
+                  <div className="flex justify-center py-2">
+                    <ArrowDown className="h-5 w-5 text-primary/60" />
                   </div>
                 )}
               </div>
             ))}
           </div>
-          {/* Mobile */}
-          <div className="lg:hidden grid grid-cols-4 sm:grid-cols-4 gap-x-1 gap-y-4 max-w-sm sm:max-w-md mx-auto">
-            {frameworkStages.map((stage, i) => (
-              <div key={stage.name} className="flex flex-col items-center text-center relative">
-                <div className="text-[10px] font-bold text-primary tracking-wider mb-1">{stage.step}</div>
-                <div className="w-11 h-11 rounded-lg bg-primary/8 border border-primary/15 flex items-center justify-center">
-                  <stage.icon className="h-4 w-4 text-primary" />
-                </div>
-                <div className="font-display text-[11px] font-semibold mt-1.5 text-foreground">{stage.name}</div>
-                {i < frameworkStages.length - 1 && i !== 3 && (
-                  <ArrowRight className="absolute right-[-8px] top-[28px] h-2.5 w-2.5 text-primary/25" />
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8 sm:mt-10">
+
+          <div className="text-center mt-10">
             <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/framework">
                 {t("Explore the Full Framework", "Explora la metodología completa")} <ArrowRight className="ml-2 h-4 w-4" />
