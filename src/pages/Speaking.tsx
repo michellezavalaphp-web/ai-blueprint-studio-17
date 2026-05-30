@@ -390,7 +390,7 @@ const Speaking = () => {
 
       {/* Inquiry Modal */}
       <Dialog open={inquiryOpen} onOpenChange={setInquiryOpen}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto min-h-[850px]">
           <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
             {t("Request Availability", "Solicitar disponibilidad")}
           </DialogTitle>
