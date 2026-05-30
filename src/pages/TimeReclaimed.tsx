@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Sparkles, FileText, ImageIcon } from "lucide-react";
+import { ArrowRight, BookOpen, Sparkles, FileText } from "lucide-react";
 import founderPhoto from "@/assets/founder-photo.png";
+import bookCover from "@/assets/time-reclaimed-cover.jpg";
 import SEO from "@/components/SEO";
 
 const WaitlistForm = () => (
@@ -47,17 +48,14 @@ const TimeReclaimed = () => {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div
-                className="rounded-xl border border-border/40 bg-muted/40 flex flex-col items-center justify-center text-center p-6 shadow-xl"
-                style={{ width: 300, height: 400 }}
-                aria-label="Book cover placeholder"
-              >
-                <ImageIcon className="h-10 w-10 text-muted-foreground mb-3" />
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                  Book Cover
-                </span>
-                <span className="text-sm font-display font-semibold mt-1">Time Reclaimed™</span>
-              </div>
+              <img
+                src={bookCover}
+                alt="Time Reclaimed™ by Mardel Michelle Zavala — book cover"
+                width={300}
+                height={400}
+                className="w-[260px] sm:w-[300px] h-auto rounded-md shadow-2xl"
+                loading="eager"
+              />
             </div>
 
             <div className="order-2 lg:order-1 text-center lg:text-left">
