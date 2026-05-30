@@ -229,28 +229,16 @@ const Speaking = () => {
 
   const events = [
     {
-      name: "AI Clarity Summit",
-      host: t("Host: Stephanie Swanson", "Anfitriona: Stephanie Swanson"),
-      format: t(
-        "Pre-recorded conversation — airs June 1–14, 2026",
-        "Conversación pregrabada — se transmite del 1 al 14 de junio, 2026",
-      ),
-      topic: t(
-        '"Stop the Overwhelm: How to Reclaim Your Time with AI"',
-        '"Detén el Agobio: Cómo Recuperar Tu Tiempo con IA"',
-      ),
+      name: "Hot AI Summit with AI Tech Boss Jenn",
+      date: t("May 30 — Speaking at 1:00 PM", "30 de mayo — Conferencia a la 1:00 PM"),
+      image: "/placeholder.svg",
+      link: "https://yourhotaisummer.com/?am_id=mardelmichelle1207",
     },
     {
-      name: 'AI Tech Boss Summit — "Your Hot AI Summer"',
-      host: t("Host: Jenn, AI Tech Boss", "Anfitriona: Jenn, AI Tech Boss"),
-      format: t(
-        "Live Zoom keynote · May 30, 2026 · 1:00–1:20 PM EST",
-        "Conferencia magistral en vivo por Zoom · 30 de mayo, 2026 · 1:00–1:20 PM EST",
-      ),
-      topic: t(
-        '"AI as a Team Member: Real Workflows in Practice"',
-        '"La IA como Miembro del Equipo: Flujos Reales en Práctica"',
-      ),
+      name: "AI Clarity Summit with Stephanie",
+      date: t("June 1–14 — Speaking June 13", "1–14 de junio — Conferencia el 13 de junio"),
+      image: "/placeholder.svg",
+      link: "https://go.aiclaritysummit.com/summit-registration?ref=michelle",
     },
   ];
 
