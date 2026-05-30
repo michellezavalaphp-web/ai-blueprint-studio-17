@@ -21,43 +21,43 @@ const Framework = () => {
 
   const stages = [
     {
-      icon: Lightbulb, number: "01",
+      icon: Lightbulb, number: "1",
       title: t("Awaken", "Despertar"),
       subtitle: t("See What's Changing", "Vea lo que está cambiando"),
       description: t("Understand what's changing in the age of AI and why it matters for your life, not just your work.", "Comprenda lo que está cambiando en la era de la IA y por qué importa para su vida, no solo para su trabajo."),
     },
     {
-      icon: Filter, number: "02",
+      icon: Filter, number: "2",
       title: t("Clarify", "Clarificar"),
       subtitle: t("Filter the Noise", "Filtre el ruido"),
       description: t("Focus on what matters most. Filter the noise and identify what actually deserves your attention using the Clarity Filter.", "Enfóquese en lo que más importa. Filtre el ruido e identifique lo que realmente merece su atención usando el Filtro de Claridad."),
     },
     {
-      icon: Search, number: "03",
+      icon: Search, number: "3",
       title: t("Uncover", "Descubrir"),
       subtitle: t("Find the Hidden Leaks", "Encuentre las fugas ocultas"),
       description: t("Identify where your time, money, and energy are quietly leaking — often in places you've stopped noticing.", "Identifique dónde su tiempo, dinero y energía se están escapando silenciosamente — a menudo en lugares que ha dejado de notar."),
     },
     {
-      icon: Diamond, number: "04",
+      icon: Diamond, number: "4",
       title: t("Choose", "Elegir"),
       subtitle: t("Pick the Right Workflow", "Elija el flujo correcto"),
       description: t("Select one high-impact workflow to improve. Not ten. One. The right one changes everything.", "Seleccione un flujo de trabajo de alto impacto para mejorar. No diez. Uno. El correcto lo cambia todo."),
     },
     {
-      icon: Hammer, number: "05",
+      icon: Hammer, number: "5",
       title: t("Build", "Construir"),
       subtitle: t("Create Your First AI System", "Cree su primer sistema de IA"),
       description: t("Create your first AI-powered system using the T.I.M.E. Method™ — a simple four-step process that gets consistent results from AI without a technical background.", "Cree su primer sistema impulsado por IA usando el Método T.I.M.E.™ — un proceso simple de cuatro pasos que obtiene resultados consistentes de la IA sin formación técnica."),
     },
     {
-      icon: Clock, number: "06",
+      icon: Clock, number: "6",
       title: t("Reclaim", "Recuperar"),
       subtitle: t("Recover Your Time", "Recupere su tiempo"),
       description: t("Recover time through smarter workflows and intentional automation. Experience what margin feels like — and what it makes possible.", "Recupere tiempo a través de flujos de trabajo más inteligentes y automatización intencional. Experimente lo que se siente tener margen — y lo que hace posible."),
     },
     {
-      icon: Crown, number: "07",
+      icon: Crown, number: "7",
       title: t("Lead", "Liderar"),
       subtitle: t("Help Others Adapt", "Ayude a otros a adaptarse"),
       description: t("Help your team, your family, and your community adapt with confidence. Your breakthrough becomes someone else's beginning.", "Ayude a su equipo, su familia y su comunidad a adaptarse con confianza. Su avance se convierte en el comienzo de alguien más."),
