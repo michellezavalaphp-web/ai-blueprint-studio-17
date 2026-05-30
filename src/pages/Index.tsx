@@ -540,9 +540,9 @@ const Index = () => {
               {t("📖 Coming June 2026", "📖 Próximamente Junio 2026")}
             </p>
             <p className="font-display text-lg sm:text-xl font-semibold leading-snug">
-              Time Reclaimed™ — {t(
-                "7 Practical Steps to Create Margin, Lead Confidently, and Reclaim Your Time in a Distracted, AI-Powered World",
-                "7 pasos prácticos para crear margen, liderar con confianza y recuperar tu tiempo en un mundo distraído y potenciado por IA"
+              Time Reclaimed™: {t(
+                "7 Practical Steps to Create Margin, Lead with Confidence, and Thrive in an AI-Powered World",
+                "7 Pasos Prácticos para Crear Margen, Liderar con Confianza y Prosperar en un Mundo Impulsado por IA"
               )}
             </p>
           </div>
