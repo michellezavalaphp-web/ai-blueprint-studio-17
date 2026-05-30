@@ -610,17 +610,29 @@ const Index = () => {
             {t("Upcoming:", "Próximos eventos:")} <a href="https://yourhotaisummer.com/?am_id=mardelmichelle1207" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground/70 hover:text-primary transition-colors underline underline-offset-2">{t("Hot AI Summit — May 30 speaking at 1pm", "Hot AI Summit — 30 de mayo, presentación a la 1pm")}</a> <span className="text-primary/50 mx-2">•</span> <a href="https://go.aiclaritysummit.com/summit-registration?ref=michelle" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground/70 hover:text-primary transition-colors underline underline-offset-2">{t("AI Clarity Summit — June 1-14, speaking Day 13", "AI Clarity Summit — 1-14 de junio, presentación Día 13")}</a>
           </p>
 
-          <div className="bg-primary/5 border-l-[3px] border-primary rounded-r-lg p-6 sm:p-8 text-left max-w-3xl mx-auto mb-10 shadow-sm">
-            <p className="text-xs tracking-[0.2em] uppercase text-primary font-semibold mb-3">
-              {t("📖 Coming June 2026", "📖 Próximamente Junio 2026")}
-            </p>
-            <p className="font-display text-lg sm:text-xl font-semibold leading-snug">
-              Time Reclaimed™: {t(
-                "7 Practical Steps to Create Margin, Lead with Confidence, and Thrive in an AI-Powered World",
-                "7 Pasos Prácticos para Crear Margen, Liderar con Confianza y Prosperar en un Mundo Impulsado por IA"
-              )}
-            </p>
-          </div>
+          <Link to="/time-reclaimed" className="block">
+            <div className="bg-primary/5 border-l-[3px] border-primary rounded-r-lg p-6 sm:p-8 text-left max-w-3xl mx-auto mb-10 shadow-sm hover:bg-primary/[0.08] transition-colors duration-300 cursor-pointer">
+              <div className="flex flex-col sm:flex-row gap-5 items-start">
+                <img
+                  src={bookCover}
+                  alt="Time Reclaimed™ book cover"
+                  className="w-20 sm:w-24 rounded-md shadow-md border border-primary/20 shrink-0"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="text-xs tracking-[0.2em] uppercase text-primary font-semibold mb-3">
+                    {t("📖 Coming June 2026", "📖 Próximamente Junio 2026")}
+                  </p>
+                  <p className="font-display text-lg sm:text-xl font-semibold leading-snug">
+                    Time Reclaimed™: {t(
+                      "7 Practical Steps to Create Margin, Lead with Confidence, and Thrive in an AI-Powered World",
+                      "7 Pasos Prácticos para Crear Margen, Liderar con Confianza y Prosperar en un Mundo Impulsado por IA"
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
 
           <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
             <Link to="/speaking">
