@@ -25,6 +25,7 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
+import TimeReclaimed from "./pages/TimeReclaimed";
 
 
 const queryClient = new QueryClient();
@@ -75,6 +76,7 @@ const App = () => (
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/time-reclaimed" element={<TimeReclaimed />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>
