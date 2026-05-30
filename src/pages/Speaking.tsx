@@ -52,9 +52,20 @@ const InquiryIframe = () => (
   />
 );
 
+const OneSheetIframe = () => (
+  <iframe
+    src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+    style={{ width: "100%", border: "none", minHeight: "420px" }}
+    scrolling="no"
+    id="onesheet-download-form"
+    title="Speaker One Sheet Download Form"
+  />
+);
+
 const Speaking = () => {
   const { t } = useLanguage();
   const [inquiryOpen, setInquiryOpen] = useState(false);
+  const [oneSheetOpen, setOneSheetOpen] = useState(false);
 
   const topics = [
     {
@@ -192,11 +203,14 @@ const Speaking = () => {
               {t("Request Availability", "Solicitar disponibilidad")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="hero-outline" size="lg" className="h-12 w-full sm:w-auto text-sm" asChild>
-              <a href="/speaker-one-sheet.pdf" target="_blank" rel="noopener noreferrer">
-                {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
-                <Download className="ml-2 h-4 w-4" />
-              </a>
+            <Button
+              variant="hero-outline"
+              size="lg"
+              className="h-12 w-full sm:w-auto text-sm"
+              onClick={() => setOneSheetOpen(true)}
+            >
+              {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
+              <Download className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -360,11 +374,14 @@ const Speaking = () => {
                 {t("Request Availability", "Solicitar disponibilidad")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 w-full sm:w-auto text-sm" asChild>
-                <a href="/speaker-one-sheet.pdf" target="_blank" rel="noopener noreferrer">
-                  {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
-                  <Download className="ml-2 h-4 w-4" />
-                </a>
+              <Button
+                variant="hero-outline"
+                size="lg"
+                className="h-12 w-full sm:w-auto text-sm"
+                onClick={() => setOneSheetOpen(true)}
+              >
+                {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
+                <Download className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -385,6 +402,24 @@ const Speaking = () => {
           </p>
           <div className="mt-2">
             <InquiryIframe />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* One Sheet Download Modal */}
+      <Dialog open={oneSheetOpen} onOpenChange={setOneSheetOpen}>
+        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
+          <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
+            {t("Get the Speaker One Sheet", "Obtenga la ficha de la conferencista")}
+          </DialogTitle>
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            {t(
+              "Enter your details below and your download will begin instantly.",
+              "Ingrese sus datos a continuación y su descarga comenzará instantáneamente.",
+            )}
+          </p>
+          <div className="mt-2">
+            <OneSheetIframe />
           </div>
         </DialogContent>
       </Dialog>
