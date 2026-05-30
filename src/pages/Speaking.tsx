@@ -283,12 +283,11 @@ const Speaking = () => {
               "Conferencista magistral sobre estrategia de IA, transformación empresarial y el futuro del trabajo. Bilingüe (EN/ES). Disponible para eventos corporativos, conferencias, cumbres y talleres.",
             )}
           </p>
-          <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
-            <Link to="/contact?ref=speaking">
-              {t("Request Availability", "Consultar disponibilidad")}{" "}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <iframe
+            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+            style={{ width: "100%", border: "none", minHeight: "400px" }}
+            scrolling="no"
+          />
         </div>
       </section>
 
