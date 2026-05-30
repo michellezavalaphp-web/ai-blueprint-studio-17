@@ -49,19 +49,20 @@ const FrameworkCard = ({ stage, index }: { stage: FrameworkStage; index: number 
   const Icon = stage.icon;
   return (
     <div
-      className="group rounded-xl p-5 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col"
+      className="group rounded-xl p-5 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col max-w-[210px] w-full justify-self-center"
       style={{
         backgroundColor: `hsl(var(--primary) / ${bgOpacity})`,
         borderColor: `hsl(var(--primary) / ${borderOpacity})`,
       }}
     >
-      <div className="font-display text-2xl md:text-3xl font-bold text-primary leading-none mb-3">
-        {stage.step}
+      <div className="font-display text-xl md:text-2xl font-bold leading-none mb-3 tracking-tight">
+        <span className="text-primary">{stage.step}</span>
+        <span className="text-muted-foreground mx-1">—</span>
+        <span className="text-foreground">{stage.name.toUpperCase()}</span>
       </div>
-      <div className="w-11 h-11 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center mb-3">
-        <Icon className="h-5 w-5 text-primary" />
+      <div className="w-12 h-12 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center mb-3">
+        <Icon className="h-6 w-6 text-primary" />
       </div>
-      <div className="font-display text-base font-bold text-foreground mb-1">{stage.name}</div>
       <div className="text-xs sm:text-[13px] text-muted-foreground leading-snug">{stage.desc}</div>
     </div>
   );
@@ -86,13 +87,13 @@ const Index = () => {
 
 
   const frameworkStages = [
-    { step: "01", name: t("Awaken", "Despertar"), icon: Lightbulb, desc: t("Recognize where your time is actually going", "Reconoce a dónde se va realmente tu tiempo") },
-    { step: "02", name: t("Clarify", "Clarificar"), icon: Filter, desc: t("Define what matters most and why", "Define lo que más importa y por qué") },
-    { step: "03", name: t("Uncover", "Descubrir"), icon: ScanSearch, desc: t("Identify the gaps, bottlenecks, and hidden drains", "Identifica las brechas, cuellos de botella y fugas ocultas") },
-    { step: "04", name: t("Choose", "Elegir"), icon: Diamond, desc: t("Make intentional decisions about where AI fits", "Toma decisiones intencionales sobre dónde encaja la IA") },
-    { step: "05", name: t("Build", "Construir"), icon: Cpu, desc: t("Implement the systems that work while you lead", "Implementa los sistemas que trabajan mientras lideras") },
-    { step: "06", name: t("Reclaim", "Recuperar"), icon: Clock, desc: t("Take back your time, energy, and focus", "Recupera tu tiempo, energía y enfoque") },
-    { step: "07", name: t("Lead", "Liderar"), icon: TrendingUp, desc: t("Operate at your highest level with confidence", "Opera a tu más alto nivel con confianza") },
+    { step: "1", name: t("Awaken", "Despertar"), icon: Lightbulb, desc: t("Recognize where your time is actually going", "Reconoce a dónde se va realmente tu tiempo") },
+    { step: "2", name: t("Clarify", "Clarificar"), icon: Filter, desc: t("Define what matters most and why", "Define lo que más importa y por qué") },
+    { step: "3", name: t("Uncover", "Descubrir"), icon: ScanSearch, desc: t("Identify the gaps, bottlenecks, and hidden drains", "Identifica las brechas, cuellos de botella y fugas ocultas") },
+    { step: "4", name: t("Choose", "Elegir"), icon: Diamond, desc: t("Make intentional decisions about where AI fits", "Toma decisiones intencionales sobre dónde encaja la IA") },
+    { step: "5", name: t("Build", "Construir"), icon: Cpu, desc: t("Implement the systems that work while you lead", "Implementa los sistemas que trabajan mientras lideras") },
+    { step: "6", name: t("Reclaim", "Recuperar"), icon: Clock, desc: t("Take back your time, energy, and focus", "Recupera tu tiempo, energía y enfoque") },
+    { step: "7", name: t("Lead", "Liderar"), icon: TrendingUp, desc: t("Operate at your highest level with confidence", "Opera a tu más alto nivel con confianza") },
   ];
 
   const diagnostics = [
@@ -532,7 +533,7 @@ const Index = () => {
           {/* Desktop / Tablet roadmap */}
           <div className="hidden md:block max-w-6xl mx-auto">
             {/* Row 1: steps 1-4 */}
-            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-stretch gap-y-6">
+            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-stretch gap-y-6 justify-items-center">
               {frameworkStages.slice(0, 4).map((stage, i) => (
                 <FrameworkCardRow key={stage.step} stage={stage} index={i} isLast={i === 3} />
               ))}
@@ -542,7 +543,7 @@ const Index = () => {
               <ArrowDown className="h-5 w-5 text-primary/60" />
             </div>
             {/* Row 2: steps 5-7 centered */}
-            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch max-w-4xl mx-auto">
+            <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch max-w-4xl mx-auto justify-items-center">
               {frameworkStages.slice(4).map((stage, i) => (
                 <FrameworkCardRow key={stage.step} stage={stage} index={i + 4} isLast={i === 2} />
               ))}
