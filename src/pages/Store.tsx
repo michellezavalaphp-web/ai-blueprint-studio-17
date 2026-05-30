@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, BookOpen, Shirt, Store as StoreIcon, Sparkles } from "lucide-react";
+import { ArrowRight, Shirt, Store as StoreIcon, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import bookCover from "@/assets/time-reclaimed-cover.jpg";
 
 const Store = () => {
   const { t } = useLanguage();
