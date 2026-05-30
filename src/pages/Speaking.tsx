@@ -283,12 +283,11 @@ const Speaking = () => {
               "Conferencista magistral sobre estrategia de IA, transformación empresarial y el futuro del trabajo. Bilingüe (EN/ES). Disponible para eventos corporativos, conferencias, cumbres y talleres.",
             )}
           </p>
-          <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
-            <Link to="/contact?ref=speaking">
-              {t("Request Availability", "Consultar disponibilidad")}{" "}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <iframe
+            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+            style={{ width: "100%", border: "none", minHeight: "400px" }}
+            scrolling="no"
+          />
         </div>
       </section>
 
@@ -424,95 +423,12 @@ const Speaking = () => {
               "Comparta algunos detalles sobre su evento y nos pondremos en contacto en menos de 24 horas.",
             )}
           />
-          {submitted ? (
-            <div className="dash-card p-10 sm:p-14 text-center glow-border">
-              <CheckCircle2 className="h-10 w-10 sm:h-12 sm:w-12 text-primary mx-auto mb-5" />
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-3">
-                {t("Thank you!", "¡Gracias!")}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">
-                {t("We'll be in touch within 24 hours.", "Nos pondremos en contacto dentro de 24 horas.")}
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSpeakingSubmit} className="dash-card p-6 sm:p-10 space-y-5 glow-border">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div className="space-y-1.5">
-                  <Label htmlFor="sp-name" className="text-xs sm:text-[13px]">
-                    {t("Full Name", "Nombre completo")} <span className="text-destructive">*</span>
-                  </Label>
-                  <Input id="sp-name" name="name" maxLength={100} required className="h-11 sm:h-10 text-sm" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="sp-email" className="text-xs sm:text-[13px]">
-                    {t("Email", "Correo")} <span className="text-destructive">*</span>
-                  </Label>
-                  <Input id="sp-email" name="email" type="email" maxLength={255} required className="h-11 sm:h-10 text-sm" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="sp-phone" className="text-xs sm:text-[13px]">{t("Phone", "Teléfono")}</Label>
-                  <Input id="sp-phone" name="phone" type="tel" maxLength={20} className="h-11 sm:h-10 text-sm" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label htmlFor="sp-org" className="text-xs sm:text-[13px]">
-                    {t("Organization / Event Name", "Organización / Nombre del evento")}{" "}
-                    <span className="text-destructive">*</span>
-                  </Label>
-                  <Input id="sp-org" name="organization" maxLength={200} required className="h-11 sm:h-10 text-sm" />
-                </div>
-                <div className="space-y-1.5">
-                  <Label className="text-xs sm:text-[13px]">{t("Event Date", "Fecha del evento")}</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className={cn(
-                          "w-full h-11 sm:h-10 justify-start text-left font-normal text-sm",
-                          !eventDate && "text-muted-foreground",
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {eventDate ? format(eventDate, "PPP") : t("Pick a date", "Seleccione una fecha")}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode="single"
-                        selected={eventDate}
-                        onSelect={setEventDate}
-                        disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
-                        initialFocus
-                        className={cn("p-3 pointer-events-auto")}
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <div className="space-y-1.5">
-                  <Label className="text-xs sm:text-[13px]">{t("Event Type", "Tipo de evento")}</Label>
-                  <Select value={eventType} onValueChange={setEventType}>
-                    <SelectTrigger className="h-11 sm:h-10 text-sm">
-                      <SelectValue placeholder={t("Select type", "Seleccione tipo")} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {EVENT_TYPES.map((type) => (
-                        <SelectItem key={type} value={type} className="text-sm">{type}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              <div className="space-y-1.5">
-                <Label htmlFor="sp-message" className="text-xs sm:text-[13px]">
-                  {t("Message / Details", "Mensaje / Detalles")}
-                </Label>
-                <Textarea id="sp-message" name="message" rows={5} maxLength={1500} className="text-sm" />
-              </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full h-12 sm:h-11 text-sm">
-                {t("Submit Inquiry", "Enviar consulta")} <Send className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-          )}
+          <iframe
+            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+            style={{ width: "100%", border: "none", minHeight: "400px" }}
+            scrolling="no"
+            id="speaking-inquiry-form"
+          />
         </div>
       </section>
 
@@ -539,12 +455,11 @@ const Speaking = () => {
               <Mail className="h-4 w-4" /> speaking@goaiinnovation.com
             </a>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
-                <Link to="/contact?ref=speaking">
-                  {t("Request Availability", "Consultar disponibilidad")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <iframe
+                src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+                style={{ width: "100%", border: "none", minHeight: "400px" }}
+                scrolling="no"
+              />
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
                 <a
                   href="/speaker-one-sheet.pdf"
