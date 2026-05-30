@@ -602,7 +602,7 @@ const Index = () => {
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
             {t(
-              "Bringing the message of AI implementation, time reclamation, and operational freedom to stages across the country. Available for keynotes, panels, workshops, and summits.",
+              "Bringing the message of AI implementation, time reclaimed, and operational freedom to stages across the country. Available for keynotes, panels, workshops, and summits.",
               "Llevando el mensaje de implementación de IA, recuperación del tiempo y libertad operativa a escenarios de todo el país. Disponible para conferencias magistrales, paneles, talleres y cumbres."
             )}
           </p>
