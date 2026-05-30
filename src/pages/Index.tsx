@@ -794,6 +794,38 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── 6 · CTA ── */}
+      <section className="section-dark py-10 sm:py-12 md:py-16 px-4 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={aiAbstract} alt="AI systems visualization" loading="lazy" className="w-full h-full object-cover opacity-[0.08]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
+        </div>
+        <div className="container mx-auto max-w-xl relative z-10">
+          <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
+              {t("Ready to Implement AI in Your Organization?", "¿Listo para implementar IA en su organización?")}
+            </h2>
+            <div className="section-divider mb-4" />
+            <p className="text-muted-foreground mb-7 sm:mb-9 text-xs sm:text-sm leading-relaxed">
+              {t("Discover where AI can create the greatest operational impact in your organization.", "Descubra dónde la IA puede generar el mayor impacto operativo en su organización.")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
+              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
+                <a href="https://aireadiness-assessment.lovable.app" target="_blank" rel="noopener noreferrer">{t("Start AI Readiness Assessment", "Inicia la evaluación de preparación para IA")}</a>
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground mt-5">
+              {t("Or call us directly:", "O llámanos directamente:")} <a href="tel:7869366937" className="text-primary hover:underline font-medium">786-936-6937</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── 6 · FAQ ── */}
       <FAQSection
         className="py-10 sm:py-12 md:py-16 px-4"
@@ -845,38 +877,6 @@ const Index = () => {
           },
         ]}
       />
-
-      {/* ── 6 · CTA ── */}
-      <section className="section-dark py-10 sm:py-12 md:py-16 px-4 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={aiAbstract} alt="AI systems visualization" loading="lazy" className="w-full h-full object-cover opacity-[0.08]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222,30%,5%)] via-[hsl(222,30%,5%/0.8)] to-[hsl(222,30%,5%/0.6)]" />
-        </div>
-        <div className="container mx-auto max-w-xl relative z-10">
-          <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
-            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
-              {t("Ready to Implement AI in Your Organization?", "¿Listo para implementar IA en su organización?")}
-            </h2>
-            <div className="section-divider mb-4" />
-            <p className="text-muted-foreground mb-7 sm:mb-9 text-xs sm:text-sm leading-relaxed">
-              {t("Discover where AI can create the greatest operational impact in your organization.", "Descubra dónde la IA puede generar el mayor impacto operativo en su organización.")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
-              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  {t("Book Strategy Call", "Agendar Llamada Estratégica")} <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-                <a href="https://aireadiness-assessment.lovable.app" target="_blank" rel="noopener noreferrer">{t("Start AI Readiness Assessment", "Inicia la evaluación de preparación para IA")}</a>
-              </Button>
-            </div>
-            <p className="text-xs text-muted-foreground mt-5">
-              {t("Or call us directly:", "O llámanos directamente:")} <a href="tel:7869366937" className="text-primary hover:underline font-medium">786-936-6937</a>
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
