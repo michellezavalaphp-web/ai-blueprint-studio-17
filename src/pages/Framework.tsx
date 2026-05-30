@@ -21,43 +21,43 @@ const Framework = () => {
 
   const stages = [
     {
-      icon: Lightbulb, number: "01",
+      icon: Lightbulb, number: "1",
       title: t("Awaken", "Despertar"),
       subtitle: t("See What's Changing", "Vea lo que está cambiando"),
       description: t("Understand what's changing in the age of AI and why it matters for your life, not just your work.", "Comprenda lo que está cambiando en la era de la IA y por qué importa para su vida, no solo para su trabajo."),
     },
     {
-      icon: Filter, number: "02",
+      icon: Filter, number: "2",
       title: t("Clarify", "Clarificar"),
       subtitle: t("Filter the Noise", "Filtre el ruido"),
       description: t("Focus on what matters most. Filter the noise and identify what actually deserves your attention using the Clarity Filter.", "Enfóquese en lo que más importa. Filtre el ruido e identifique lo que realmente merece su atención usando el Filtro de Claridad."),
     },
     {
-      icon: Search, number: "03",
+      icon: Search, number: "3",
       title: t("Uncover", "Descubrir"),
       subtitle: t("Find the Hidden Leaks", "Encuentre las fugas ocultas"),
       description: t("Identify where your time, money, and energy are quietly leaking — often in places you've stopped noticing.", "Identifique dónde su tiempo, dinero y energía se están escapando silenciosamente — a menudo en lugares que ha dejado de notar."),
     },
     {
-      icon: Diamond, number: "04",
+      icon: Diamond, number: "4",
       title: t("Choose", "Elegir"),
       subtitle: t("Pick the Right Workflow", "Elija el flujo correcto"),
       description: t("Select one high-impact workflow to improve. Not ten. One. The right one changes everything.", "Seleccione un flujo de trabajo de alto impacto para mejorar. No diez. Uno. El correcto lo cambia todo."),
     },
     {
-      icon: Hammer, number: "05",
+      icon: Hammer, number: "5",
       title: t("Build", "Construir"),
       subtitle: t("Create Your First AI System", "Cree su primer sistema de IA"),
       description: t("Create your first AI-powered system using the T.I.M.E. Method™ — a simple four-step process that gets consistent results from AI without a technical background.", "Cree su primer sistema impulsado por IA usando el Método T.I.M.E.™ — un proceso simple de cuatro pasos que obtiene resultados consistentes de la IA sin formación técnica."),
     },
     {
-      icon: Clock, number: "06",
+      icon: Clock, number: "6",
       title: t("Reclaim", "Recuperar"),
       subtitle: t("Recover Your Time", "Recupere su tiempo"),
       description: t("Recover time through smarter workflows and intentional automation. Experience what margin feels like — and what it makes possible.", "Recupere tiempo a través de flujos de trabajo más inteligentes y automatización intencional. Experimente lo que se siente tener margen — y lo que hace posible."),
     },
     {
-      icon: Crown, number: "07",
+      icon: Crown, number: "7",
       title: t("Lead", "Liderar"),
       subtitle: t("Help Others Adapt", "Ayude a otros a adaptarse"),
       description: t("Help your team, your family, and your community adapt with confidence. Your breakthrough becomes someone else's beginning.", "Ayude a su equipo, su familia y su comunidad a adaptarse con confianza. Su avance se convierte en el comienzo de alguien más."),
@@ -79,7 +79,7 @@ const Framework = () => {
           </div>
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("The Time Reclaimed™ Framework — 7 Steps to Reclaim Your Time with AI", "El marco Time Reclaimed™ — 7 pasos para recuperar tu tiempo con la IA")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
-            {t("Our proprietary seven-step methodology for reclaiming your time, clarity, and focus in an AI-powered world.", "Nuestra metodología propietaria de siete pasos para recuperar tu tiempo, claridad y enfoque en un mundo impulsado por IA.")}
+            {t("A proven seven-step system for reclaiming your time, clarity, and focus in an AI-powered world.", "Un sistema probado de siete pasos para recuperar tu tiempo, claridad y enfoque en un mundo impulsado por IA.")}
           </p>
         </div>
       </div>
@@ -88,8 +88,8 @@ const Framework = () => {
         <div className="container mx-auto max-w-2xl text-center">
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {t(
-              "The Time Reclaimed™ Framework is more than a consulting process — it's a transformation engine. Each step builds on the last, taking you from operational chaos to AI-powered clarity, focus, and freedom.",
-              "El marco Time Reclaimed™ es más que un proceso de consultoría — es un motor de transformación. Cada paso se construye sobre el anterior, llevándolo del caos operativo a la claridad, el enfoque y la libertad impulsados por IA."
+              "The Time Reclaimed™ Framework is more than a process — it's a proven path. Each step builds intentionally on the last, moving you from overwhelmed and reactive to focused, free, and leading at your highest level.",
+              "El marco Time Reclaimed™ es más que un proceso — es un camino probado. Cada paso se construye intencionalmente sobre el anterior, llevándote de estar abrumado y reactivo a enfocado, libre y liderando a tu máximo nivel."
             )}
           </p>
         </div>
