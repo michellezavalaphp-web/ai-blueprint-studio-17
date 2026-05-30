@@ -80,7 +80,7 @@ const FrameworkCardRow = ({ stage, index, isLast }: { stage: FrameworkStage; ind
 );
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const { posts } = useBlogPosts();
 
