@@ -45,7 +45,7 @@ const SPEAKER_SCHEMA = {
 const InquiryIframe = () => (
   <iframe
     src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-    style={{ width: "100%", border: "none", minHeight: "700px" }}
+    style={{ width: "100%", border: "none", minHeight: "750px", display: "block" }}
     scrolling="no"
     id="speaking-inquiry-form"
     title="Speaking Inquiry Form"
@@ -54,8 +54,8 @@ const InquiryIframe = () => (
 
 const OneSheetIframe = () => (
   <iframe
-    src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-    style={{ width: "100%", border: "none", minHeight: "700px" }}
+    src="https://api.growthhub365.com/widget/form/5VxN5B3oAE4rmkSz7gyi"
+    style={{ width: "100%", border: "none", minHeight: "500px", display: "block" }}
     scrolling="no"
     id="onesheet-download-form"
     title="Speaker One Sheet Download Form"
@@ -390,7 +390,7 @@ const Speaking = () => {
 
       {/* Inquiry Modal */}
       <Dialog open={inquiryOpen} onOpenChange={setInquiryOpen}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto min-h-[850px]">
           <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
             {t("Request Availability", "Solicitar disponibilidad")}
           </DialogTitle>
@@ -408,7 +408,7 @@ const Speaking = () => {
 
       {/* One Sheet Download Modal */}
       <Dialog open={oneSheetOpen} onOpenChange={setOneSheetOpen}>
-        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto min-h-[600px]">
           <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
             {t("Get the Speaker One Sheet", "Obtenga la ficha de la conferencista")}
           </DialogTitle>
