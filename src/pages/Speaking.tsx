@@ -455,12 +455,11 @@ const Speaking = () => {
               <Mail className="h-4 w-4" /> speaking@goaiinnovation.com
             </a>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm" asChild>
-                <Link to="/contact?ref=speaking">
-                  {t("Request Availability", "Consultar disponibilidad")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <iframe
+                src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+                style={{ width: "100%", border: "none", minHeight: "400px" }}
+                scrolling="no"
+              />
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
                 <a
                   href="/speaker-one-sheet.pdf"
