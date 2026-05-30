@@ -42,13 +42,13 @@ const Index = () => {
 
 
   const frameworkStages = [
-    { step: "01", name: t("Awaken", "Despertar"), icon: Lightbulb },
-    { step: "02", name: t("Clarify", "Clarificar"), icon: Filter },
-    { step: "03", name: t("Uncover", "Descubrir"), icon: ScanSearch },
-    { step: "04", name: t("Choose", "Elegir"), icon: Diamond },
-    { step: "05", name: t("Build", "Construir"), icon: Cpu },
-    { step: "06", name: t("Reclaim", "Recuperar"), icon: Clock },
-    { step: "07", name: t("Lead", "Liderar"), icon: TrendingUp },
+    { step: "01", name: t("Awaken", "Despertar"), icon: Lightbulb, desc: t("Recognize where your time is actually going", "Reconoce a dónde se va realmente tu tiempo") },
+    { step: "02", name: t("Clarify", "Clarificar"), icon: Filter, desc: t("Define what matters most and why", "Define lo que más importa y por qué") },
+    { step: "03", name: t("Uncover", "Descubrir"), icon: ScanSearch, desc: t("Identify the gaps, bottlenecks, and hidden drains", "Identifica las brechas, cuellos de botella y fugas ocultas") },
+    { step: "04", name: t("Choose", "Elegir"), icon: Diamond, desc: t("Make intentional decisions about where AI fits", "Toma decisiones intencionales sobre dónde encaja la IA") },
+    { step: "05", name: t("Build", "Construir"), icon: Cpu, desc: t("Implement the systems that work while you lead", "Implementa los sistemas que trabajan mientras lideras") },
+    { step: "06", name: t("Reclaim", "Recuperar"), icon: Clock, desc: t("Take back your time, energy, and focus", "Recupera tu tiempo, energía y enfoque") },
+    { step: "07", name: t("Lead", "Liderar"), icon: TrendingUp, desc: t("Operate at your highest level with confidence", "Opera a tu más alto nivel con confianza") },
   ];
 
   const diagnostics = [
