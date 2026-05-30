@@ -21,6 +21,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import SectionHeading from "@/components/SectionHeading";
+import eventHotAiSummer from "@/assets/event-hot-ai-summer.png";
+import eventAiClaritySummit from "@/assets/event-ai-clarity-summit.jpeg";
 
 const SPEAKER_SCHEMA = {
   "@context": "https://schema.org",
