@@ -69,7 +69,7 @@ const Impact = () => {
   ];
 
   const credentials = [
-    t("CPD Accredited AI Consultant (International)", "Consultora de IA Acreditada CPD (Internacional)"),
+    t("International CPD Accredited AI Consultant", "Consultora de IA Acreditada Internacional CPD"),
     t("Published Author — Time Reclaimed™ (May 2026)", "Autora publicada — Time Reclaimed™ (Mayo 2026)"),
     t("Speaker — AI Tech Boss Summit, May 2026", "Conferencista — AI Tech Boss Summit, mayo 2026"),
     t("Speaker — AI Clarity Summit, June 2026", "Conferencista — AI Clarity Summit, junio 2026"),
@@ -117,8 +117,8 @@ const Impact = () => {
           />
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
             {t(
-              "Go AI Innovation is dedicated to making artificial intelligence accessible to every business — regardless of size, industry, or technical background. Founded by Mardel Michelle Zavala, a CPD Accredited AI Consultant with 20+ years of operations experience, we serve the business community through our AI Business Readiness & Adoption Program and proprietary Time Reclaimed™ Framework. Our mission is rooted in workforce development, community empowerment, and closing the digital divide — with particular commitment to Latino-owned and underserved small businesses across South Florida and nationwide.",
-              "Go AI Innovation se dedica a hacer la inteligencia artificial accesible para cada empresa — sin importar el tamaño, la industria o los conocimientos técnicos. Fundada por Mardel Michelle Zavala, Consultora de IA acreditada CPD con más de 20 años de experiencia operativa, servimos a la comunidad empresarial a través de nuestro Programa de Preparación y Adopción de IA Empresarial y el Framework propietario Time Reclaimed™. Nuestra misión está arraigada en el desarrollo de la fuerza laboral, el empoderamiento comunitario y el cierre de la brecha digital — con un compromiso particular con las pequeñas empresas latinas y desatendidas en el sur de Florida y a nivel nacional.",
+              "Go AI Innovation is dedicated to making artificial intelligence accessible to every business — regardless of size, industry, or technical background. Founded by Mardel Michelle Zavala, an International CPD Accredited AI Consultant with 20+ years of operations experience, we serve the business community through our AI Business Readiness & Adoption Program and proprietary Time Reclaimed™ Framework. Our mission is rooted in workforce development, community empowerment, and closing the digital divide — with particular commitment to Latino-owned and underserved small businesses across South Florida and nationwide.",
+              "Go AI Innovation se dedica a hacer la inteligencia artificial accesible para cada empresa — sin importar el tamaño, la industria o los conocimientos técnicos. Fundada por Mardel Michelle Zavala, Consultora de IA Acreditada Internacional CPD con más de 20 años de experiencia operativa, servimos a la comunidad empresarial a través de nuestro Programa de Preparación y Adopción de IA Empresarial y el Framework propietario Time Reclaimed™. Nuestra misión está arraigada en el desarrollo de la fuerza laboral, el empoderamiento comunitario y el cierre de la brecha digital — con un compromiso particular con las pequeñas empresas latinas y desatendidas en el sur de Florida y a nivel nacional.",
             )}
           </p>
         </div>

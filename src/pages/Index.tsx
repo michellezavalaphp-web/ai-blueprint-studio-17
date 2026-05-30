@@ -59,7 +59,7 @@ const Index = () => {
 
   return (
     <>
-      <SEO title={"Go AI Innovation — AI Consulting & Implementation | Miami"} description={"Go AI Innovation helps businesses implement AI systems that save 10+ hours per week. Led by CPD Accredited AI Consultant Mardel Michelle Zavala. Free AI Readiness Assessment."} />
+      <SEO title={"Go AI Innovation — AI Consulting & Implementation | Miami"} description={"Go AI Innovation helps businesses implement AI systems that save 10+ hours per week. Led by International CPD Accredited AI Consultant Mardel Michelle Zavala. Free AI Readiness Assessment."} />
       <SchemaMarkup id="local-business" schema={LOCAL_BUSINESS_SCHEMA} />
       {/* ── 1 · Hero ── */}
       <section className="section-light relative flex items-center overflow-hidden bg-white">

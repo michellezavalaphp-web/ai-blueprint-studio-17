@@ -38,7 +38,7 @@ export const ORGANIZATION_SCHEMA = {
     name: "Mardel Michelle Zavala",
     jobTitle: "Founder & CEO",
     description:
-      "CPD Accredited AI Consultant with 20+ years in operations and business transformation. Published author of Time Reclaimed™.",
+      "International CPD Accredited AI Consultant with 20+ years in operations and business transformation. Published author of Time Reclaimed™.",
   },
   address: {
     "@type": "PostalAddress",
@@ -85,7 +85,7 @@ export const PERSON_SCHEMA = {
   name: "Mardel Michelle Zavala",
   jobTitle: "Founder & CEO, AI Consultant",
   description:
-    "CPD Accredited AI Consultant with 20+ years in operations and business transformation. Creator of the Time Reclaimed™ Framework.",
+    "International CPD Accredited AI Consultant with 20+ years in operations and business transformation. Creator of the Time Reclaimed™ Framework.",
   url: "https://www.goaiinnovation.com/about",
   worksFor: {
     "@type": "Organization",

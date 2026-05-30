@@ -36,7 +36,7 @@ const About = () => {
 
   return (
     <>
-      <SEO title={"About Go AI Innovation — Michelle Zavala, Miami"} description={"CPD Accredited AI Consultant with 20+ years in operations. Creator of the Time Reclaimed™ Framework. Bilingual (EN/ES). Based in Miami, FL."} />
+      <SEO title={"About Go AI Innovation — Michelle Zavala, Miami"} description={"International CPD Accredited AI Consultant with 20+ years in operations. Creator of the Time Reclaimed™ Framework. Bilingual (EN/ES). Based in Miami, FL."} />
       <SchemaMarkup id="person" schema={PERSON_SCHEMA} />
       <div className="page-header">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/3 to-transparent" />
