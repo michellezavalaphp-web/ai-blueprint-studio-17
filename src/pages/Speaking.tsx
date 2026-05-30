@@ -45,7 +45,7 @@ const SPEAKER_SCHEMA = {
 const InquiryIframe = () => (
   <iframe
     src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-    style={{ width: "100%", border: "none", minHeight: "700px" }}
+    style={{ width: "100%", border: "none", minHeight: "750px", display: "block" }}
     scrolling="no"
     id="speaking-inquiry-form"
     title="Speaking Inquiry Form"
@@ -54,8 +54,8 @@ const InquiryIframe = () => (
 
 const OneSheetIframe = () => (
   <iframe
-    src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-    style={{ width: "100%", border: "none", minHeight: "700px" }}
+    src="https://api.growthhub365.com/widget/form/5VxN5B3oAE4rmkSz7gyi"
+    style={{ width: "100%", border: "none", minHeight: "500px", display: "block" }}
     scrolling="no"
     id="onesheet-download-form"
     title="Speaker One Sheet Download Form"
