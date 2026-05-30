@@ -490,14 +490,7 @@ const Index = () => {
             {/* Row 1: steps 1-4 */}
             <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-stretch gap-y-6">
               {frameworkStages.slice(0, 4).map((stage, i) => (
-                <>
-                  <FrameworkCard key={stage.step} stage={stage} index={i} total={7} />
-                  {i < 3 && (
-                    <div key={`arr-${i}`} className="flex items-center justify-center px-1">
-                      <ArrowRight className="h-5 w-5 text-primary/60" />
-                    </div>
-                  )}
-                </>
+                <FrameworkCardRow key={stage.step} stage={stage} index={i} isLast={i === 3} />
               ))}
             </div>
             {/* Connector down arrow */}
@@ -507,14 +500,7 @@ const Index = () => {
             {/* Row 2: steps 5-7 centered */}
             <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch max-w-4xl mx-auto">
               {frameworkStages.slice(4).map((stage, i) => (
-                <>
-                  <FrameworkCard key={stage.step} stage={stage} index={i + 4} total={7} />
-                  {i < 2 && (
-                    <div key={`arr2-${i}`} className="flex items-center justify-center px-1">
-                      <ArrowRight className="h-5 w-5 text-primary/60" />
-                    </div>
-                  )}
-                </>
+                <FrameworkCardRow key={stage.step} stage={stage} index={i + 4} isLast={i === 2} />
               ))}
             </div>
           </div>
@@ -523,7 +509,7 @@ const Index = () => {
           <div className="md:hidden flex flex-col items-stretch max-w-sm mx-auto">
             {frameworkStages.map((stage, i) => (
               <div key={stage.step} className="flex flex-col items-stretch">
-                <FrameworkCard stage={stage} index={i} total={7} />
+                <FrameworkCard stage={stage} index={i} />
                 {i < frameworkStages.length - 1 && (
                   <div className="flex justify-center py-2">
                     <ArrowDown className="h-5 w-5 text-primary/60" />
