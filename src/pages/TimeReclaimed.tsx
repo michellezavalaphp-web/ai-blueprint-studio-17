@@ -21,17 +21,17 @@ const TimeReclaimed = () => {
     {
       icon: BookOpen,
       title: "Early Book Launch Updates",
-      description: "Be the first to know when Time Reclaimed™ goes live, plus pre-order windows and bonus offers.",
+      description: "Be the first to know when Time Reclaimed™ drops, including launch day announcements and exclusive pre-release content.",
     },
     {
       icon: FileText,
       title: "Free T.I.M.E. Method™ One-Page Guide",
-      description: "A practical one-page framework you can apply this week to reclaim focused, intentional time.",
+      description: "A quick-reference framework from inside the book to help you start reclaiming your time before launch day.",
     },
     {
       icon: Sparkles,
-      title: "Exclusive Time Reclaimed™ Resources",
-      description: "Subscriber-only worksheets, workshops, and behind-the-scenes content from Michelle.",
+      title: "Exclusive Early Access Resources",
+      description: "Bonus tools, frameworks, and implementation guides drawn from all 7 steps of the Time Reclaimed™ system — delivered to early access members only.",
     },
   ];
 
