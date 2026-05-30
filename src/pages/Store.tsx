@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, BookOpen, Shirt, Store as StoreIcon, Sparkles } from "lucide-react";
+import { ArrowRight, Shirt, Store as StoreIcon, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import bookCover from "@/assets/time-reclaimed-cover.jpg";
 
 const Store = () => {
   const { t } = useLanguage();
@@ -51,38 +53,34 @@ const Store = () => {
       {/* Featured Book */}
       <section className="section-padding !pt-10 sm:!pt-14">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-center glass-panel p-6 sm:p-10 glow-border">
-            <div className="order-2 lg:order-1">
-              <div className="flex items-center gap-2 mb-4"><ComingSoon /></div>
-              <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">Time Reclaimed™</h2>
-              <p className="text-muted-foreground text-xs sm:text-sm md:text-base leading-relaxed mb-6">
-                {t(
-                  "A practical framework to help you reclaim time, reduce overwhelm, and lead with clarity in an AI-powered world.",
-                  "Un marco práctico para ayudarte a recuperar tiempo, reducir la sobrecarga y liderar con claridad en un mundo impulsado por IA."
-                )}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Button variant="hero" size="lg" className="h-11 text-sm" disabled>
-                  {t("Pre-Order", "Reservar")} <Sparkles className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                    {t("Book Strategy Call", "Agendar Llamada Estratégica")}
-                  </a>
-                </Button>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative w-48 sm:w-60 md:w-72 aspect-[3/4] rounded-lg bg-gradient-to-br from-[hsl(222,30%,10%)] to-[hsl(222,40%,18%)] border border-primary/20 shadow-2xl shadow-primary/20 flex flex-col items-center justify-center p-6 text-center">
-                <BookOpen className="h-10 w-10 text-primary mb-4" />
-                <div className="font-display text-lg sm:text-xl font-bold text-white">Time Reclaimed™</div>
-                <div className="mt-2 text-[10px] sm:text-[11px] uppercase tracking-widest text-primary/80">
-                  {t("By the Founder", "Por el fundador")}
+          <Link to="/time-reclaimed" className="block">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-center glass-panel p-6 sm:p-10 glow-border">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center gap-2 mb-4"><ComingSoon /></div>
+                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">Time Reclaimed™</h2>
+                <p className="text-muted-foreground text-xs sm:text-sm md:text-base leading-relaxed mb-6">
+                  {t(
+                    "A practical framework to help you reclaim time, reduce overwhelm, and lead with clarity in an AI-powered world.",
+                    "Un marco práctico para ayudarte a recuperar tiempo, reducir la sobrecarga y liderar con claridad en un mundo impulsado por IA."
+                  )}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Button variant="hero-outline" size="lg" className="h-11 text-sm" asChild>
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                      {t("Book Strategy Call", "Agendar Llamada Estratégica")}
+                    </a>
+                  </Button>
                 </div>
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 h-3 w-32 bg-black/40 blur-md rounded-full" />
+              </div>
+              <div className="order-1 lg:order-2 flex justify-center">
+                <img
+                  src={bookCover}
+                  alt="Time Reclaimed™ book cover"
+                  className="relative w-48 sm:w-60 md:w-72 rounded-lg border border-primary/20 shadow-2xl shadow-primary/20"
+                />
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
