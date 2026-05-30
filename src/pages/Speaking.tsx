@@ -405,6 +405,24 @@ const Speaking = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* One Sheet Download Modal */}
+      <Dialog open={oneSheetOpen} onOpenChange={setOneSheetOpen}>
+        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
+          <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
+            {t("Get the Speaker One Sheet", "Obtenga la ficha de la conferencista")}
+          </DialogTitle>
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            {t(
+              "Enter your details below and your download will begin instantly.",
+              "Ingrese sus datos a continuación y su descarga comenzará instantáneamente.",
+            )}
+          </p>
+          <div className="mt-2">
+            <OneSheetIframe />
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
