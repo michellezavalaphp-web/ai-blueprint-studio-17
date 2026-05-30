@@ -34,6 +34,49 @@ import SEO from "@/components/SEO";
 import SchemaMarkup, { LOCAL_BUSINESS_SCHEMA } from "@/components/SchemaMarkup";
 import FAQSection from "@/components/FAQSection";
 
+type FrameworkStage = {
+  step: string;
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  desc: string;
+};
+
+const FrameworkCard = ({ stage, index }: { stage: FrameworkStage; index: number }) => {
+  // Gradually deepen brand color from step 1 (light) to step 7 (deepest)
+  const bgOpacity = 0.06 + index * 0.06; // 0.06 -> 0.42
+  const borderOpacity = 0.18 + index * 0.06;
+  const Icon = stage.icon;
+  return (
+    <div
+      className="group rounded-xl p-5 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/20 h-full flex flex-col"
+      style={{
+        backgroundColor: `hsl(var(--primary) / ${bgOpacity})`,
+        borderColor: `hsl(var(--primary) / ${borderOpacity})`,
+      }}
+    >
+      <div className="font-display text-2xl md:text-3xl font-bold text-primary leading-none mb-3">
+        {stage.step}
+      </div>
+      <div className="w-11 h-11 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center mb-3">
+        <Icon className="h-5 w-5 text-primary" />
+      </div>
+      <div className="font-display text-base font-bold text-foreground mb-1">{stage.name}</div>
+      <div className="text-xs sm:text-[13px] text-muted-foreground leading-snug">{stage.desc}</div>
+    </div>
+  );
+};
+
+const FrameworkCardRow = ({ stage, index, isLast }: { stage: FrameworkStage; index: number; isLast: boolean }) => (
+  <>
+    <FrameworkCard stage={stage} index={index} />
+    {!isLast && (
+      <div className="flex items-center justify-center px-1">
+        <ArrowRight className="h-5 w-5 text-primary/60" />
+      </div>
+    )}
+  </>
+);
+
 const Index = () => {
   const { t } = useLanguage();
 
