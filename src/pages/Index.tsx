@@ -391,25 +391,45 @@ const Index = () => {
                 {t("My Story", "Mi Historia")}
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-bold leading-[1.12] mb-6 tracking-tight">
-                {t("The Tuesday Night That Changed Everything", "El martes por la noche que lo cambió todo")}
+                {t("The Moment I Realized Harder Wasn't the Answer", "El momento en que entendí que trabajar más no era la solución")}
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <div className="space-y-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 <p>{t(
-                  "You were a capable professional running at full capacity — with nothing left in reserve. Watching opportunities pass because you didn't have the margin to pursue them.",
-                  "Eras una profesional capaz funcionando al máximo — sin nada en reserva. Viendo pasar oportunidades porque no tenías el margen para perseguirlas."
+                  "I was a business leader, consultant, and mother of six — and I was drowning.",
+                  "Era líder de negocios, consultora y madre de seis hijos — y me estaba ahogando."
                 )}</p>
                 <p>{t(
-                  "You weren't lazy. You weren't disorganized. You were overloaded in a way no amount of harder work was going to fix.",
-                  "No eras perezosa. No eras desorganizada. Estabas sobrecargada de una manera que ningún esfuerzo adicional iba a resolver."
+                  "Not because I wasn't working hard enough.",
+                  "No porque no estuviera trabajando lo suficiente."
                 )}</p>
                 <p>{t(
-                  "That Tuesday night, sitting at your desk after the house went quiet, looking at a list of unfinished things — you felt the grief of someone who could see exactly what they were capable of… and couldn't quite reach it. Not from lack of effort. From lack of margin.",
-                  "Ese martes por la noche, sentada en tu escritorio después de que la casa quedó en silencio, mirando una lista de cosas sin terminar — sentiste el dolor de alguien que podía ver exactamente de lo que era capaz… y no podía alcanzarlo. No por falta de esfuerzo. Por falta de margen."
+                  "Because no amount of hard work was creating more hours in the day.",
+                  "Porque ninguna cantidad de trabajo duro estaba creando más horas en el día."
+                )}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-snug py-2">
+                  {t(
+                    "The problem wasn't effort. The problem was capacity.",
+                    "El problema no era el esfuerzo. El problema era la capacidad."
+                  )}
+                </p>
+                <p>{t(
+                  "That's when everything changed.",
+                  "Fue entonces cuando todo cambió."
                 )}</p>
                 <p>{t(
-                  "That's why I built Go AI Innovation. Not to sell you tools. To give you back the time, clarity, and freedom to do the work that actually matters.",
-                  "Por eso construí Go AI Innovation. No para venderte herramientas. Para devolverte el tiempo, la claridad y la libertad de hacer el trabajo que realmente importa."
+                  "AI gave me back my time. My clarity. My ability to lead without burning out.",
+                  "La IA me devolvió mi tiempo. Mi claridad. Mi capacidad de liderar sin agotarme."
                 )}</p>
+                <p>{t(
+                  "Now I help leaders and organizations do the same.",
+                  "Ahora ayudo a líderes y organizaciones a hacer lo mismo."
+                )}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-snug py-2">
+                  {t(
+                    "AI isn't your replacement. It's your relief.",
+                    "La IA no es tu reemplazo. Es tu alivio."
+                  )}
+                </p>
               </div>
               <div className="mt-8">
                 <Button variant="hero" size="lg" className="h-12 text-sm" asChild>
