@@ -43,9 +43,9 @@ const Tools = () => {
             <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center">
               <LayoutDashboard className="h-4 w-4 text-primary" />
             </div>
-            <span className="badge-tag">{t("AI Readiness Diagnostics", "Diagnóstico de preparación para IA")}</span>
+            <span className="badge-tag">{t("Free AI Tools", "Herramientas IA Gratuitas")}</span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("AI Readiness Diagnostics", "Diagnóstico de preparación para IA")}</h1>
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">{t("Free AI Tools", "Herramientas IA Gratuitas")}</h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
             {t("Evaluate your organization's AI readiness and uncover opportunities to prepare for successful AI implementation.", "Evalúe la preparación de su organización para la IA y descubra oportunidades para una implementación exitosa.")}
           </p>
