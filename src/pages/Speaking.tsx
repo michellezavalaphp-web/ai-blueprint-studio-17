@@ -65,6 +65,7 @@ const OneSheetIframe = () => (
 const Speaking = () => {
   const { t } = useLanguage();
   const [inquiryOpen, setInquiryOpen] = useState(false);
+  const [oneSheetOpen, setOneSheetOpen] = useState(false);
 
   const topics = [
     {
