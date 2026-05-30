@@ -13,6 +13,7 @@ const Navbar = () => {
   const { t } = useLanguage();
 
   const navLinks = [
+    { label: t("Home", "Inicio"), to: "/" },
     { label: t("Services", "Servicios"), to: "/services" },
     { label: t("Framework", "Metodología"), to: "/framework" },
     { label: t("Speaking", "Conferencias"), to: t("/speaking", "/es/conferencias") },
