@@ -68,7 +68,7 @@ const Index = () => {
             {/* Left: Text (60%) */}
             <div className="lg:col-span-3 order-2 lg:order-1 animate-fade-up text-center lg:text-left">
               <span className="block text-[10px] sm:text-xs font-semibold tracking-[0.22em] text-primary mb-5 sm:mb-6 uppercase">
-                {t("International International CPD Accredited AI Consultant", "Consultora de IA Acreditada Internacional CPD")}
+                {t("International CPD Accredited AI Consultant", "Consultora de IA Acreditada Internacional CPD")}
               </span>
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.08] mb-5 sm:mb-6 tracking-tight">
                 {t("Less Overwhelm. More Freedom. ", "Menos agobio. Más libertad. ")}

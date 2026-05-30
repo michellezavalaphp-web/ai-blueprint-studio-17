@@ -208,7 +208,7 @@ const Speaking = () => {
   ];
 
   const credentials = [
-    t("International CPD Accredited AI Consultant", "Consultora de IA Acreditada CPD"),
+    t("International CPD Accredited AI Consultant", "Consultora de IA Acreditada Internacional CPD"),
     t("Published Author — Time Reclaimed™ (May 2026)", "Autora Publicada — Time Reclaimed™ (Mayo 2026)"),
     t("Creator, Time Reclaimed™ Framework", "Creadora del Framework Time Reclaimed™"),
     t("20+ years operations experience", "Más de 20 años de experiencia operativa"),
@@ -338,7 +338,7 @@ const Speaking = () => {
           />
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto text-center">
             {t(
-              "Mardel Michelle Zavala is the founder of Go AI Innovation and creator of the Time Reclaimed™ Framework. A International CPD Accredited AI Consultant with 20+ years in operations and business transformation — and published author of Time Reclaimed™ — Michelle brings raw authenticity, practical expertise, and contagious energy to every stage. She built her company at night as a single mother of six while working full-time, and she brings that same relentless, faith-driven drive to every audience she serves.",
+              "Mardel Michelle Zavala is the founder of Go AI Innovation and creator of the Time Reclaimed™ Framework. An International CPD Accredited AI Consultant with 20+ years in operations and business transformation — and published author of Time Reclaimed™ — Michelle brings raw authenticity, practical expertise, and contagious energy to every stage. She built her company at night as a single mother of six while working full-time, and she brings that same relentless, faith-driven drive to every audience she serves.",
               "Mardel Michelle Zavala es la fundadora de Go AI Innovation y creadora del Framework Time Reclaimed™. Consultora de IA acreditada CPD con más de 20 años en operaciones y transformación empresarial — y autora publicada de Time Reclaimed™ — Michelle aporta autenticidad cruda, experiencia práctica y energía contagiosa a cada escenario. Construyó su empresa por las noches como madre soltera de seis mientras trabajaba a tiempo completo, y trae esa misma determinación incansable y guiada por la fe a cada audiencia que sirve.",
             )}
           </p>
