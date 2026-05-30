@@ -27,6 +27,8 @@ import {
   Lightbulb,
   Diamond,
   ArrowDown,
+  ClipboardCheck,
+  Zap,
 } from "lucide-react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import BlogCard from "@/components/BlogCard";
@@ -644,15 +646,68 @@ const Index = () => {
       </section>
 
 
-      {/* ── 4 · AI Readiness Diagnostics ── */}
-      <section className="section-light py-10 sm:py-12 md:py-16 px-4">
-        <div className="container mx-auto">
-          <SectionHeading
-            tag={t("AI Readiness Diagnostics", "Diagnóstico de preparación para IA")}
-            title={t("Assess Your AI Readiness", "Evalúa tu preparación para la IA")}
-            description={t("Evaluate your organization's AI readiness and uncover high-impact opportunities before implementation.", "Evalúe la preparación de su organización para la IA y descubra oportunidades de alto impacto antes de la implementación.")}
-          />
-          <div className="text-center mt-8 sm:mt-10">
+      {/* ── 4 · Free AI Tools ── */}
+      <section className="section-dark py-16 sm:py-20 md:py-28 px-4 border-y border-border/40">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-block text-xs uppercase tracking-[0.25em] font-bold text-primary mb-5">
+              {t("Free AI Tools", "Herramientas IA Gratuitas")}
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5 text-foreground">
+              {t(
+                "Do You Know Where Your Organization Stands with AI?",
+                "¿Sabe dónde se encuentra su organización con la IA?"
+              )}
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              {t(
+                "Most businesses are further behind than they think — and further ahead than they realize. Find out exactly where you are in under 10 minutes.",
+                "La mayoría de las empresas están más atrasadas de lo que creen — y más adelantadas de lo que imaginan. Descubra exactamente dónde está en menos de 10 minutos."
+              )}
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-5 sm:gap-6 mb-12">
+            {[
+              {
+                icon: ClipboardCheck,
+                title: t("Identify Your Gaps", "Identifique sus brechas"),
+                desc: t(
+                  "Uncover where AI can create the most immediate impact in your operations.",
+                  "Descubra dónde la IA puede generar el mayor impacto inmediato en sus operaciones."
+                ),
+              },
+              {
+                icon: Zap,
+                title: t("Get Instant Clarity", "Obtenga claridad inmediata"),
+                desc: t(
+                  "Receive a personalized readiness score and actionable next steps — no tech background required.",
+                  "Reciba una puntuación de preparación personalizada y próximos pasos accionables — sin conocimientos técnicos."
+                ),
+              },
+              {
+                icon: TrendingUp,
+                title: t("Prioritize What Matters", "Priorice lo que importa"),
+                desc: t(
+                  "Stop guessing. Start implementing with a clear, prioritized AI roadmap.",
+                  "Deje de adivinar. Comience a implementar con una hoja de ruta de IA clara y priorizada."
+                ),
+              },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-border/40 bg-card/40 backdrop-blur-sm p-6 sm:p-7 hover:border-primary/40 hover:bg-card/60 transition-all duration-300"
+              >
+                <div className="h-11 w-11 rounded-xl bg-primary/15 border border-primary/25 flex items-center justify-center mb-5">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-display text-lg sm:text-xl font-bold mb-2 text-foreground">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
             <Button variant="hero" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
               <Link to="/tools">
                 {t("Start Your Assessment", "Inicia tu evaluación")} <ArrowRight className="ml-2 h-4 w-4" />
@@ -661,6 +716,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+
 
 
       {/* ── 5 · Latest AI Blog ── */}
