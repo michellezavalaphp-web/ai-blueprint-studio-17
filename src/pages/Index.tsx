@@ -27,6 +27,8 @@ import {
   Lightbulb,
   Diamond,
   ArrowDown,
+  ClipboardCheck,
+  Zap,
 } from "lucide-react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import BlogCard from "@/components/BlogCard";
