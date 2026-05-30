@@ -695,8 +695,8 @@ const Index = () => {
             {posts.slice(0, 1).map((post) => {
               const basePath = language === "es" ? "/es/blog" : "/blog";
               const title = language === "es" ? post.title.es : post.title.en;
-              const dateStr = post.publishedAt
-                ? new Date(post.publishedAt).toLocaleDateString(language === "es" ? "es-ES" : "en-US", {
+              const dateStr = post.date
+                ? new Date(post.date).toLocaleDateString(language === "es" ? "es-ES" : "en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
