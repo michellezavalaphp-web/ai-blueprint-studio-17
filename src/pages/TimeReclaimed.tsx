@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Sparkles, FileText } from "lucide-react";
+import { BookOpen, Sparkles, FileText } from "lucide-react";
 import founderPhoto from "@/assets/founder-photo.png";
 import bookCover from "@/assets/time-reclaimed-cover.jpg";
 import SEO from "@/components/SEO";
@@ -53,7 +52,7 @@ const TimeReclaimed = () => {
                 alt="Time Reclaimed™ by Mardel Michelle Zavala — book cover"
                 width={300}
                 height={400}
-                className="w-[260px] sm:w-[300px] h-auto rounded-md shadow-2xl"
+                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[440px] h-auto rounded-md shadow-2xl"
                 loading="eager"
               />
             </div>
@@ -72,16 +71,6 @@ const TimeReclaimed = () => {
 
               <div className="max-w-md mx-auto lg:mx-0">
                 <WaitlistForm />
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="w-full sm:w-auto mt-4"
-                  asChild
-                >
-                  <a href="#time-reclaimed-waitlist-form">
-                    GET EARLY ACCESS <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
               </div>
             </div>
           </div>
@@ -164,11 +153,6 @@ const TimeReclaimed = () => {
             Time Reclaimed™ is coming soon. Join the waitlist today and receive exclusive updates before the public launch.
           </p>
           <WaitlistForm />
-          <Button variant="hero" size="lg" className="w-full sm:w-auto mt-5" asChild>
-            <a href="#time-reclaimed-waitlist-form">
-              JOIN THE WAITLIST <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
         </div>
       </section>
     </>
