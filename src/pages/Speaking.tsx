@@ -203,11 +203,14 @@ const Speaking = () => {
               {t("Request Availability", "Solicitar disponibilidad")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="hero-outline" size="lg" className="h-12 w-full sm:w-auto text-sm" asChild>
-              <a href="/speaker-one-sheet.pdf" target="_blank" rel="noopener noreferrer">
-                {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
-                <Download className="ml-2 h-4 w-4" />
-              </a>
+            <Button
+              variant="hero-outline"
+              size="lg"
+              className="h-12 w-full sm:w-auto text-sm"
+              onClick={() => setOneSheetOpen(true)}
+            >
+              {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
+              <Download className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -371,11 +374,14 @@ const Speaking = () => {
                 {t("Request Availability", "Solicitar disponibilidad")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="hero-outline" size="lg" className="h-12 w-full sm:w-auto text-sm" asChild>
-                <a href="/speaker-one-sheet.pdf" target="_blank" rel="noopener noreferrer">
-                  {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
-                  <Download className="ml-2 h-4 w-4" />
-                </a>
+              <Button
+                variant="hero-outline"
+                size="lg"
+                className="h-12 w-full sm:w-auto text-sm"
+                onClick={() => setOneSheetOpen(true)}
+              >
+                {t("Download Speaker One Sheet", "Descargar ficha de conferencista")}
+                <Download className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
