@@ -140,13 +140,13 @@ const Speaking = () => {
     {
       name: "Hot AI Summit with AI Tech Boss Jenn",
       date: t("May 30 — Speaking at 1:00 PM", "30 de mayo — Conferencia a la 1:00 PM"),
-      image: "/placeholder.svg",
+      image: eventHotAiSummer,
       link: "https://yourhotaisummer.com/?am_id=mardelmichelle1207",
     },
     {
       name: "AI Clarity Summit with Stephanie",
       date: t("June 1–14 — Speaking June 13", "1–14 de junio — Conferencia el 13 de junio"),
-      image: "/placeholder.svg",
+      image: eventAiClaritySummit,
       link: "https://go.aiclaritysummit.com/summit-registration?ref=michelle",
     },
   ];
