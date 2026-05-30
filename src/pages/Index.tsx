@@ -80,7 +80,7 @@ const FrameworkCardRow = ({ stage, index, isLast }: { stage: FrameworkStage; ind
 );
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const { posts } = useBlogPosts();
 
@@ -665,28 +665,75 @@ const Index = () => {
 
       {/* ── 5 · Latest AI Blog ── */}
       <section className="section-light py-10 sm:py-12 md:py-16 px-4">
-        <div className="container mx-auto">
-          <SectionHeading
-            tag={t("Blog", "Blog")}
-            title={t("Latest AI Blog Posts", "Últimas entradas del Blog de IA")}
-            description={t(
-              "Practical strategies and real-world ideas to help you reclaim time, improve operations, and scale smarter with AI.",
-              "Estrategias prácticas e ideas reales para ayudarte a recuperar tiempo, mejorar operaciones y escalar con inteligencia artificial."
-            )}
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Left column: intro */}
+            <div>
+              <span className="inline-block text-xs uppercase tracking-widest font-bold text-primary mb-4">
+                {t("From the Blog", "Desde el Blog")}
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+                {t(
+                  "Practical AI Insights for Leaders and Organizations.",
+                  "Perspectivas prácticas de IA para líderes y organizaciones."
+                )}
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+                {t(
+                  "Real strategies, honest insights, and actionable guidance on AI implementation, time reclamation, and building systems that work.",
+                  "Estrategias reales, perspectivas honestas y orientación práctica sobre la implementación de IA, la recuperación de tiempo y la creación de sistemas que funcionan."
+                )}
+              </p>
+              <Button variant="hero-outline" size="lg" className="h-12 text-sm" asChild>
+                <Link to={t("/blog", "/es/blog")}>
+                  {t("View All Blog Posts", "Ver todas las entradas del blog")} <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
 
-            {posts.slice(0, 1).map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
-
-          <div className="text-center mt-8 sm:mt-10">
-            <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm w-full sm:w-auto" asChild>
-              <Link to={t("/blog", "/es/blog")}>
-                {t("View All Blog Posts", "Ver todas las entradas del blog")} <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            {/* Right column: featured post */}
+            {posts.slice(0, 1).map((post) => {
+              const basePath = language === "es" ? "/es/blog" : "/blog";
+              const title = language === "es" ? post.title.es : post.title.en;
+              const dateStr = post.date
+                ? new Date(post.date).toLocaleDateString(language === "es" ? "es-ES" : "en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "";
+              return (
+                <Link
+                  key={post.slug}
+                  to={`${basePath}/${post.slug}`}
+                  className="group block rounded-2xl overflow-hidden border border-border bg-card hover:border-primary/40 hover:shadow-xl transition-all"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[hsl(222,30%,12%)] to-[hsl(222,30%,5%)]">
+                    {post.coverImageUrl && (
+                      <img
+                        src={post.coverImageUrl}
+                        alt={title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    )}
+                  </div>
+                  <div className="p-6 sm:p-7">
+                    {dateStr && (
+                      <p className="text-xs uppercase tracking-widest font-semibold text-muted-foreground mb-3">
+                        {dateStr}
+                      </p>
+                    )}
+                    <h3 className="font-display text-xl sm:text-2xl font-semibold leading-snug mb-4 group-hover:text-primary transition-colors">
+                      {title}
+                    </h3>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
+                      {t("Read More", "Leer más")} <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
