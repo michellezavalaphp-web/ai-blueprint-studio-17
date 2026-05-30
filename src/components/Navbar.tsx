@@ -16,9 +16,8 @@ const Navbar = () => {
     { label: t("Services", "Servicios"), to: "/services" },
     { label: t("Framework", "Metodología"), to: "/framework" },
     { label: t("Speaking", "Conferencias"), to: t("/speaking", "/es/conferencias") },
-    { label: t("About", "Nosotros"), to: "/about" },
-    { label: t("Store", "Tienda"), to: "/store" },
-    { label: t("Contact", "Contacto"), to: "/contact" },
+    { label: t("Blog", "Blog"), to: t("/blog", "/es/blog") },
+    { label: t("Store", "Tienda"), to: t("/store", "/tienda") },
   ];
 
   const linkClass = (to: string) =>
