@@ -408,7 +408,7 @@ const Speaking = () => {
 
       {/* One Sheet Download Modal */}
       <Dialog open={oneSheetOpen} onOpenChange={setOneSheetOpen}>
-        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto min-h-[600px]">
           <DialogTitle className="font-display text-xl sm:text-2xl font-bold">
             {t("Get the Speaker One Sheet", "Obtenga la ficha de la conferencista")}
           </DialogTitle>
