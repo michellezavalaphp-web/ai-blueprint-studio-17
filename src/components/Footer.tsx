@@ -27,7 +27,7 @@ const Footer = () => {
           <ul className="space-y-2 sm:space-y-2.5">
             {[
               { to: "/services", label: t("Services", "Servicios") },
-              { to: "/tools", label: t("AI Tools", "Herramientas IA") },
+              { to: "/tools", label: t("Free AI Tools", "Herramientas IA Gratuitas") },
               { to: "/framework", label: t("Framework", "Metodología") },
               { to: "/solutions", label: t("Solutions", "Soluciones") },
               { to: "/store", label: t("Store", "Tienda") },
