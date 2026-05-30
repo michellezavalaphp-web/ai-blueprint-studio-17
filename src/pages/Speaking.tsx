@@ -253,7 +253,7 @@ const Speaking = () => {
       <SchemaMarkup id="speaker" schema={SPEAKER_SCHEMA} />
 
       {/* Hero */}
-      <section className="page-header">
+      <section className="page-header pb-10 sm:pb-12">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container mx-auto relative z-10 text-center max-w-3xl">
           <div className="inline-flex items-center gap-2.5 mb-4">
@@ -265,22 +265,18 @@ const Speaking = () => {
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             {t("Book Michelle for Your Next Event", "Reserve a Michelle para su próximo evento")}
           </h1>
-          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-7">
+          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             {t(
               "Keynote speaker on AI strategy, business transformation, and the future of work. Bilingual (EN/ES). Available for corporate events, conferences, summits, and workshops.",
               "Conferencista magistral sobre estrategia de IA, transformación empresarial y el futuro del trabajo. Bilingüe (EN/ES). Disponible para eventos corporativos, conferencias, cumbres y talleres.",
             )}
           </p>
-          <iframe
-            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-            style={{ width: "100%", border: "none", minHeight: "400px" }}
-            scrolling="no"
-          />
         </div>
       </section>
 
       {/* Keynote Topics */}
-      <section className="section-padding section-light">
+      <section className="py-12 sm:py-14 section-light">
+
         <div className="container mx-auto">
           <SectionHeading
             tag={t("Keynote Topics", "Temas de conferencias")}
