@@ -25,6 +25,7 @@ import {
   Filter,
   Lightbulb,
   Diamond,
+  ArrowDown,
 } from "lucide-react";
 import { useBlogPosts } from "@/hooks/useBlogPosts";
 import BlogCard from "@/components/BlogCard";
