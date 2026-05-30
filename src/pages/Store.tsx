@@ -57,7 +57,12 @@ const Store = () => {
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-center glass-panel p-6 sm:p-10 glow-border">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-2 mb-4"><ComingSoon /></div>
-                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">Time Reclaimed™</h2>
+                <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
+                  Time Reclaimed™: {t(
+                    "7 Practical Steps to Create Margin, Lead with Confidence, and Thrive in an AI-Powered World",
+                    "7 Pasos Prácticos para Crear Margen, Liderar con Confianza y Prosperar en un Mundo Impulsado por IA"
+                  )}
+                </h2>
                 <p className="text-muted-foreground text-xs sm:text-sm md:text-base leading-relaxed mb-6">
                   {t(
                     "A practical framework to help you reclaim time, reduce overwhelm, and lead with clarity in an AI-powered world.",
