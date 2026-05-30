@@ -5,7 +5,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import SectionHeading from "@/components/SectionHeading";
 import michellePortrait from "@/assets/michelle-portrait.png";
 import michelleStory from "@/assets/michelle-story.jpg";
-
+import bookCover from "@/assets/time-reclaimed-cover.jpg";
 
 import aiAbstract from "@/assets/ai-systems-abstract.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -297,7 +297,7 @@ const Index = () => {
         {/* 3 service cards */}
         <div className="grid md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
           {/* Card 1 */}
-          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <Link to="/services" className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-all duration-300 cursor-pointer hover:border-primary/40 block">
             <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">01</span>
             <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
               <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
@@ -328,10 +328,10 @@ const Index = () => {
                 )}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2 */}
-          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <Link to="/services" className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-all duration-300 cursor-pointer hover:border-primary/40 block">
             <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">02</span>
             <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
               <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
@@ -362,10 +362,10 @@ const Index = () => {
                 )}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 3 */}
-          <div className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <Link to="/services" className="relative bg-white rounded-xl border border-border/60 p-6 sm:p-8 overflow-hidden hover:shadow-md transition-all duration-300 cursor-pointer hover:border-primary/40 block">
             <span className="absolute top-1 right-2 font-display text-[6rem] sm:text-[7rem] font-bold text-primary/[0.06] leading-none select-none">03</span>
             <div className="relative z-10 border-l-[3px] border-primary/20 pl-5 sm:pl-6">
               <h3 className="font-display text-sm sm:text-base font-semibold mb-2.5">
@@ -396,7 +396,7 @@ const Index = () => {
                 )}
               </p>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Quote Divider */}
