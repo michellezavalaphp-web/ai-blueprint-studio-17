@@ -301,11 +301,11 @@ const Speaking = () => {
                 rel="noopener noreferrer"
                 className="group dash-card flex flex-col p-0 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
-                <div className="aspect-[16/9] bg-muted overflow-hidden">
+                <div className="aspect-square bg-muted overflow-hidden flex items-center justify-center">
                   <img
                     src={e.image}
                     alt={e.name}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex flex-col gap-3 flex-1">
