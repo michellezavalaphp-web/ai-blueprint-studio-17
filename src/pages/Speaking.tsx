@@ -229,28 +229,16 @@ const Speaking = () => {
 
   const events = [
     {
-      name: "AI Clarity Summit",
-      host: t("Host: Stephanie Swanson", "Anfitriona: Stephanie Swanson"),
-      format: t(
-        "Pre-recorded conversation — airs June 1–14, 2026",
-        "Conversación pregrabada — se transmite del 1 al 14 de junio, 2026",
-      ),
-      topic: t(
-        '"Stop the Overwhelm: How to Reclaim Your Time with AI"',
-        '"Detén el Agobio: Cómo Recuperar Tu Tiempo con IA"',
-      ),
+      name: "Hot AI Summit with AI Tech Boss Jenn",
+      date: t("May 30 — Speaking at 1:00 PM", "30 de mayo — Conferencia a la 1:00 PM"),
+      image: "/placeholder.svg",
+      link: "https://yourhotaisummer.com/?am_id=mardelmichelle1207",
     },
     {
-      name: 'AI Tech Boss Summit — "Your Hot AI Summer"',
-      host: t("Host: Jenn, AI Tech Boss", "Anfitriona: Jenn, AI Tech Boss"),
-      format: t(
-        "Live Zoom keynote · May 30, 2026 · 1:00–1:20 PM EST",
-        "Conferencia magistral en vivo por Zoom · 30 de mayo, 2026 · 1:00–1:20 PM EST",
-      ),
-      topic: t(
-        '"AI as a Team Member: Real Workflows in Practice"',
-        '"La IA como Miembro del Equipo: Flujos Reales en Práctica"',
-      ),
+      name: "AI Clarity Summit with Stephanie",
+      date: t("June 1–14 — Speaking June 13", "1–14 de junio — Conferencia el 13 de junio"),
+      image: "/placeholder.svg",
+      link: "https://go.aiclaritysummit.com/summit-registration?ref=michelle",
     },
   ];
 
@@ -265,7 +253,7 @@ const Speaking = () => {
       <SchemaMarkup id="speaker" schema={SPEAKER_SCHEMA} />
 
       {/* Hero */}
-      <section className="page-header">
+      <section className="page-header pb-10 sm:pb-12">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container mx-auto relative z-10 text-center max-w-3xl">
           <div className="inline-flex items-center gap-2.5 mb-4">
@@ -277,22 +265,18 @@ const Speaking = () => {
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             {t("Book Michelle for Your Next Event", "Reserve a Michelle para su próximo evento")}
           </h1>
-          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-7">
+          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             {t(
               "Keynote speaker on AI strategy, business transformation, and the future of work. Bilingual (EN/ES). Available for corporate events, conferences, summits, and workshops.",
               "Conferencista magistral sobre estrategia de IA, transformación empresarial y el futuro del trabajo. Bilingüe (EN/ES). Disponible para eventos corporativos, conferencias, cumbres y talleres.",
             )}
           </p>
-          <iframe
-            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-            style={{ width: "100%", border: "none", minHeight: "400px" }}
-            scrolling="no"
-          />
         </div>
       </section>
 
       {/* Keynote Topics */}
-      <section className="section-padding section-light">
+      <section className="py-12 sm:py-14 section-light">
+
         <div className="container mx-auto">
           <SectionHeading
             tag={t("Keynote Topics", "Temas de conferencias")}
@@ -329,7 +313,7 @@ const Speaking = () => {
       </section>
 
       {/* About Michelle */}
-      <section className="section-padding bg-secondary/20">
+      <section className="py-12 sm:py-14 bg-secondary/20">
         <div className="container mx-auto max-w-4xl">
           <SectionHeading
             tag={t("About the Speaker", "Sobre la conferencista")}
@@ -356,7 +340,7 @@ const Speaking = () => {
       </section>
 
       {/* Speaking Formats */}
-      <section className="section-padding section-light">
+      <section className="py-12 sm:py-14 section-light">
         <div className="container mx-auto max-w-4xl">
           <SectionHeading
             tag={t("Formats", "Formatos")}
@@ -376,66 +360,54 @@ const Speaking = () => {
         </div>
       </section>
 
-      {/* Upcoming & Recent Events */}
-      <section className="section-padding bg-secondary/20">
-        <div className="container mx-auto max-w-4xl">
+      {/* Upcoming Events */}
+      <section className="py-12 sm:py-14 bg-secondary/20">
+        <div className="container mx-auto max-w-5xl">
           <SectionHeading
             tag={t("Events", "Eventos")}
-            title={t("Upcoming & Recent Events", "Eventos próximos y recientes")}
+            title={t("Upcoming Events", "Próximos eventos")}
           />
-          <div className="space-y-4">
+          <div className="grid sm:grid-cols-2 gap-5">
             {events.map((e) => (
-              <div key={e.name} className="dash-card flex flex-col sm:flex-row sm:items-start gap-4">
-                <div className="h-11 w-11 rounded-lg bg-primary/10 border border-primary/15 flex items-center justify-center flex-shrink-0">
-                  <CalendarIcon className="h-5 w-5 text-primary" />
+              <a
+                key={e.name}
+                href={e.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group dash-card flex flex-col p-0 overflow-hidden transition-all hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <div className="aspect-[16/9] bg-muted overflow-hidden">
+                  <img
+                    src={e.image}
+                    alt={e.name}
+                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                  />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-display text-base sm:text-lg font-semibold mb-1">
+                <div className="p-5 flex flex-col gap-3 flex-1">
+                  <h3 className="font-display text-base sm:text-lg font-semibold leading-snug">
                     {e.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">{e.host}</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-2">{e.format}</p>
-                  <p className="text-xs sm:text-sm text-foreground/85 italic">{e.topic}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
+                    <CalendarIcon className="h-4 w-4 text-primary flex-shrink-0" />
+                    {e.date}
+                  </p>
+                  <div className="mt-auto pt-2">
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
+                      {t("Register Now", "Regístrate ahora")}
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
-          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-6">
-            {t(
-              "More events added regularly. Request availability below.",
-              "Se agregan más eventos con regularidad. Consulte disponibilidad abajo.",
-            )}
-          </p>
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="section-padding section-light">
+      {/* CTA / Inquiry Form */}
+      <section className="section-dark py-12 sm:py-16">
         <div className="container mx-auto max-w-2xl">
-          <SectionHeading
-            tag={t("Inquire", "Consultar")}
-            title={t(
-              "Book Mardel Michelle for Your Next Event",
-              "Reserve a Mardel Michelle para su próximo evento",
-            )}
-            description={t(
-              "Share a few details about your event and we'll be in touch within 24 hours.",
-              "Comparta algunos detalles sobre su evento y nos pondremos en contacto en menos de 24 horas.",
-            )}
-          />
-          <iframe
-            src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-            style={{ width: "100%", border: "none", minHeight: "400px" }}
-            scrolling="no"
-            id="speaking-inquiry-form"
-          />
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-dark section-padding">
-        <div className="container mx-auto max-w-2xl">
-          <div className="glass-panel p-7 sm:p-10 md:p-12 text-center glow-border">
+          <div className="glass-panel p-6 sm:p-8 md:p-10 text-center glow-border">
             <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-3">
               {t(
                 "Ready to bring Michelle to your event?",
@@ -450,16 +422,17 @@ const Speaking = () => {
             </p>
             <a
               href="mailto:speaking@goaiinnovation.com"
-              className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-7"
+              className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline mb-6"
             >
               <Mail className="h-4 w-4" /> speaking@goaiinnovation.com
             </a>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <iframe
-                src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
-                style={{ width: "100%", border: "none", minHeight: "400px" }}
-                scrolling="no"
-              />
+            <iframe
+              src="https://api.growthhub365.com/widget/form/IEBuZdlc7FC3mOwC4tmI"
+              style={{ width: "100%", border: "none", minHeight: "500px" }}
+              scrolling="no"
+              id="speaking-inquiry-form"
+            />
+            <div className="mt-4 flex justify-center">
               <Button variant="hero-outline" size="lg" className="h-12 sm:h-11 text-sm" asChild>
                 <a
                   href="/speaker-one-sheet.pdf"
@@ -474,6 +447,7 @@ const Speaking = () => {
           </div>
         </div>
       </section>
+
     </>
   );
 };
